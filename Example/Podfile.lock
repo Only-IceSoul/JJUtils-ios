@@ -1,0 +1,16 @@
+PODS:
+  - jjutils (0.1.0)
+
+DEPENDENCIES:
+  - jjutils (from `../`)
+
+EXTERNAL SOURCES:
+  jjutils:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  jjutils: 1468d3afea3b253d71c2e27930e8e41cffa90a6c
+
+PODFILE CHECKSUM: 120b1e3ffd21b10cf810174232c92554cfabe90f
+
+COCOAPODS: 1.10.0

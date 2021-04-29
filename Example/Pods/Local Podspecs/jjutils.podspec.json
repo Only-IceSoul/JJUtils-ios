@@ -1,0 +1,22 @@
+{
+  "name": "jjutils",
+  "version": "0.1.0",
+  "summary": "A short description of jjutils.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/only-icesoul/jjutils",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "only-icesoul": "justinjlf21@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/only-icesoul/jjutils.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "jjutils/Classes/**/*"
+}

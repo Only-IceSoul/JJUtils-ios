@@ -1,0 +1,6 @@
+framework module jjutils {
+  umbrella header "jjutils-umbrella.h"
+
+  export *
+  module * { export * }
+}
