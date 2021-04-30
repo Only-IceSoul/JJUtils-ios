@@ -31,6 +31,9 @@ public class PathParser {
         if(d == nil ){
             return mPath;
         }
+        if(d!.isEmpty ){
+            return mPath;
+        }
         var prev_cmd : Character = Character(" ");
         l = d!.count
         s = d!;

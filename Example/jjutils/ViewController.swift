@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         mView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
         
         mView.backgroundColor = UIColor.white
+        
     }
 
    

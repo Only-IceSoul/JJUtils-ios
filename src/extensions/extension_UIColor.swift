@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIColor{
     
-    static func parseColor(_ hex: String) -> UIColor? {
+    static func parseHex(_ hex: String) -> UIColor? {
           var chars = Array(hex.hasPrefix("#") ? hex.dropFirst() : hex[...])
           let red, green, blue, alpha: CGFloat
           switch chars.count {
@@ -30,4 +30,12 @@ public extension UIColor{
           }
          return self.init(red: red, green: green, blue:  blue, alpha: alpha)
       }
+    
+    static func parseSignedInt(argb: Int)-> UIColor{
+        let a = CGFloat((argb >> 24) & 0xFF)
+        let r = CGFloat((argb >> 16) & 0xFF)
+        let g = CGFloat((argb >> 8) & 0xFF)
+        let b = CGFloat(argb & 0xFF)
+        return UIColor(red: r / 255, green: g / 255, blue: b / 255, alpha: a / 255)
+    }
 }

@@ -19,15 +19,17 @@ class DrawableView: UIView {
     init() {
         super.init(frame: .zero)
         
-        layer.addSublayer(mShadow)
+//        layer.addSublayer(mShadow)
         layer.addSublayer(mBg)
 
+        
         
         
         mBg
             .setSvgPath(d: other,viewBox: [0,0,20,20])
             .setShape(s: .svgPath)
-            .setFillColor(c: UIColor.white.cgColor)
+            .setRadius(v: 100)
+            .setFillColor(c: UIColor.parseSignedInt(argb: -7375473).cgColor)
 //
 //
         mShadow

@@ -208,6 +208,7 @@ public class Drawable: CAShapeLayer {
    }
      @discardableResult
     public func setTranslation(dx:CGFloat,dy:CGFloat)-> Drawable {
+        mIsTranslationPercent = false
         mTranslationX = dx
         mTranslationY = dy
         return self
@@ -334,15 +335,15 @@ public class Drawable: CAShapeLayer {
             break
    
         case .svgPath:
-            mPath = PathParser.parse(d: mSvgPath)
-            if mVbRect.width > 0 && mVbRect.height > 0 {
-                let trans = ViewBox.transform(vbRect: mVbRect, eRect: mRect, align: mSvgAlign, meetOrSlice: mSvgAspect)
-              
-                mPath.apply(trans)
+            if(mSvgPath.isNotEmpty){
+                mPath = PathParser.parse(d: mSvgPath)
+                if mVbRect.width > 0 && mVbRect.height > 0 {
+                    let trans = ViewBox.transform(vbRect: mVbRect, eRect: mRect, align: mSvgAlign, meetOrSlice: mSvgAspect)
+                  
+                    mPath.apply(trans)
+                }
             }
            
-            
-            
         default:
             mPath.addRoundRect(mRect, radius: mRadius)
         }
