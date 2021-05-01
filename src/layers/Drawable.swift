@@ -61,7 +61,7 @@ public class Drawable: CAShapeLayer {
         super.fillColor = UIColor.clear.cgColor
         super.shadowOffset = .init(width: 0, height: 0)
         super.lineWidth = 0
-        super.strokeColor = UIColor.clear.cgColor
+        super.strokeColor = UIColor.black.cgColor
         super.shadowOpacity = 0
         super.shadowRadius = 1
         super.shadowColor = UIColor.black.cgColor
@@ -82,6 +82,7 @@ public class Drawable: CAShapeLayer {
    }
     @discardableResult
    public func setPathTranslation(dx:CGFloat,dy:CGFloat)-> Drawable {
+      mIsPathTranslationPercent = false
        mPathTranslationX = dx
        mPathTranslationY = dy
        return self
@@ -335,14 +336,13 @@ public class Drawable: CAShapeLayer {
             break
    
         case .svgPath:
-            if(mSvgPath.isNotEmpty){
                 mPath = PathParser.parse(d: mSvgPath)
                 if mVbRect.width > 0 && mVbRect.height > 0 {
                     let trans = ViewBox.transform(vbRect: mVbRect, eRect: mRect, align: mSvgAlign, meetOrSlice: mSvgAspect)
                   
                     mPath.apply(trans)
                 }
-            }
+            
            
         default:
             mPath.addRoundRect(mRect, radius: mRadius)
