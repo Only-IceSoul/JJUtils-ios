@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         mView.translatesAutoresizingMaskIntoConstraints = false
         mView.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        mView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        mView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         mView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         mView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
         

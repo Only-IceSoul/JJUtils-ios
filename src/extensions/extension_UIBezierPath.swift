@@ -29,12 +29,22 @@ extension UIBezierPath {
     
     func addRoundRect(_ r:CGRect?,radius:[CGFloat]){
         guard let rect = r else { return }
+        var rtl = radius[0]
+        var rtr = radius[1]
+        var rbl = radius[2]
+        var rbr = radius[3]
         
-        let maxValue = min(rect.width, rect.height) / 2
-        let rtl = (radius[0] > maxValue ? maxValue : radius[0]).normalizedNotNegative()
-        let rtr = (radius[1] > maxValue ? maxValue : radius[1]).normalizedNotNegative()
-        let rbl = (radius[2] > maxValue ? maxValue : radius[2]).normalizedNotNegative()
-        let rbr = (radius[3] > maxValue ? maxValue : radius[3]).normalizedNotNegative()
+        var maxValue = max(rtl + rtr, rbl + rbr)
+        maxValue = max(rtl + rbl, rtr + rbr)
+        
+        if(maxValue > rect.height || maxValue > rect.width){
+            let size = min(rect.height, rect.width)
+            rtl = (radius[0] / maxValue ) * size
+            rtr = (radius[1] / maxValue ) * size
+            rbl = (radius[2] / maxValue ) * size
+            rbr = (radius[3] / maxValue ) * size
+        }
+        
         
 
         let l = rect.origin.x

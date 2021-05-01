@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'jjutils'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'utils for swift'
 
 # This description is used to generate tags and improve search results.

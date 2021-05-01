@@ -26,10 +26,9 @@ class DrawableView: UIView {
         
         
         mBg
-            .setSvgPath(d: other,viewBox: [0,0,20,20])
-            .setShape(s: .svgPath)
-            .setRadius(v: 100)
-            .setFillColor(c: UIColor.parseSignedInt(argb: -7375473).cgColor)
+            .setRadius(topLeft: 90, topRight: 20, bottomLeft: 20, bottomRight: 75)
+            .setFillColor(c: UIColor.green.cgColor)
+            .setBackgroundColor(c: UIColor.red.cgColor)
 //
 //
         mShadow
