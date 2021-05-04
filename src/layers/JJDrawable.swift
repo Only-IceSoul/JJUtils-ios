@@ -21,7 +21,12 @@ public class JJDrawable: CAShapeLayer {
   
     }
         
-    
+    //MARK: Blur set and get
+    @discardableResult
+    public func setBlurVisualEffect(radius:CGFloat,style:UIBlurEffect.Style = .light)-> JJDrawable{
+        mDrawable.setBlurVisualEffect(radius: radius,style:style)
+       return self
+   }
     //MARK: Path set and get
     @discardableResult
    public func setPathScale(sx:CGFloat,sy:CGFloat)-> JJDrawable{
@@ -81,6 +86,16 @@ public class JJDrawable: CAShapeLayer {
        return self
    }
     
+    @discardableResult
+   public func setStrokeStart(s:CGFloat) -> JJDrawable{
+    mDrawable.strokeStart = s
+       return self
+   }
+    @discardableResult
+   public func setStrokeEnd(e:CGFloat) -> JJDrawable{
+    mDrawable.strokeEnd = e
+       return self
+   }
     //MARK: LAYER SET
     
     @discardableResult
@@ -196,11 +211,14 @@ public class JJDrawable: CAShapeLayer {
         super.position.y = frame.height / 2
         mDrawable.onBoundsChange(frame)
         mBg.onBoundsChange(frame)
+        
     }
     
     public func invalidateSelf(){
         mDrawable.invalidateSelf()
         mBg.invalidateSelf()
+        
+        
         
     }
     
@@ -220,12 +238,6 @@ public class JJDrawable: CAShapeLayer {
         fatalError("init(coder:) has not been implemented")
     }
  
-    //MARK : Override
-    
-   
-    public  override var backgroundColor :CGColor? {
-           set { print("JJDrawable: use the setter") }
-           get { return super.backgroundColor }
-       }
+
  
 }

@@ -30,6 +30,11 @@
 		D001C2F4263B0A8500443894 /* extension_CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001C2EC263B0A8400443894 /* extension_CGFloat.swift */; };
 		D001C2F5263B0A8500443894 /* extension_UIBezierPathUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001C2ED263B0A8400443894 /* extension_UIBezierPathUpper.swift */; };
 		D001C2F6263B0A8500443894 /* extension_CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001C2EE263B0A8500443894 /* extension_CALayer.swift */; };
+		D0CC6756264071E9002525AC /* extension_UIVIsualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6755264071E9002525AC /* extension_UIVIsualEffect.swift */; };
+		D0CC675B2640720A002525AC /* CustomBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC675A2640720A002525AC /* CustomBlurEffect.swift */; };
+		D0CC67622640723C002525AC /* JJBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC67612640723C002525AC /* JJBlurEffect.swift */; };
+		D0CC676826407C3A002525AC /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC676726407C3A002525AC /* VisualEffectView.swift */; };
+		D0CC677026407C4E002525AC /* UIViewEffectViewiOS14.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC676F26407C4E002525AC /* UIViewEffectViewiOS14.swift */; };
 		E4741DD7203DDE775D196607A0134BFB /* Pods-jjutils_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 319A938125330FE84F18679B8926BC6D /* Pods-jjutils_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F511668125084B2EB8659EF735FF8A4C /* Pods-jjutils_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 245F1772B288FF883C817B3444838BA2 /* Pods-jjutils_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F753AA7FD9A19822BC6198FB18944807 /* jjutils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEA393912394F32DE43F637CE466866C /* jjutils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,6 +101,11 @@
 		D001C2EC263B0A8400443894 /* extension_CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_CGFloat.swift; sourceTree = "<group>"; };
 		D001C2ED263B0A8400443894 /* extension_UIBezierPathUpper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPathUpper.swift; sourceTree = "<group>"; };
 		D001C2EE263B0A8500443894 /* extension_CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_CALayer.swift; sourceTree = "<group>"; };
+		D0CC6755264071E9002525AC /* extension_UIVIsualEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_UIVIsualEffect.swift; sourceTree = "<group>"; };
+		D0CC675A2640720A002525AC /* CustomBlurEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBlurEffect.swift; sourceTree = "<group>"; };
+		D0CC67612640723C002525AC /* JJBlurEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJBlurEffect.swift; sourceTree = "<group>"; };
+		D0CC676726407C3A002525AC /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		D0CC676F26407C4E002525AC /* UIViewEffectViewiOS14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEffectViewiOS14.swift; sourceTree = "<group>"; };
 		D93BE88340A8E1CED15D417FF36F3F1D /* jjutils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = jjutils.debug.xcconfig; sourceTree = "<group>"; };
 		E8F322EAAE187BFB860D95D8DD498EBC /* Pods_jjutils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jjutils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92D369DB5EDAE42A4776998C8D43439 /* jjutils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = jjutils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -239,6 +249,7 @@
 		D001C2C8263B09EA00443894 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D0CC676626407C2C002525AC /* blurEffect */,
 				D001C2CC263B0A2400443894 /* ElementType.swift */,
 				D001C2C9263B0A2400443894 /* PathElement.swift */,
 				D001C2D4263B0A3E00443894 /* layers */,
@@ -264,6 +275,7 @@
 		D001C2E5263B0A6C00443894 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D0CC6755264071E9002525AC /* extension_UIVIsualEffect.swift */,
 				D001C2EE263B0A8500443894 /* extension_CALayer.swift */,
 				D001C2E7263B0A8400443894 /* extension_CAShapeLayer.swift */,
 				D001C2EC263B0A8400443894 /* extension_CGFloat.swift */,
@@ -274,6 +286,17 @@
 				D001C2E8263B0A8400443894 /* extension_UIColor.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		D0CC676626407C2C002525AC /* blurEffect */ = {
+			isa = PBXGroup;
+			children = (
+				D0CC675A2640720A002525AC /* CustomBlurEffect.swift */,
+				D0CC676726407C3A002525AC /* VisualEffectView.swift */,
+				D0CC676F26407C4E002525AC /* UIViewEffectViewiOS14.swift */,
+				D0CC67612640723C002525AC /* JJBlurEffect.swift */,
+			);
+			path = blurEffect;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -452,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0CC677026407C4E002525AC /* UIViewEffectViewiOS14.swift in Sources */,
 				D001C2CF263B0A2400443894 /* ViewBox.swift in Sources */,
 				D001C2DF263B0A5800443894 /* JJRegistrationCompletedView.swift in Sources */,
 				9DC2CA0733DF271BA52CA1DD9ABD7CA3 /* jjutils-dummy.m in Sources */,
@@ -464,11 +488,15 @@
 				D001C2DE263B0A5800443894 /* LayerCircleProgress.swift in Sources */,
 				D001C2F3263B0A8500443894 /* extension_CGRect.swift in Sources */,
 				D001C2F2263B0A8500443894 /* extension_string.swift in Sources */,
+				D0CC6756264071E9002525AC /* extension_UIVIsualEffect.swift in Sources */,
 				D001C2CE263B0A2400443894 /* PathParser.swift in Sources */,
 				D001C2F6263B0A8500443894 /* extension_CALayer.swift in Sources */,
 				D001C2D0263B0A2400443894 /* ElementType.swift in Sources */,
 				D001C2F5263B0A8500443894 /* extension_UIBezierPathUpper.swift in Sources */,
+				D0CC676826407C3A002525AC /* VisualEffectView.swift in Sources */,
+				D0CC67622640723C002525AC /* JJBlurEffect.swift in Sources */,
 				D001C2F4263B0A8500443894 /* extension_CGFloat.swift in Sources */,
+				D0CC675B2640720A002525AC /* CustomBlurEffect.swift in Sources */,
 				D001C2E1263B0A5800443894 /* JJDrawable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

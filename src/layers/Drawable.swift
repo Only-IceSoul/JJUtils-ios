@@ -45,6 +45,10 @@ public class Drawable: CAShapeLayer {
     private var mVbRect = CGRect()
     
     
+    //MARK: Blur
+    
+    private var mBlurVisualEffect : VisualEffectView?
+    
     //MARK: Path propertys
     private var mPath  = UIBezierPath()
     private var mPathScaleX:CGFloat = 1
@@ -68,9 +72,18 @@ public class Drawable: CAShapeLayer {
     }
         
     
+    //MARK: Blur set and get
+    @discardableResult
+   public func setBlurVisualEffect(radius:CGFloat,style:UIBlurEffect.Style)-> Drawable{
+       mBlurVisualEffect?.layer.removeFromSuperlayer()
+       mBlurVisualEffect = VisualEffectView()
+       addSublayer(mBlurVisualEffect!.layer)
+       return self
+   }
+    
     //MARK: Path set and get
     @discardableResult
-   public func setPathScale(sx:CGFloat,sy:CGFloat, _ animated:Bool = false)-> Drawable{
+   public func setPathScale(sx:CGFloat,sy:CGFloat)-> Drawable{
        mPathScaleX = sx
        mPathScaleY = sy
        return self
@@ -293,13 +306,17 @@ public class Drawable: CAShapeLayer {
         if(mFirstBounds.width > 0 && mFirstBounds.height > 0){
             setupRect()
             setupPath()
-            
+            setupBlurVisualEffect()
             makeTransform()
         }
      
         
     }
     
+    private func setupBlurVisualEffect(){
+        mBlurVisualEffect?.frame = CGRect(x: 0, y: 0, width: mRect.width, height: mRect.height)
+        
+    }
     
     private func setupRect(){
         mRect.set(rect: mBaseRect)
@@ -309,6 +326,8 @@ public class Drawable: CAShapeLayer {
         super.frame = mRect
         super.position.x = mRect.width / 2
         super.position.y = mRect.height / 2
+     
+     
     }
     
     private func setupPath(){
@@ -446,9 +465,9 @@ public class Drawable: CAShapeLayer {
  
     //MARK : public override
     
-       public override var backgroundColor :CGColor? {
-           set { print("Drawable - Background is not supported") }
-           get { return super.backgroundColor }
-       }
+//       public override var backgroundColor :CGColor? {
+//           set { print("Drawable - Background is not supported") }
+//           get { return super.backgroundColor }
+//       }
       
 }

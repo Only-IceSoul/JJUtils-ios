@@ -10,8 +10,9 @@ import jjutils
 
 class DrawableView: UIView {
     
+ 
     let mBg = JJDrawable()
-    let mShadow = JJDrawable()
+
     
     let cabeza = "M45.09,10.69a29,29,0,0,0-29,29s-1.39,12.88,11.11,26.4V89.37H59.62v-12h10.3a6.25,6.25,0,0,0,6.25-6.25V60.71c2.3-.52,8.05-2.68,7.83-4.56-.25-2.15-6.57-16.42-6.57-16.42C71.87,7.91,45.09,10.69,45.09,10.69Z"
     let cabezaPart = "M45.09,10.69a29,29,0,0,0-29,29"
@@ -19,37 +20,39 @@ class DrawableView: UIView {
     init() {
         super.init(frame: .zero)
         
-//        layer.addSublayer(mShadow)
-        layer.addSublayer(mBg)
 
+        layer.addSublayer(mBg)
         
         
         
+        backgroundColor = UIColor.clear
+        layer.backgroundColor = UIColor.clear.cgColor
+        mBg.backgroundColor = UIColor.clear.cgColor
+//
         mBg
-            .setRadius(topLeft: 90, topRight: 20, bottomLeft: 20, bottomRight: 75)
-            .setFillColor(c: UIColor.green.cgColor)
-            .setBackgroundColor(c: UIColor.red.cgColor)
-//
-//
-        mShadow
+            .setFillColor(c: UIColor.red.cgColor)
             .setSvgPath(d: other,viewBox: [0,0,20,20])
             .setShape(s: .svgPath)
-            .setShadowOpacity(o: 0.3)
+            .setShadowOpacity(o: 1)
             .setShadowRadius(r: 10)
-            .setPathScale(sx: 1.1, sy: 1.1)
-           
-       
+            .setStrokeWidth(w: 2)
+            .setStrokeColor(color: UIColor.green.cgColor)
+            .setStrokeStart(s: 0.5)
+            .setStrokeEnd(e: 0.8)
+//            .setBackgroundColor(c: UIColor.green.cgColor)
+//            .setBlurVisualEffect(radius:10)
         
-          
-  
+   
+        
     
         
     }
     
+    
     override var bounds: CGRect{
         didSet{
             mBg.onBoundsChange(bounds)
-            mShadow.onBoundsChange(bounds)
+            
         }
     }
     
@@ -63,6 +66,7 @@ class DrawableView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+//        layer.backgroundColor = UIColor.red.cgColor
      
     }
 }
