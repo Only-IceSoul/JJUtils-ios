@@ -21,12 +21,7 @@ public class JJDrawable: CAShapeLayer {
   
     }
         
-    //MARK: Blur set and get
-    @discardableResult
-    public func setBlurVisualEffect(radius:CGFloat,style:UIBlurEffect.Style = .light)-> JJDrawable{
-        mDrawable.setBlurVisualEffect(radius: radius,style:style)
-       return self
-   }
+
     //MARK: Path set and get
     @discardableResult
    public func setPathScale(sx:CGFloat,sy:CGFloat)-> JJDrawable{

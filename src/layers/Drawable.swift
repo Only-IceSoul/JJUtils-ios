@@ -45,10 +45,6 @@ public class Drawable: CAShapeLayer {
     private var mVbRect = CGRect()
     
     
-    //MARK: Blur
-    
-    private var mBlurVisualEffect : VisualEffectView?
-    
     //MARK: Path propertys
     private var mPath  = UIBezierPath()
     private var mPathScaleX:CGFloat = 1
@@ -71,15 +67,7 @@ public class Drawable: CAShapeLayer {
         super.shadowColor = UIColor.black.cgColor
     }
         
-    
-    //MARK: Blur set and get
-    @discardableResult
-   public func setBlurVisualEffect(radius:CGFloat,style:UIBlurEffect.Style)-> Drawable{
-       mBlurVisualEffect?.layer.removeFromSuperlayer()
-       mBlurVisualEffect = VisualEffectView()
-       addSublayer(mBlurVisualEffect!.layer)
-       return self
-   }
+
     
     //MARK: Path set and get
     @discardableResult
@@ -276,7 +264,7 @@ public class Drawable: CAShapeLayer {
     
     //MARK: layer methods
     
-    public func onBoundsChange(_ frame: CGRect){
+    public func onBoundsChange(_ frame: CGRect,invalidate:Bool = true){
         mFirstBounds.set(rect: frame)
         
         if(mIsBoundsPercentPos){
@@ -298,25 +286,23 @@ public class Drawable: CAShapeLayer {
             mBaseRect.set(rect: frame)
         }
         
+     
           
-          draw(frame)
+        if invalidate { invalidateSelf() }
     }
     
     private func draw(_ bounds:CGRect){
         if(mFirstBounds.width > 0 && mFirstBounds.height > 0){
             setupRect()
             setupPath()
-            setupBlurVisualEffect()
+      
             makeTransform()
         }
      
         
     }
     
-    private func setupBlurVisualEffect(){
-        mBlurVisualEffect?.frame = CGRect(x: 0, y: 0, width: mRect.width, height: mRect.height)
-        
-    }
+ 
     
     private func setupRect(){
         mRect.set(rect: mBaseRect)

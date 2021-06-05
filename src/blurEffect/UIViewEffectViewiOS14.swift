@@ -32,7 +32,7 @@ extension UIVisualEffectView {
     }
 }
 
-private extension UIVisualEffectView {
+extension UIVisualEffectView {
     var backdropView: UIView? {
         return subview(of: NSClassFromString("_UIVisualEffectBackdropView"))
     }
@@ -54,7 +54,7 @@ private extension UIVisualEffectView {
     }
 }
 
-private extension NSObject {
+extension NSObject {
     var requestedValues: [String: Any]? {
         get { return value(forKeyPath: "requestedValues") as? [String: Any] }
         set { setValue(newValue, forKeyPath: "requestedValues") }
@@ -64,7 +64,7 @@ private extension NSObject {
     }
 }
 
-private extension UIView {
+extension UIView {
     func subview(of classType: AnyClass?) -> UIView? {
         return subviews.first { type(of: $0) == classType }
     }

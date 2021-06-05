@@ -7,12 +7,15 @@
 
 import UIKit
 import jjutils
+import CoreImage
+import CoreImage.CIFilterBuiltins
 
 class DrawableView: UIView {
     
  
-    let mBg = JJDrawable()
+    let mBg = JJFilteredDrawable()
 
+    let skiaLayer = SkiaDrawable()
     
     let cabeza = "M45.09,10.69a29,29,0,0,0-29,29s-1.39,12.88,11.11,26.4V89.37H59.62v-12h10.3a6.25,6.25,0,0,0,6.25-6.25V60.71c2.3-.52,8.05-2.68,7.83-4.56-.25-2.15-6.57-16.42-6.57-16.42C71.87,7.91,45.09,10.69,45.09,10.69Z"
     let cabezaPart = "M45.09,10.69a29,29,0,0,0-29,29"
@@ -25,34 +28,31 @@ class DrawableView: UIView {
         
         
         
-        backgroundColor = UIColor.clear
-        layer.backgroundColor = UIColor.clear.cgColor
-        mBg.backgroundColor = UIColor.clear.cgColor
+//        backgroundColor = UIColor.clear
+//        layer.backgroundColor = UIColor.clear.cgColor
+//        mBg.backgroundColor = UIColor.clear.cgColor
 //
         mBg
             .setFillColor(c: UIColor.red.cgColor)
             .setSvgPath(d: other,viewBox: [0,0,20,20])
             .setShape(s: .svgPath)
-            .setShadowOpacity(o: 1)
-            .setShadowRadius(r: 10)
-            .setStrokeWidth(w: 2)
-            .setStrokeColor(color: UIColor.green.cgColor)
-            .setStrokeStart(s: 0.5)
-            .setStrokeEnd(e: 0.8)
-//            .setBackgroundColor(c: UIColor.green.cgColor)
-//            .setBlurVisualEffect(radius:10)
-        
-   
-        
+            .setBlur(radius: 10)
+//            .setBackgroundColor(c: UIColor.blue.cgColor)
+//            .setShadowOpacity(o: 1)
+//            .setShadowRadius(r: 10)
+//            .setStrokeWidth(w: 2)
+//            .setStrokeColor(color: UIColor.green.cgColor)
+//            .setStrokeStart(s: 0.5)
+//            .setStrokeEnd(e: 0.8)
+
     
         
     }
     
-    
+    private var mDd = JJDrawable()
     override var bounds: CGRect{
         didSet{
             mBg.onBoundsChange(bounds)
-            
         }
     }
     
@@ -67,6 +67,16 @@ class DrawableView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
 //        layer.backgroundColor = UIColor.red.cgColor
+        
+//        let anim = CABasicAnimation(keyPath: #keyPath(JJBlurredDrawable.blur))
+//
+//        anim.fromValue = 0
+//        anim.toValue =  15
+//        anim.duration = 5
+//        anim.fillMode = kCAFillModeForwards
+//        anim.isRemovedOnCompletion = false
+//
+//        mBg.add(anim, forKey: nil)
      
     }
 }

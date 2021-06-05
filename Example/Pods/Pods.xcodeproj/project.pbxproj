@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,11 +30,23 @@
 		D001C2F4263B0A8500443894 /* extension_CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001C2EC263B0A8400443894 /* extension_CGFloat.swift */; };
 		D001C2F5263B0A8500443894 /* extension_UIBezierPathUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001C2ED263B0A8400443894 /* extension_UIBezierPathUpper.swift */; };
 		D001C2F6263B0A8500443894 /* extension_CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001C2EE263B0A8500443894 /* extension_CALayer.swift */; };
+		D041ED862667216A00F92CF2 /* extension_bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041ED852667216A00F92CF2 /* extension_bitwise.swift */; };
+		D041ED872667216A00F92CF2 /* extension_bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041ED852667216A00F92CF2 /* extension_bitwise.swift */; };
+		D041ED882667216A00F92CF2 /* extension_bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041ED852667216A00F92CF2 /* extension_bitwise.swift */; };
+		D042693126697126007FA718 /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042693026697125007FA718 /* SkiaKit.framework */; };
+		D042693226697126007FA718 /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042693026697125007FA718 /* SkiaKit.framework */; platformFilter = ios; };
+		D042693326697126007FA718 /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042693026697125007FA718 /* SkiaKit.framework */; platformFilter = ios; };
+		D04269342669712C007FA718 /* SkiaKit.framework in copy skiakit */ = {isa = PBXBuildFile; fileRef = D042693026697125007FA718 /* SkiaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D04886F6266AC4710041F69B /* extension_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04886F5266AC4710041F69B /* extension_UIImage.swift */; };
+		D04886FA266AC5EF0041F69B /* extension_CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04886F9266AC5EF0041F69B /* extension_CGImage.swift */; };
+		D04886FE266AC6BD0041F69B /* JJFilteredDrawableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04886FD266AC6BD0041F69B /* JJFilteredDrawableView.swift */; };
+		D0488706266AD4A00041F69B /* JJFilteredDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0488705266AD4A00041F69B /* JJFilteredDrawable.swift */; };
 		D0CC6756264071E9002525AC /* extension_UIVIsualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6755264071E9002525AC /* extension_UIVIsualEffect.swift */; };
 		D0CC675B2640720A002525AC /* CustomBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC675A2640720A002525AC /* CustomBlurEffect.swift */; };
 		D0CC67622640723C002525AC /* JJBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC67612640723C002525AC /* JJBlurEffect.swift */; };
 		D0CC676826407C3A002525AC /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC676726407C3A002525AC /* VisualEffectView.swift */; };
 		D0CC677026407C4E002525AC /* UIViewEffectViewiOS14.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC676F26407C4E002525AC /* UIViewEffectViewiOS14.swift */; };
+		D0E01D652666C66000D2E9CD /* SkiaDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E01D642666C66000D2E9CD /* SkiaDrawable.swift */; };
 		E4741DD7203DDE775D196607A0134BFB /* Pods-jjutils_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 319A938125330FE84F18679B8926BC6D /* Pods-jjutils_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F511668125084B2EB8659EF735FF8A4C /* Pods-jjutils_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 245F1772B288FF883C817B3444838BA2 /* Pods-jjutils_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F753AA7FD9A19822BC6198FB18944807 /* jjutils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEA393912394F32DE43F637CE466866C /* jjutils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +68,20 @@
 			remoteInfo = jjutils;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0E01D802666CBFC00D2E9CD /* copy skiakit */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D04269342669712C007FA718 /* SkiaKit.framework in copy skiakit */,
+			);
+			name = "copy skiakit";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		048BBC965BD92BF22B0E25C8272B2275 /* Pods-jjutils_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-jjutils_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -101,11 +127,18 @@
 		D001C2EC263B0A8400443894 /* extension_CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_CGFloat.swift; sourceTree = "<group>"; };
 		D001C2ED263B0A8400443894 /* extension_UIBezierPathUpper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPathUpper.swift; sourceTree = "<group>"; };
 		D001C2EE263B0A8500443894 /* extension_CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_CALayer.swift; sourceTree = "<group>"; };
+		D041ED852667216A00F92CF2 /* extension_bitwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension_bitwise.swift; sourceTree = "<group>"; };
+		D042693026697125007FA718 /* SkiaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SkiaKit.framework; sourceTree = "<group>"; };
+		D04886F5266AC4710041F69B /* extension_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension_UIImage.swift; sourceTree = "<group>"; };
+		D04886F9266AC5EF0041F69B /* extension_CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension_CGImage.swift; sourceTree = "<group>"; };
+		D04886FD266AC6BD0041F69B /* JJFilteredDrawableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJFilteredDrawableView.swift; sourceTree = "<group>"; };
+		D0488705266AD4A00041F69B /* JJFilteredDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJFilteredDrawable.swift; sourceTree = "<group>"; };
 		D0CC6755264071E9002525AC /* extension_UIVIsualEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_UIVIsualEffect.swift; sourceTree = "<group>"; };
 		D0CC675A2640720A002525AC /* CustomBlurEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBlurEffect.swift; sourceTree = "<group>"; };
 		D0CC67612640723C002525AC /* JJBlurEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJBlurEffect.swift; sourceTree = "<group>"; };
 		D0CC676726407C3A002525AC /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		D0CC676F26407C4E002525AC /* UIViewEffectViewiOS14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEffectViewiOS14.swift; sourceTree = "<group>"; };
+		D0E01D642666C66000D2E9CD /* SkiaDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiaDrawable.swift; sourceTree = "<group>"; };
 		D93BE88340A8E1CED15D417FF36F3F1D /* jjutils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = jjutils.debug.xcconfig; sourceTree = "<group>"; };
 		E8F322EAAE187BFB860D95D8DD498EBC /* Pods_jjutils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jjutils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92D369DB5EDAE42A4776998C8D43439 /* jjutils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = jjutils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -120,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				760DC6617DAB87EC2E78B7EF71A4A98E /* Foundation.framework in Frameworks */,
+				D042693226697126007FA718 /* SkiaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5246CA225C0704FAA440F29C3ABADA7D /* Foundation.framework in Frameworks */,
+				D042693326697126007FA718 /* SkiaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				339FE3812E5848A9BD32B2817CE5CE07 /* Foundation.framework in Frameworks */,
+				D042693126697126007FA718 /* SkiaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +196,7 @@
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D042693026697125007FA718 /* SkiaKit.framework */,
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
@@ -268,6 +305,9 @@
 				D001C2DA263B0A5800443894 /* LayerCircleProgress.swift */,
 				D001C2DC263B0A5800443894 /* LayerClip.swift */,
 				D001C2D5263B0A4700443894 /* Drawable.swift */,
+				D0E01D642666C66000D2E9CD /* SkiaDrawable.swift */,
+				D04886FD266AC6BD0041F69B /* JJFilteredDrawableView.swift */,
+				D0488705266AD4A00041F69B /* JJFilteredDrawable.swift */,
 			);
 			path = layers;
 			sourceTree = "<group>";
@@ -279,11 +319,14 @@
 				D001C2EE263B0A8500443894 /* extension_CALayer.swift */,
 				D001C2E7263B0A8400443894 /* extension_CAShapeLayer.swift */,
 				D001C2EC263B0A8400443894 /* extension_CGFloat.swift */,
+				D04886F9266AC5EF0041F69B /* extension_CGImage.swift */,
 				D001C2EB263B0A8400443894 /* extension_CGRect.swift */,
 				D001C2EA263B0A8400443894 /* extension_string.swift */,
 				D001C2E9263B0A8400443894 /* extension_UIBezierPath.swift */,
 				D001C2ED263B0A8400443894 /* extension_UIBezierPathUpper.swift */,
 				D001C2E8263B0A8400443894 /* extension_UIColor.swift */,
+				D041ED852667216A00F92CF2 /* extension_bitwise.swift */,
+				D04886F5266AC4710041F69B /* extension_UIImage.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -375,6 +418,7 @@
 				DD5522B3FD47B936BB11B4DE264951F5 /* Sources */,
 				F45AC3C31ED76DD3E7C2E5416EDF92C4 /* Frameworks */,
 				84032C99B84A8687A14CBCA7DDEA0B1F /* Resources */,
+				D0E01D802666CBFC00D2E9CD /* copy skiakit */,
 			);
 			buildRules = (
 			);
@@ -413,7 +457,13 @@
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				TargetAttributes = {
+					0A76BB7460E3A19B3EEC26DF80B1C356 = {
+						LastSwiftMigration = 1220;
+					};
 					454D442657ACE64A352DA1B1A9540794 = {
+						LastSwiftMigration = 1220;
+					};
+					9ED1BF184D1F922CCE018B46CF6DBBD8 = {
 						LastSwiftMigration = 1220;
 					};
 				};
@@ -468,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3DC33045D9F3C7CE1D85483CB38CE75 /* Pods-jjutils_Example-dummy.m in Sources */,
+				D041ED872667216A00F92CF2 /* extension_bitwise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,14 +526,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04886FA266AC5EF0041F69B /* extension_CGImage.swift in Sources */,
 				D0CC677026407C4E002525AC /* UIViewEffectViewiOS14.swift in Sources */,
 				D001C2CF263B0A2400443894 /* ViewBox.swift in Sources */,
 				D001C2DF263B0A5800443894 /* JJRegistrationCompletedView.swift in Sources */,
 				9DC2CA0733DF271BA52CA1DD9ABD7CA3 /* jjutils-dummy.m in Sources */,
 				D001C2F0263B0A8500443894 /* extension_UIColor.swift in Sources */,
+				D04886F6266AC4710041F69B /* extension_UIImage.swift in Sources */,
 				D001C2E0263B0A5800443894 /* LayerClip.swift in Sources */,
 				D001C2EF263B0A8500443894 /* extension_CAShapeLayer.swift in Sources */,
 				D001C2F1263B0A8500443894 /* extension_UIBezierPath.swift in Sources */,
+				D0488706266AD4A00041F69B /* JJFilteredDrawable.swift in Sources */,
+				D04886FE266AC6BD0041F69B /* JJFilteredDrawableView.swift in Sources */,
 				D001C2CD263B0A2400443894 /* PathElement.swift in Sources */,
 				D001C2D6263B0A4700443894 /* Drawable.swift in Sources */,
 				D001C2DE263B0A5800443894 /* LayerCircleProgress.swift in Sources */,
@@ -496,8 +551,10 @@
 				D0CC676826407C3A002525AC /* VisualEffectView.swift in Sources */,
 				D0CC67622640723C002525AC /* JJBlurEffect.swift in Sources */,
 				D001C2F4263B0A8500443894 /* extension_CGFloat.swift in Sources */,
+				D041ED862667216A00F92CF2 /* extension_bitwise.swift in Sources */,
 				D0CC675B2640720A002525AC /* CustomBlurEffect.swift in Sources */,
 				D001C2E1263B0A5800443894 /* JJDrawable.swift in Sources */,
+				D0E01D652666C66000D2E9CD /* SkiaDrawable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E8291B4A8067D8864BD25F62781C49 /* Pods-jjutils_Tests-dummy.m in Sources */,
+				D041ED882667216A00F92CF2 /* extension_bitwise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,16 +598,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "Target Support Files/jjutils/jjutils-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/jjutils/jjutils-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/jjutils/jjutils.modulemap";
 				PRODUCT_MODULE_NAME = jjutils;
 				PRODUCT_NAME = jjutils;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -612,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -630,6 +697,7 @@
 			baseConfigurationReference = B4A0851E0E4FAEB5D5011D919F48095F /* Pods-jjutils_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -638,10 +706,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -651,6 +727,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -670,16 +748,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "Target Support Files/jjutils/jjutils-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/jjutils/jjutils-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/jjutils/jjutils.modulemap";
 				PRODUCT_MODULE_NAME = jjutils;
 				PRODUCT_NAME = jjutils;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -694,6 +781,7 @@
 			baseConfigurationReference = B10DBEB54790508DAE4A4C0E6206DC30 /* Pods-jjutils_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -702,10 +790,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -715,6 +811,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -726,6 +824,7 @@
 			baseConfigurationReference = 79DEB755199B5827A8DAEFB99F3475A5 /* Pods-jjutils_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -734,10 +833,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -747,6 +854,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -759,6 +867,7 @@
 			baseConfigurationReference = A7CEFBFAA370950C53D7510A90738D25 /* Pods-jjutils_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -767,10 +876,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -780,6 +897,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -837,12 +955,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

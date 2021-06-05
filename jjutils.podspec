@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'jjutils'
-  s.version          = '1.3.1'
+  s.version          = '1.3.2'
   s.summary          = 'utils for swift'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Class for create app faster
   s.source           = { :git => 'https://github.com/Only-IceSoul/JJUtils-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'src/**/*.swift'
   s.swift_version = '4.2'
