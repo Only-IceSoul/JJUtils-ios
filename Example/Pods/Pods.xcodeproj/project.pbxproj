@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,10 +33,6 @@
 		D041ED862667216A00F92CF2 /* extension_bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041ED852667216A00F92CF2 /* extension_bitwise.swift */; };
 		D041ED872667216A00F92CF2 /* extension_bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041ED852667216A00F92CF2 /* extension_bitwise.swift */; };
 		D041ED882667216A00F92CF2 /* extension_bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041ED852667216A00F92CF2 /* extension_bitwise.swift */; };
-		D042693126697126007FA718 /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042693026697125007FA718 /* SkiaKit.framework */; };
-		D042693226697126007FA718 /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042693026697125007FA718 /* SkiaKit.framework */; platformFilter = ios; };
-		D042693326697126007FA718 /* SkiaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042693026697125007FA718 /* SkiaKit.framework */; platformFilter = ios; };
-		D04269342669712C007FA718 /* SkiaKit.framework in copy skiakit */ = {isa = PBXBuildFile; fileRef = D042693026697125007FA718 /* SkiaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D04886F6266AC4710041F69B /* extension_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04886F5266AC4710041F69B /* extension_UIImage.swift */; };
 		D04886FA266AC5EF0041F69B /* extension_CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04886F9266AC5EF0041F69B /* extension_CGImage.swift */; };
 		D04886FE266AC6BD0041F69B /* JJFilteredDrawableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04886FD266AC6BD0041F69B /* JJFilteredDrawableView.swift */; };
@@ -76,7 +72,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D04269342669712C007FA718 /* SkiaKit.framework in copy skiakit */,
 			);
 			name = "copy skiakit";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +123,6 @@
 		D001C2ED263B0A8400443894 /* extension_UIBezierPathUpper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPathUpper.swift; sourceTree = "<group>"; };
 		D001C2EE263B0A8500443894 /* extension_CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension_CALayer.swift; sourceTree = "<group>"; };
 		D041ED852667216A00F92CF2 /* extension_bitwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension_bitwise.swift; sourceTree = "<group>"; };
-		D042693026697125007FA718 /* SkiaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SkiaKit.framework; sourceTree = "<group>"; };
 		D04886F5266AC4710041F69B /* extension_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension_UIImage.swift; sourceTree = "<group>"; };
 		D04886F9266AC5EF0041F69B /* extension_CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension_CGImage.swift; sourceTree = "<group>"; };
 		D04886FD266AC6BD0041F69B /* JJFilteredDrawableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJFilteredDrawableView.swift; sourceTree = "<group>"; };
@@ -153,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				760DC6617DAB87EC2E78B7EF71A4A98E /* Foundation.framework in Frameworks */,
-				D042693226697126007FA718 /* SkiaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5246CA225C0704FAA440F29C3ABADA7D /* Foundation.framework in Frameworks */,
-				D042693326697126007FA718 /* SkiaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				339FE3812E5848A9BD32B2817CE5CE07 /* Foundation.framework in Frameworks */,
-				D042693126697126007FA718 /* SkiaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +187,6 @@
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D042693026697125007FA718 /* SkiaKit.framework */,
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
@@ -606,11 +596,7 @@
 				INFOPLIST_FILE = "Target Support Files/jjutils/jjutils-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/jjutils/jjutils.modulemap";
 				PRODUCT_MODULE_NAME = jjutils;
 				PRODUCT_NAME = jjutils;
@@ -713,11 +699,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -756,11 +738,7 @@
 				INFOPLIST_FILE = "Target Support Files/jjutils/jjutils-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/jjutils/jjutils.modulemap";
 				PRODUCT_MODULE_NAME = jjutils;
 				PRODUCT_NAME = jjutils;
@@ -797,11 +775,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -840,11 +814,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -883,11 +853,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -960,8 +926,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

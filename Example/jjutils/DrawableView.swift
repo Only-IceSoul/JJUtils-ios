@@ -14,8 +14,6 @@ class DrawableView: UIView {
     
  
     let mBg = JJFilteredDrawable()
-
-    let skiaLayer = SkiaDrawable()
     
     let cabeza = "M45.09,10.69a29,29,0,0,0-29,29s-1.39,12.88,11.11,26.4V89.37H59.62v-12h10.3a6.25,6.25,0,0,0,6.25-6.25V60.71c2.3-.52,8.05-2.68,7.83-4.56-.25-2.15-6.57-16.42-6.57-16.42C71.87,7.91,45.09,10.69,45.09,10.69Z"
     let cabezaPart = "M45.09,10.69a29,29,0,0,0-29,29"
