@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'jjutils'
-  s.version          = '1.3.5'
+  s.version          = '1.3.6'
   s.summary          = 'utils for swift'
 
 # This description is used to generate tags and improve search results.
@@ -38,6 +38,11 @@ Class for create app faster
   
   s.ios.preserve_paths = 'src/Frameworks'
   s.public_header_files = 'src/Frameworks/**/Headers/*.{h}'
+
+  s.pod_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)' ,
+ 'ONLY_ACTIVE_ARCH' => 'YES'}
+  s.user_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)', 'ONLY_ACTIVE_ARCH' => 'YES'}
+  
 #  s.ios.preserve_paths = 'src/Frameworks' , 'src/obj'
 #  s.public_header_files = 'src/Frameworks/**/Headers/*.{h}' , 'src/obj/Headers/*.{h}'
 
@@ -47,6 +52,6 @@ Class for create app faster
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  # s.frameworks = 'SkiaKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
