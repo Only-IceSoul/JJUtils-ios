@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'jjutils'
-  s.version          = '1.3.3'
+  s.version          = '1.3.4'
   s.summary          = 'utils for swift'
 
 # This description is used to generate tags and improve search results.
@@ -30,8 +30,18 @@ Class for create app faster
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'src/**/*.swift'
+  s.source_files = ['src/**/*.{swift,h,m}']
   s.swift_version = '4.2'
+  
+  
+  s.vendored_frameworks = 'src/Frameworks/*.framework'
+  
+  s.ios.preserve_paths = 'src/Frameworks'
+  s.public_header_files = 'src/Frameworks/**/Headers/*.{h}'
+#  s.ios.preserve_paths = 'src/Frameworks' , 'src/obj'
+#  s.public_header_files = 'src/Frameworks/**/Headers/*.{h}' , 'src/obj/Headers/*.{h}'
+
+  
   # s.resource_bundles = {
   #   'jjutils' => ['jjutils/Assets/*.png']
   # }

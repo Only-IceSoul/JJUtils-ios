@@ -14,7 +14,9 @@ private enum Constants {
        static let colorTintAlphaKey = "colorTintAlpha"
    }
 
+
 class ViewController: UIViewController {
+    
     
     var mView = DrawableView()
     var view2 = UIView()
@@ -31,17 +33,18 @@ class ViewController: UIViewController {
 //        view2.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
 //        view2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
 //        
-//        mView.setFillColor(c: UIColor.red.cgColor)
-//            .setSvgPath(d: other,viewBox: [0,0,20,20])
-//            .setShape(s: .svgPath)
-//            .setBlur(radius: 5)
+
+       
         view.addSubview(mView)
+        mView.backgroundColor = UIColor.purple
         mView.translatesAutoresizingMaskIntoConstraints = false
         mView.widthAnchor.constraint(equalToConstant: 240).isActive = true
         mView.heightAnchor.constraint(equalToConstant: 240).isActive = true
         mView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         mView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
-       
+        
+//        let mDisplay = CADisplayLink(target: self, selector: #selector(self.displayAnimation(_:)))
+//        mDisplay.add(to: .main, forMode: .defaultRunLoopMode)
 
         
 //        let b = VisualEffectView(frame: CGRect(x: 0, y: 0, width: 240, height: 240))
@@ -56,7 +59,32 @@ class ViewController: UIViewController {
         
     }
     
+    var percent:CGFloat = 0
+    var mFirst = false
+    @objc func displayAnimation(_ link:CADisplayLink){
+//        if !mFirst{
+//            mFirst = true
+//          let framerate =   Int(round(1.0 / Double(link.duration)))
+//            print(framerate)
+//        }
+//
+        if !mFirst{
+            percent += 0.003333333
+            if percent > 1{
+//                mFirst = true
+                percent = 0
+            }
+            mView.setStrokeEnd(percent)
+        }
+        
+        
+    }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+       
+    }
    
   
 

@@ -12,7 +12,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 
 ```
-   ios 11+
+   ios 10+
 ```
 
 ## Installation

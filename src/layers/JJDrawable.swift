@@ -83,12 +83,13 @@ public class JJDrawable: CAShapeLayer {
     
     @discardableResult
    public func setStrokeStart(s:CGFloat) -> JJDrawable{
-    mDrawable.strokeStart = s
+    mDrawable.setStrokeStart(s: s)
        return self
    }
     @discardableResult
    public func setStrokeEnd(e:CGFloat) -> JJDrawable{
-    mDrawable.strokeEnd = e
+    mDrawable.setStrokeEnd(e: e)
+ 
        return self
    }
     //MARK: LAYER SET
@@ -198,6 +199,10 @@ public class JJDrawable: CAShapeLayer {
     }
     
     
+    public func getStrokeEnd()->CGFloat{
+        return mDrawable.strokeEnd
+    }
+    
     //MARK: layer methods
     
     public func onBoundsChange(_ frame: CGRect){
@@ -233,6 +238,14 @@ public class JJDrawable: CAShapeLayer {
         fatalError("init(coder:) has not been implemented")
     }
  
-
+    private func disableAnimation(){
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+    }
+    
+    private func commit(){
+        CATransaction.commit()
+    }
+    
  
 }

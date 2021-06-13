@@ -5,9 +5,10 @@
 //  Created by Juan J LF on 6/4/21.
 //
 
+//not Animatable , slow, example class using CIFilter
 import UIKit
 public class JJFilteredDrawable: CALayer {
-    
+
 
     private let mDrawable = JJDrawable()
     private var mBlurRadius:Float = 0
@@ -83,12 +84,12 @@ public class JJFilteredDrawable: CALayer {
     
     @discardableResult
    public func setStrokeStart(s:CGFloat) -> JJFilteredDrawable{
-    mDrawable.strokeStart = s
+    mDrawable.setStrokeEnd(e: s)
        return self
    }
     @discardableResult
    public func setStrokeEnd(e:CGFloat) -> JJFilteredDrawable{
-    mDrawable.strokeEnd = e
+    mDrawable.setStrokeEnd(e: e)
        return self
    }
     //MARK: LAYER SET
@@ -209,29 +210,46 @@ public class JJFilteredDrawable: CALayer {
         mDrawable.invalidateSelf()
         setNeedsDisplay()
     }
-//    @objc public dynamic var blur : CGFloat = 0
-//    @objc public override class func needsDisplay(forKey key: String) -> Bool {
-//        if(key == #keyPath(JJBlurredDrawable.blur)) { return true }
-//
-//        return super.needsDisplay(forKey: key)
-//    }
+    @objc public dynamic var blur : CGFloat {
+        set{
+            mBlurRadius = Float(newValue)
+        }
+        get{
+            CGFloat(mBlurRadius)
+        }
+    }
+    @objc public override class func needsDisplay(forKey key: String) -> Bool {
+        if(key == #keyPath(JJFilteredDrawable.blur)) { return true }
+
+        return super.needsDisplay(forKey: key)
+    }
+    private let contextCg = CIContext.init(options: nil)
     public override func display() {
         super.display()
-//        let value = self.presentation()?.blur ?? self.blur
+        
+        //20ms
+        let value = self.presentation()?.blur ?? self.blur
         let img = mImageRenderer.image { (c) in
             mDrawable.render(in: c.cgContext)
         }
-        if let result:CIImage = img.blurCI(mBlurRadius){
-           let c = CIContext.init(options: nil)
-           let cg = c.createCGImage(result, from: result.extent)
-            self.contents = cg
-       }
+    
+        if value <= 0 {
+            self.contents = img.cgImage!
+        }else{
+            //200ms to 400ms
+            if let result:CIImage = img.blur(Float(value)){
+               let cg = contextCg.createCGImage(result, from: result.extent)
+                self.contents = cg
+
+           }
+        }
+      
     
     }
-//    override init(layer: Any) {
-//        super.init(layer: layer)
-//        if let ol = layer as? JJBlurredDrawable { self.blur = ol.blur }
-//    }
+    override init(layer: Any) {
+        super.init(layer: layer)
+        if let ol = layer as? JJFilteredDrawable { self.blur = ol.blur }
+    }
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

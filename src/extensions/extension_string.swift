@@ -26,10 +26,10 @@ extension String {
         let toIndex = index(from: to)
         return String(self[..<toIndex])
     }
-    func substring(with r: Range<Int>) -> String {
+    func substring(with r: Range<Int>) -> Substring {
         let startIndex = index(from: r.lowerBound)
         let endIndex = index(from: r.upperBound)
-        return String(self[startIndex..<endIndex])
+        return self[startIndex..<endIndex]
     }
     
     var isNotEmpty : Bool {

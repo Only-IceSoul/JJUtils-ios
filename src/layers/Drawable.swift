@@ -103,22 +103,30 @@ public class Drawable: CAShapeLayer {
     
     @discardableResult
    public func setShadowOffset(p:CGSize) -> Drawable{
+    disableAnimation()
        super.shadowOffset = p
+    commit()
        return self
    }
     @discardableResult
    public func setShadowRadius(r:CGFloat) -> Drawable{
+    disableAnimation()
        super.shadowRadius = r
+    commit()
        return self
    }
     @discardableResult
    public func setShadowOpacity(o:Float) -> Drawable{
+    disableAnimation()
        super.shadowOpacity = o
+    commit()
        return self
    }
     @discardableResult
    public func setShadowColor(c:CGColor) -> Drawable{
+    disableAnimation()
        super.shadowColor = c
+    commit()
        return self
    }
     
@@ -126,15 +134,33 @@ public class Drawable: CAShapeLayer {
     
     @discardableResult
    public func setStrokeWidth(w:CGFloat) -> Drawable{
+        disableAnimation()
        super.lineWidth = w
+        commit()
        return self
    }
     @discardableResult
    public func setStrokeColor(color:CGColor) -> Drawable{
+        disableAnimation()
        super.strokeColor = color
+        commit()
        return self
    }
     
+    @discardableResult
+   public func setStrokeStart(s:CGFloat) -> Drawable{
+    disableAnimation()
+    super.strokeStart = s
+    commit()
+       return self
+   }
+    @discardableResult
+   public func setStrokeEnd(e:CGFloat) -> Drawable{
+     disableAnimation()
+    super.strokeEnd = e
+    commit()
+       return self
+   }
     //MARK: LAYER SET
     
     @discardableResult
@@ -169,15 +195,17 @@ public class Drawable: CAShapeLayer {
    }
     @discardableResult
    public func setFillColor(c:CGColor) -> Drawable{
+        disableAnimation()
        super.fillColor = c
+    commit()
        return self
    }
    
     
      @discardableResult
     public func setInset(dx:CGFloat,dy:CGFloat) -> Drawable{
-        mInsetY = dy.normalizedNotNegative()
-        mInsetX = dx.normalizedNotNegative()
+        mInsetY = dy.clampNotNegative()
+        mInsetX = dx.clampNotNegative()
         return self
     }
     
@@ -256,8 +284,8 @@ public class Drawable: CAShapeLayer {
         mIsBoundsPercentSize = percentSize
         mBoundsX = x
         mBoundsY = y
-        mBoundsWidth = width.normalizedNotNegative()
-        mBoundsHeight = height.normalizedNotNegative()
+        mBoundsWidth = width.clampNotNegative()
+        mBoundsHeight = height.clampNotNegative()
         return self
     }
     
@@ -326,10 +354,10 @@ public class Drawable: CAShapeLayer {
             mPath.addRoundRect(mRect, radius: mRadius)
             break
         case .radiusRelativeToHeight,.radiusRelativeToWidth :
-            let tl = mRadius[0].normalized()
-            let tr = mRadius[1].normalized()
-            let bl = mRadius[2].normalized()
-            let br = mRadius[3].normalized()
+            let tl = mRadius[0].clamp()
+            let tr = mRadius[1].clamp()
+            let bl = mRadius[2].clamp()
+            let br = mRadius[3].clamp()
             var size = mShape == .radiusRelativeToWidth ? mRect.width : 0
             size = mShape == .radiusRelativeToHeight ? mRect.height : size
             mRadius[0] = tl * size
@@ -341,7 +369,9 @@ public class Drawable: CAShapeLayer {
             break
    
         case .svgPath:
+  
                 mPath = PathParser.parse(d: mSvgPath)
+         
                 if mVbRect.width > 0 && mVbRect.height > 0 {
                     let trans = ViewBox.transform(vbRect: mVbRect, eRect: mRect, align: mSvgAlign, meetOrSlice: mSvgAspect)
                   
