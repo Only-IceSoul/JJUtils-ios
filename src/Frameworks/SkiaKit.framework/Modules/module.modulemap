@@ -2,7 +2,7 @@ framework module SkiaKit {
 //  umbrella header "SkiaKit.h"
 
   export *
-  module * { export * }
+//  module * { export * }
 }
 
 module SkiaKit.Swift {
