@@ -1,11 +1,11 @@
-framework module SkiaKit {
-  umbrella header "SkiaKit.h"
-
-  export *
-//  module * { export * }
-}
+//framework module SkiaKit {
+//  umbrella header "SkiaKit.h"
 //
-module SkiaKit.Swift {
-    header "SkiaKit-Swift.h"
-    requires objc
-}
+//  export *
+////  module * { export * }
+//}
+////
+//module SkiaKit.Swift {
+//    header "SkiaKit-Swift.h"
+//    requires objc
+//}
