@@ -9,6 +9,8 @@
 import UIKit
 public class Drawable: CAShapeLayer {
     
+    public static var debug :Bool = false
+    
     public enum Shape {
         case circle,
              svgPath,
@@ -369,9 +371,8 @@ public class Drawable: CAShapeLayer {
             break
    
         case .svgPath:
-  
                 mPath = PathParser.parse(d: mSvgPath)
-         
+           
                 if mVbRect.width > 0 && mVbRect.height > 0 {
                     let trans = ViewBox.transform(vbRect: mVbRect, eRect: mRect, align: mSvgAlign, meetOrSlice: mSvgAspect)
                   
@@ -388,7 +389,9 @@ public class Drawable: CAShapeLayer {
             mPathTranslationX = (mPathTranslationX * mBaseRect.width) + mPathTranslationPlusX
             mPathTranslationY = (mPathTranslationY * mBaseRect.height) + mPathTranslationPlusY
         }
-        
+        if Drawable.debug { print("path translation per x y ",mIsPathTranslationPercent,mPathTranslationX,mPathTranslationY)
+            
+        }
         //first translate for rotate and scale from center
         let t = CGAffineTransform.identity
             .translatedBy(x: mPathTranslationX, y: mPathTranslationY)

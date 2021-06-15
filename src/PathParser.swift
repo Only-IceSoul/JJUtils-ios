@@ -14,7 +14,7 @@ public class PathParser {
     private static var i :Int = 0;
     private static var lenght : Int = 0;
     private static var str : NSString = "";
-    private static let  mPath  = UIBezierPath()
+    private static var  mPath  = UIBezierPath()
 
 
     private static var mPenX : CGFloat = 0
@@ -58,7 +58,7 @@ public class PathParser {
     private static let x = "x".utf16.first!
     
     public static func parse( d:String?) -> UIBezierPath {
-        mPath.removeAllPoints()
+        mPath = UIBezierPath()
         if(d == nil ){
             return mPath;
         }
@@ -400,7 +400,6 @@ public class PathParser {
             mPivotY = y;
 
            if (rx != ry || rad != 0) {
-               print("bezier arc")
                arcToBezier(cx, cy, rx, ry, sa, ea, clockwise, rad);
            } else {
            

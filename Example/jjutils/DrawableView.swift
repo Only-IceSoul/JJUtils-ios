@@ -34,14 +34,15 @@ class DrawableView: UIView {
 //            .setSvgPath(d: other,viewBox: [0,0,20,20])
 //            .setShape(s: .svgPath)
 ////            .setBlur(radius: 1)
-////            .setBackgroundColor(c: UIColor.blue.cgColor)
+//            .setBackgroundColor(c: Color.BLUE)
 ////            .setShadowOpacity(o: 1)
 ////            .setShadowRadius(r: 10)
 //            .setStrokeWidth(w: Float(10 / UIScreen.main.scale))
 //            .setStrokeColor(color: Color.GREEN)
 //            .setStrokeStart(s: 0.5)
 //            .setStrokeEnd(e: 0.8)
-//            .setStrokeStyle(style: .borderOutside)
+////            .setRotationX(degrees: 45)
+//            .setRotationY(degrees: 45)
 //            .setFillBlur(radius: Float(12 / UIScreen.main.scale) *  1.8)
 //            .setBorderBlur(radius: Float(12 / UIScreen.main.scale))
         
@@ -60,7 +61,7 @@ class DrawableView: UIView {
     }
     
     func setStrokeEnd(_ v :CGFloat){
-        mBg.setStrokeEnd(e: v)
+//        mBg.setStrokeEnd(e: v)
         mBg.invalidateSelf()
     }
     

@@ -17,10 +17,10 @@ public struct Color : Equatable {
     
     public init (r: UInt32, g: UInt32, b: UInt32, a: UInt32 = 0xff)
     {
-        color = self.toUInt32(r: r, g: g, b: b,a: a)
+        color = Color.toUInt32(r: r, g: g, b: b,a: a)
     }
     
-    private func toUInt32(r: UInt32, g: UInt32, b: UInt32, a: UInt32) -> UInt32{
+    private static func toUInt32(r: UInt32, g: UInt32, b: UInt32, a: UInt32) -> UInt32{
        return (a << 24) | (r << 16) | (g << 8) | b
     }
     
@@ -51,7 +51,7 @@ public struct Color : Equatable {
             b = 255 * Color.hueToRgb (v1, v2, h - (1.0 / 3.0))
         }
 
-        self.color = self.toUInt32(r: UInt32(r), g: UInt32(g), b: UInt32(b), a: alpha)
+        self.color = Color.toUInt32(r: UInt32(r), g: UInt32(g), b: UInt32(b), a: alpha)
     }
     
     static func hueToRgb (_ v1: Float, _ v2: Float, _ vh: Float) -> Float
@@ -75,6 +75,27 @@ public struct Color : Equatable {
         }
         return v1
     }
+    
+    public static func parseColor(_ hex: String) -> UInt32? {
+          var chars = Array(hex.hasPrefix("#") ? hex.dropFirst() : hex[...])
+          let red, green, blue, alpha: UInt32
+          switch chars.count {
+          case 3:
+              chars = chars.flatMap { [$0, $0] }
+              fallthrough
+          case 6:
+              chars = ["F","F"] + chars
+              fallthrough
+          case 8:
+              alpha = UInt32(strtoul(String(chars[0...1]), nil, 16))
+              red   = UInt32(strtoul(String(chars[2...3]), nil, 16))
+              green = UInt32(strtoul(String(chars[4...5]), nil, 16))
+              blue  = UInt32(strtoul(String(chars[6...7]), nil, 16))
+          default:
+              return nil
+          }
+        return Color.toUInt32(r: red, g: green, b: blue, a: alpha)
+      }
     
     public var alpha : UInt32 {
         get {

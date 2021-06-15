@@ -31,7 +31,7 @@ public extension UIColor{
          return self.init(red: red, green: green, blue:  blue, alpha: alpha)
       }
     
-    static func parseSignedInt(argb: Int)-> UIColor{
+    static func parseInt(argb: Int)-> UIColor{
         let a = CGFloat((argb >> 24) & 0xFF)
         let r = CGFloat((argb >> 16) & 0xFF)
         let g = CGFloat((argb >> 8) & 0xFF)

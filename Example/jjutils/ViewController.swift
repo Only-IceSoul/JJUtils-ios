@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 
        
         view.addSubview(mView)
-        mView.backgroundColor = UIColor.purple
+      
         mView.translatesAutoresizingMaskIntoConstraints = false
         mView.widthAnchor.constraint(equalToConstant: 240).isActive = true
         mView.heightAnchor.constraint(equalToConstant: 240).isActive = true

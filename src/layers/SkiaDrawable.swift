@@ -19,11 +19,7 @@ public class SkiaDrawable: CALayer {
              none
     }
     
-    public enum BorderStyle {
-        case borderInside,
-        borderOutside
-    }
-
+    
 
     private var mPaint = Paint()
     private var mPaintBg = Paint()
@@ -89,13 +85,12 @@ public class SkiaDrawable: CALayer {
     private var mBorderBlurRadius : Float = 0
     private var mBgBlurRadius : Float = 0
     
-    private var mBorderStyle = BorderStyle.borderInside
     
     public override init() {
         super.init()
         
         mPaint.isAntialias = true
-        mPaint.style = Paint.Style.strokeAndFill
+        mPaint.style = Paint.Style.fill
         mPaint.color = Color.TRANSPARENT
         mPaint.strokeWidth = 0
         
@@ -109,14 +104,6 @@ public class SkiaDrawable: CALayer {
         mPaintStroke.isAntialias = true
     }
 
-    @discardableResult
-    public func setStrokeStyle(style:BorderStyle)-> SkiaDrawable{
-       mBorderStyle = style
-
-        mPaint.style = style == .borderOutside ? Paint.Style.fill : Paint.Style.strokeAndFill
-        
-       return self
-   }
     
     @discardableResult
     public func setBlur(radius:Float)-> SkiaDrawable{
