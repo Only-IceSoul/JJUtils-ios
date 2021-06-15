@@ -9,7 +9,6 @@
 import UIKit
 public class Drawable: CAShapeLayer {
     
-    public static var debug :Bool = false
     
     public enum Shape {
         case circle,
@@ -19,14 +18,16 @@ public class Drawable: CAShapeLayer {
              none
     }
     
+    public enum Axis {
+        case x, y , z
+    }
+    
   
     //MARK: layer propertys
     private var mRotationX :CGFloat = 0
     private var mRotationY :CGFloat = 0
     private var mRotationZ :CGFloat = 0
-    private var mIsRotationX : Bool = false
-    private var mIsRotationY : Bool = false
-    private var mIsRotationZ : Bool = false
+    private var mRotationOrder :[Axis] = [.z,.x,.y]
     private var mTranslationX : CGFloat = 0
     private var mTranslationY : CGFloat = 0
  
@@ -35,8 +36,6 @@ public class Drawable: CAShapeLayer {
     private var mIsTranslationPercent : Bool = false
     private var mScaleX  : CGFloat = 1
     private var mScaleY  : CGFloat = 1
-    private var mInsetX : CGFloat = 0
-    private var mInsetY : CGFloat = 0
     private var mBaseRect = CGRect()
     private var mRect = CGRect()
     private var mRadius :[CGFloat] = [0,0,0,0]
@@ -204,38 +203,36 @@ public class Drawable: CAShapeLayer {
    }
    
     
-     @discardableResult
-    public func setInset(dx:CGFloat,dy:CGFloat) -> Drawable{
-        mInsetY = dy.clampNotNegative()
-        mInsetX = dx.clampNotNegative()
-        return self
-    }
+
     
     //MARK: layer set transform
-    
      @discardableResult
     public func setScale(sx:CGFloat,sy:CGFloat)-> Drawable{
         mScaleX = sx
         mScaleY = sy
         return self
     }
+
      @discardableResult
     public func setRotationZ(degrees: CGFloat) -> Drawable{
         mRotationZ = degrees
-        mIsRotationZ = true
         return self
     }
-    
     @discardableResult
    public func setRotationX(degrees: CGFloat) -> Drawable{
        mRotationX = degrees
-       mIsRotationX = true
        return self
    }
     @discardableResult
    public func setRotationY(degrees: CGFloat) -> Drawable{
        mRotationY = degrees
-       mIsRotationY = true
+ 
+       return self
+   }
+    @discardableResult
+    public func setRotationOrder(f: Axis,s:Axis,t:Axis) -> Drawable{
+        if (f == s || f == t) || ( s == t ) { return self}
+       mRotationOrder = [f,s,t]
        return self
    }
      @discardableResult
@@ -296,36 +293,38 @@ public class Drawable: CAShapeLayer {
     
     public func onBoundsChange(_ frame: CGRect,invalidate:Bool = true){
         mFirstBounds.set(rect: frame)
-        
+        var left = mBoundsX
+        var top = mBoundsY
+        var width = mBoundsWidth
+        var height = mBoundsHeight
         if(mIsBoundsPercentPos){
-            mBoundsX *= frame.width
-            mBoundsY *= frame.height
+            left = mBoundsX * frame.width
+            top = mBoundsY * frame.height
             
         }
         if(mIsBoundsPercentSize){
-            mBoundsWidth *= frame.width
-            mBoundsHeight *= frame.height
+            width = mBoundsWidth * frame.width
+            height = mBoundsHeight * frame.height
         }
         if(mIsBoundsDynamically){
             
-            mBaseRect.origin.x = mBoundsX
-            mBaseRect.origin.y = mBoundsY
-            mBaseRect.size.width = mBoundsWidth
-            mBaseRect.size.height = mBoundsHeight
+            mBaseRect.origin.x = left
+            mBaseRect.origin.y = top
+            mBaseRect.size.width = width
+            mBaseRect.size.height = height
+         
         }else{
             mBaseRect.set(rect: frame)
         }
         
-     
-          
+        super.frame = mBaseRect
         if invalidate { invalidateSelf() }
     }
     
-    private func draw(_ bounds:CGRect){
-        if(mFirstBounds.width > 0 && mFirstBounds.height > 0){
+    private func draw(){
+        if(frame.width > 0 && frame.height > 0){
             setupRect()
             setupPath()
-      
             makeTransform()
         }
      
@@ -335,14 +334,12 @@ public class Drawable: CAShapeLayer {
  
     
     private func setupRect(){
-        mRect.set(rect: mBaseRect)
-        mRect.setInset(dx: mInsetX, dy: mInsetY)
+        mRect.origin.x = 0
+        mRect.origin.y = 0
+        mRect.size.width = mBaseRect.width
+        mRect.size.height = mBaseRect.height
         let strokeInset = super.lineWidth / 2
         mRect.setInset(dx: strokeInset, dy: strokeInset)
-        super.frame = mRect
-        super.position.x = mRect.width / 2
-        super.position.y = mRect.height / 2
-     
      
     }
     
@@ -384,17 +381,17 @@ public class Drawable: CAShapeLayer {
             mPath.addRoundRect(mRect, radius: mRadius)
         }
         
+        var transX : CGFloat = mPathTranslationX
+        var transY : CGFloat = mPathTranslationY
         //path transform
         if(mIsPathTranslationPercent){
-            mPathTranslationX = (mPathTranslationX * mBaseRect.width) + mPathTranslationPlusX
-            mPathTranslationY = (mPathTranslationY * mBaseRect.height) + mPathTranslationPlusY
+            transX = (mPathTranslationX * mBaseRect.width) + mPathTranslationPlusX
+            transY = (mPathTranslationY * mBaseRect.height) + mPathTranslationPlusY
         }
-        if Drawable.debug { print("path translation per x y ",mIsPathTranslationPercent,mPathTranslationX,mPathTranslationY)
-            
-        }
+   
         //first translate for rotate and scale from center
         let t = CGAffineTransform.identity
-            .translatedBy(x: mPathTranslationX, y: mPathTranslationY)
+            .translatedBy(x: transX, y: transY)
             
             .translatedBy(x: mPath.bounds.center.x, y: mPath.bounds.center.y)
             .rotated(by: mPathRotation.toRadians())
@@ -416,16 +413,13 @@ public class Drawable: CAShapeLayer {
   
     
     public func invalidateSelf(){
-        draw(mBaseRect)
+        draw()
     }
     
     
  
     private func makeTransform(_ animated:Bool = false){
-        if(mIsTranslationPercent){
-            mTranslationX = (mTranslationX * mFirstBounds.width) + mTranslationPlusX
-            mTranslationY = (mTranslationY * mFirstBounds.height) + mTranslationPlusY
-        }
+      
         if(animated && duration > 0){
             applyTransform()
         }else {
@@ -435,32 +429,38 @@ public class Drawable: CAShapeLayer {
         }
     }
     private func applyTransform(){
-        
-        var perspective = CATransform3DIdentity
+        var transX : CGFloat = mTranslationX
+        var transY : CGFloat = mTranslationY
+        if(mIsTranslationPercent){
+            transX = (mTranslationX * mFirstBounds.width) + mTranslationPlusX
+            transY = (mTranslationY * mFirstBounds.height) + mTranslationPlusY
+        }
 
-   
-        perspective.m34 = 1 / -400;
-       
-        if(mIsRotationX){
-            perspective = CATransform3DRotate(perspective, -mRotationX.toRadians(), 1, 0, 0)
-        }
-        if(mIsRotationY){
-            perspective = CATransform3DRotate(perspective, -mRotationY.toRadians(), 0, 1, 0)
-        }
+        var result  = CATransform3DTranslate(CATransform3DIdentity, transX, transY, 0)
         
- 
-       
-        var normal = CATransform3DIdentity;
         
-        if(mIsRotationZ){
-            normal = CATransform3DRotate(normal, mRotationZ.toRadians(), 0, 0, 1)
+        for e in mRotationOrder {
+            if e == .z{
+                result =  CATransform3DRotate(result, mRotationZ.toRadians(), 0, 0, 1)
+            }
+            if e == .y{
+                var per = CATransform3DIdentity
+                per.m34 = 1 / -400;
+                per = CATransform3DRotate(per, -mRotationY.toRadians(), 0, 1, 0)
+                result = CATransform3DConcat(per, result)
+            }
+            if e == .x{
+                var per = CATransform3DIdentity
+                per.m34 = 1 / -400;
+                per = CATransform3DRotate(per, -mRotationX.toRadians(), 1, 0, 0)
+                result = CATransform3DConcat(per, result)
+            }
         }
-        //first translation for for scale from center
-        normal = CATransform3DTranslate(normal, mTranslationX, mTranslationY, 0)
-        normal = CATransform3DScale(normal, mScaleX, mScaleX, 1)
-      
+
         
-        self.transform = CATransform3DConcat(perspective, normal)
+        result = CATransform3DScale(result, mScaleX, mScaleX, 1)
+        
+        self.transform = result
     }
     private func disableAnimation(){
         CATransaction.begin()

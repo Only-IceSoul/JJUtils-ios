@@ -128,11 +128,7 @@ public class JJDrawable: CAShapeLayer {
        return self
    }
     
-     @discardableResult
-    public func setInset(dx:CGFloat,dy:CGFloat) -> JJDrawable{
-        mDrawable.setInset(dx: dx, dy: dy)
-        return self
-    }
+   
     
     //MARK: layer set transform
     
@@ -159,6 +155,12 @@ public class JJDrawable: CAShapeLayer {
    public func setRotationY(degrees: CGFloat) -> JJDrawable{
     mDrawable.setRotationY(degrees: degrees)
     mBg.setRotationY(degrees: degrees)
+       return self
+   }
+    @discardableResult
+    public func setRotationOrder(f: Drawable.Axis,s:Drawable.Axis,t:Drawable.Axis) -> JJDrawable{
+        mDrawable.setRotationOrder(f: f, s: s, t: t)
+        mBg.setRotationOrder(f: f, s: s, t: t)
        return self
    }
      @discardableResult

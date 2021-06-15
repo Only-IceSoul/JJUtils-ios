@@ -128,11 +128,7 @@ public class JJFilteredDrawable: CALayer {
        return self
    }
     
-     @discardableResult
-    public func setInset(dx:CGFloat,dy:CGFloat) -> JJFilteredDrawable{
-        mDrawable.setInset(dx: dx, dy: dy)
-        return self
-    }
+  
     
     //MARK: layer set transform
     

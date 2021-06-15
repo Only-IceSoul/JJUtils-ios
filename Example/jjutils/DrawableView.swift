@@ -12,7 +12,7 @@ import CoreImage.CIFilterBuiltins
 class DrawableView: UIView {
     
  
-    let mBg = JJDrawable()
+    let mBg = SkiaDrawable()
     
     let cabeza = "M45.09,10.69a29,29,0,0,0-29,29s-1.39,12.88,11.11,26.4V89.37H59.62v-12h10.3a6.25,6.25,0,0,0,6.25-6.25V60.71c2.3-.52,8.05-2.68,7.83-4.56-.25-2.15-6.57-16.42-6.57-16.42C71.87,7.91,45.09,10.69,45.09,10.69Z"
     let cabezaPart = "M45.09,10.69a29,29,0,0,0-29,29"
@@ -20,43 +20,51 @@ class DrawableView: UIView {
     init() {
         super.init(frame: .zero)
         
-
+        backgroundColor = UIColor.magenta
         layer.addSublayer(mBg)
-        
         
         
 //        backgroundColor = UIColor.clear
 //        layer.backgroundColor = UIColor.clear.cgColor
 //        mBg.backgroundColor = UIColor.clear.cgColor
-//
-//        mBg
+
+        mBg
+//            .setRotationZ(degrees: 45)
+//            .setRotationX(degrees: 45)
+//            .setRotationOrder(f: .y, s: .z, t: .x)
+//            .setRotationY(degrees: 20)
+//            .setScale(sx: 1.2, sy: 1.2)
+//            .setTranslation(percentX: 0.5, percentY: 0.5)
+            .setPathRotation(degrees: 45)
+            .setPathScale(sx: 1.2, sy: 1.2)
+//            .setPathTranslation(percentX: 0.5, percentY: 0)
+            .setFillColor(c: Color.RED)
 //            .setFillColor(c: Color.RED)
-//            .setSvgPath(d: other,viewBox: [0,0,20,20])
-//            .setShape(s: .svgPath)
-////            .setBlur(radius: 1)
-//            .setBackgroundColor(c: Color.BLUE)
-////            .setShadowOpacity(o: 1)
-////            .setShadowRadius(r: 10)
+            .setSvgPath(d: other,viewBox: [0,0,20,20])
+            .setShape(s: .svgPath)
+            .setBackgroundColor(c: Color.BLUE)
+//            .setBoundsDynamically(x: 0.5, y: 0.5, width: 0.5, height: 0.5, percentPos: true, percentSize: true)
 //            .setStrokeWidth(w: Float(10 / UIScreen.main.scale))
 //            .setStrokeColor(color: Color.GREEN)
 //            .setStrokeStart(s: 0.5)
 //            .setStrokeEnd(e: 0.8)
-////            .setRotationX(degrees: 45)
+//            .setRotationX(degrees: 45)
 //            .setRotationY(degrees: 45)
 //            .setFillBlur(radius: Float(12 / UIScreen.main.scale) *  1.8)
-//            .setBorderBlur(radius: Float(12 / UIScreen.main.scale))
+//            .setStrokeBlur(radius: Float(12 / UIScreen.main.scale))
         
-        mBg
-            .setFillColor(c: UIColor.red.cgColor)
-            .setSvgPath(d: other,viewBox: [0,0,20,20])
-            .setShape(s: .svgPath)
+//        mBg
+//            .setFillColor(c: UIColor.red.cgColor)
+//            .setSvgPath(d: other,viewBox: [0,0,20,20])
+//            .setShape(s: .svgPath)
 //            .setStrokeStart(s: 0.5)
 //            .setStrokeEnd(e: 0.8)
-//            .setBlur(radius: 3)
-            .setStrokeWidth(w: (22 / UIScreen.main.scale))
-            .setStrokeColor(color: UIColor.green.cgColor)
-
-    
+////            .setBlur(radius: 3)
+//            .setStrokeWidth(w: (5 / UIScreen.main.scale))
+//            .setStrokeColor(color: UIColor.green.cgColor)
+//            .setBackgroundColor(c: UIColor.purple.cgColor)
+//
+//
         
     }
     

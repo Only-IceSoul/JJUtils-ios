@@ -19,6 +19,9 @@ public class SkiaDrawable: CALayer {
              none
     }
     
+    public enum Axis {
+        case x, y , z
+    }
     
 
     private var mPaint = Paint()
@@ -29,9 +32,7 @@ public class SkiaDrawable: CALayer {
     private var mRotationX :CGFloat = 0
     private var mRotationY :CGFloat = 0
     private var mRotationZ :CGFloat = 0
-    private var mIsRotationX : Bool = false
-    private var mIsRotationY : Bool = false
-    private var mIsRotationZ : Bool = false
+    private var mRotationOrder :[Axis] = [.z,.x,.y]
     private var mTranslationX : CGFloat = 0
     private var mTranslationY : CGFloat = 0
     private var mTranslationPlusX : CGFloat = 0
@@ -39,8 +40,6 @@ public class SkiaDrawable: CALayer {
     private var mIsTranslationPercent : Bool = false
     private var mScaleX  : CGFloat = 1
     private var mScaleY  : CGFloat = 1
-    private var mInsetX : Float = 0
-    private var mInsetY : Float = 0
     private var mBaseRect = RectF()
     private var mRect = RectF()
     private var mRadius :[Float] = [0,0,0,0,0,0,0,0]
@@ -82,7 +81,7 @@ public class SkiaDrawable: CALayer {
     
     //MARK: BLUR PROPS
     private var mBlurRadius : Float = 0
-    private var mBorderBlurRadius : Float = 0
+    private var mStrokeBlurRadius : Float = 0
     private var mBgBlurRadius : Float = 0
     
     
@@ -109,7 +108,7 @@ public class SkiaDrawable: CALayer {
     public func setBlur(radius:Float)-> SkiaDrawable{
         mBlurRadius = radius
         mBgBlurRadius = radius
-        mBorderBlurRadius = radius
+        mStrokeBlurRadius = radius
         
         return self
    }
@@ -128,8 +127,8 @@ public class SkiaDrawable: CALayer {
     
     
     @discardableResult
-    public func setBorderBlur(radius:Float)-> SkiaDrawable{
-        mBorderBlurRadius = radius
+    public func setStrokeBlur(radius:Float)-> SkiaDrawable{
+        mStrokeBlurRadius = radius
         return self
    }
     
@@ -254,12 +253,6 @@ public class SkiaDrawable: CALayer {
        return self
    }
 
-     @discardableResult
-    public func setInset(dx:Float,dy:Float) -> SkiaDrawable{
-        mInsetY = dy.clampNotNegative()
-        mInsetX = dx.clampNotNegative()
-        return self
-    }
 
     //MARK: layer set transform
 
@@ -272,20 +265,23 @@ public class SkiaDrawable: CALayer {
      @discardableResult
     public func setRotationZ(degrees: CGFloat) -> SkiaDrawable{
         mRotationZ = degrees
-        mIsRotationZ = true
         return self
     }
 
     @discardableResult
    public func setRotationX(degrees: CGFloat) -> SkiaDrawable{
        mRotationX = degrees
-       mIsRotationX = true
        return self
    }
     @discardableResult
    public func setRotationY(degrees: CGFloat) -> SkiaDrawable{
        mRotationY = degrees
-       mIsRotationY = true
+       return self
+   }
+    @discardableResult
+    public func setRotationOrder(f: Axis,s:Axis,t:Axis) -> SkiaDrawable{
+        if (f == s || f == t) || ( s == t ) { return self}
+       mRotationOrder = [f,s,t]
        return self
    }
      @discardableResult
@@ -305,7 +301,7 @@ public class SkiaDrawable: CALayer {
         return self
    }
 
-
+    private var mFirstBounds = CGRect()
     private var mBoundsX:Float = 0
     private var mBoundsY:Float = 0
     private var mBoundsWidth:Float = 0
@@ -346,42 +342,43 @@ public class SkiaDrawable: CALayer {
     private var mBitmap : Bitmap?
     private var mCanvas: Canvas?
     private var mBlurRect = RectF()
-    public func onBoundsChange(_ frame: CGRect){
-
+    public func onBoundsChange(_ frame: CGRect,invalidate:Bool = true){
+        mFirstBounds.set(rect: frame)
+        var left = mBoundsX
+        var top = mBoundsY
+        var width = mBoundsWidth
+        var height = mBoundsHeight
 
         if(mIsBoundsPercentPos){
-            mBoundsX *= Float(frame.width)
-            mBoundsY *= Float(frame.height)
-
+            left =  mBoundsX * Float(frame.width)
+            top = mBoundsY * Float(frame.height)
         }
         if(mIsBoundsPercentSize){
-            mBoundsWidth *= Float(frame.width)
-            mBoundsHeight *= Float(frame.height)
+            width = mBoundsWidth * Float(frame.width)
+            height = mBoundsHeight * Float(frame.height)
         }
         if(mIsBoundsDynamically){
-            mBaseRect.set(left: mBoundsX, top: mBoundsY, right: mBoundsX+mBoundsWidth, bottom: mBoundsY+mBoundsHeight)
+            mBaseRect.set(left: left, top: top, right: left+width, bottom: top+height)
         }else{
             mBaseRect.set(left: Float(frame.origin.x), top: Float(frame.origin.y), right: Float(frame.origin.x+frame.size.width), bottom: Float(frame.origin.y+frame.size.height))
         }
         
-        super.frame = frame
-        super.position.x = frame.width / 2
-        super.position.y = frame.height / 2
+        super.frame = CGRect(x: CGFloat(mBaseRect.left), y: CGFloat(mBaseRect.top), width: CGFloat(mBaseRect.width), height: CGFloat(mBaseRect.height))
         
-        mInfo = ImageInfo(width: Int32 (frame.width), height: Int32 (frame.height), colorType: .bgra8888, alphaType: .premul)
+        mInfo = ImageInfo(width: Int32 (mBaseRect.width), height: Int32 (mBaseRect.height), colorType: .bgra8888, alphaType: .premul)
         mBitmap = try? Bitmap(mInfo!)
-    
         mCanvas = mBitmap != nil ? Canvas(mBitmap!) : nil
-        invalidateSelf()
+        
+        if invalidate { invalidateSelf() }
     }
 
     private let mBitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue).union(.byteOrder32Little)
     private let mColorSpace = CGColorSpaceCreateDeviceRGB()
-    public override func display() {
-        super.display()
-       
+//    public override func display() {
+//        super.display()
+//
 
-    }
+//    }
 
     private func drawLayer(){
         if(frame.width > 0 && frame.height > 0){
@@ -395,7 +392,7 @@ public class SkiaDrawable: CALayer {
                 mCanvas!.clear()
                 //bg
                 if mPaintBg.color != Color.TRANSPARENT{
-                    mBlurRect.set(src: mBaseRect)
+                    mBlurRect.set(left: 0, top: 0, right: mBaseRect.width, bottom: mBaseRect.height)
                     mPaintBg.maskFilter = mBgBlurRadius > 0 ? BlurMaskFilter(radius: mBgBlurRadius, style: .normal) : nil
                     if mBgBlurRadius > 0{
                         mBlurRect.inset(dx: mBgBlurRadius, dy: mBgBlurRadius)
@@ -417,7 +414,7 @@ public class SkiaDrawable: CALayer {
                 //stroke
                 if mPaintStroke.color != Color.TRANSPARENT && mPaintStroke.strokeWidth > 0 && mStrokeStart < mStrokeEnd {
                     
-                    mPaintStroke.maskFilter = mBorderBlurRadius > 0 ? BlurMaskFilter(radius: mBorderBlurRadius, style: .normal) : nil
+                    mPaintStroke.maskFilter = mStrokeBlurRadius > 0 ? BlurMaskFilter(radius: mStrokeBlurRadius, style: .normal) : nil
                     
                     if mStrokeStart != 0 || mStrokeEnd != 1 {
                         mPathStroke.reset()
@@ -451,8 +448,7 @@ public class SkiaDrawable: CALayer {
     }
     
     private func setupRect(){
-        mRect.set(src: mBaseRect)
-        mRect.inset(dx: mInsetX, dy: mInsetY)
+        mRect.set(left: 0, top: 0, right: mBaseRect.width, bottom: mBaseRect.height)
         let strokeInset = mPaint.strokeWidth / 2
         mRect.inset(dx: strokeInset, dy: strokeInset)
     }
@@ -511,10 +507,12 @@ public class SkiaDrawable: CALayer {
 
 
     private func setupPathTransform(){
+        var transX : Float = mPathTranslationX
+        var transY : Float = mPathTranslationY
         //path transform
         if(mIsPathTranslationPercent){
-            mPathTranslationX = (mPathTranslationX * mBaseRect.width) + mPathTranslationPlusX
-            mPathTranslationY = (mPathTranslationY * mBaseRect.height) + mPathTranslationPlusY
+            transX = (mPathTranslationX * mBaseRect.width) + mPathTranslationPlusX
+            transY = (mPathTranslationY * mBaseRect.height) + mPathTranslationPlusY
         }
 
         mPathBounds.set(left: 0, top: 0, right: 0, bottom: 0)
@@ -522,7 +520,7 @@ public class SkiaDrawable: CALayer {
         mPathMatrix.reset()
         mPathMatrix.postRotate(degress: mPathRotation,px: mPathBounds.centerX(),py:mPathBounds.centerY())
         mPathMatrix.postScale(sx: mPathScaleX, sy: mPathScaleY ,px: mPathBounds.centerX(),py:mPathBounds.centerY())
-        mPathMatrix.postTranslate(dx: mPathTranslationX, dy: mPathTranslationY)
+        mPathMatrix.postTranslate(dx: transX, dy: transY)
 
 
 
@@ -542,10 +540,7 @@ public class SkiaDrawable: CALayer {
 
 
     private func makeTransform(_ animated:Bool = false){
-        if(mIsTranslationPercent){
-            mTranslationX = (mTranslationX * frame.width) + mTranslationPlusX
-            mTranslationY = (mTranslationY * frame.height) + mTranslationPlusY
-        }
+        
         if(animated && duration > 0){
             applyTransform()
         }else {
@@ -555,32 +550,39 @@ public class SkiaDrawable: CALayer {
         }
     }
     private func applyTransform(){
-
-        var perspective = CATransform3DIdentity
-
-
-        perspective.m34 = 1 / -400;
-
-        if(mIsRotationX){
-            perspective = CATransform3DRotate(perspective, -mRotationX.toRadians(), 1, 0, 0)
+        var transX : CGFloat = mTranslationX
+        var transY : CGFloat = mTranslationY
+        if(mIsTranslationPercent){
+            transX = (mTranslationX * mFirstBounds.width) + mTranslationPlusX
+            transY = (mTranslationY * mFirstBounds.height) + mTranslationPlusY
         }
-        if(mIsRotationY){
-            perspective = CATransform3DRotate(perspective, -mRotationY.toRadians(), 0, 1, 0)
+        
+        
+        var result  = CATransform3DTranslate(CATransform3DIdentity, transX, transY, 0)
+        
+        
+        for e in mRotationOrder {
+            if e == .z{
+                result =  CATransform3DRotate(result, mRotationZ.toRadians(), 0, 0, 1)
+            }
+            if e == .y{
+                var per = CATransform3DIdentity
+                per.m34 = 1 / -400;
+                per = CATransform3DRotate(per, -mRotationY.toRadians(), 0, 1, 0)
+                result = CATransform3DConcat(per, result)
+            }
+            if e == .x{
+                var per = CATransform3DIdentity
+                per.m34 = 1 / -400;
+                per = CATransform3DRotate(per, -mRotationX.toRadians(), 1, 0, 0)
+                result = CATransform3DConcat(per, result)
+            }
         }
 
-
-
-        var normal = CATransform3DIdentity;
-
-        if(mIsRotationZ){
-            normal = CATransform3DRotate(normal, mRotationZ.toRadians(), 0, 0, 1)
-        }
-        //first translation for for scale from center
-        normal = CATransform3DTranslate(normal, mTranslationX, mTranslationY, 0)
-        normal = CATransform3DScale(normal, mScaleX, mScaleX, 1)
-
-
-        self.transform = CATransform3DConcat(perspective, normal)
+        
+        result = CATransform3DScale(result, mScaleX, mScaleX, 1)
+        
+        self.transform = result
     }
     private func disableAnimation(){
         CATransaction.begin()
