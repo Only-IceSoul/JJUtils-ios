@@ -12,7 +12,7 @@ import CoreImage.CIFilterBuiltins
 class DrawableView: UIView {
     
  
-    let mBg = SkiaDrawable()
+    let mBg = JJDrawable()
     
     let cabeza = "M45.09,10.69a29,29,0,0,0-29,29s-1.39,12.88,11.11,26.4V89.37H59.62v-12h10.3a6.25,6.25,0,0,0,6.25-6.25V60.71c2.3-.52,8.05-2.68,7.83-4.56-.25-2.15-6.57-16.42-6.57-16.42C71.87,7.91,45.09,10.69,45.09,10.69Z"
     let cabezaPart = "M45.09,10.69a29,29,0,0,0-29,29"
@@ -22,6 +22,7 @@ class DrawableView: UIView {
         
         backgroundColor = UIColor.magenta
         layer.addSublayer(mBg)
+        layer.masksToBounds = true
         
         
 //        backgroundColor = UIColor.clear
@@ -32,18 +33,18 @@ class DrawableView: UIView {
 //            .setRotationZ(degrees: 45)
 //            .setRotationX(degrees: 45)
 //            .setRotationOrder(f: .y, s: .z, t: .x)
-//            .setRotationY(degrees: 20)
+//            .setRotationY(degrees: 45)
 //            .setScale(sx: 1.2, sy: 1.2)
 //            .setTranslation(percentX: 0.5, percentY: 0.5)
             .setPathRotation(degrees: 45)
             .setPathScale(sx: 1.2, sy: 1.2)
-//            .setPathTranslation(percentX: 0.5, percentY: 0)
-            .setFillColor(c: Color.RED)
+            .setPathTranslation(dx: 20 , dy: 20 )
+            .setFillColor(c: UIColor.red.cgColor)
 //            .setFillColor(c: Color.RED)
             .setSvgPath(d: other,viewBox: [0,0,20,20])
             .setShape(s: .svgPath)
-            .setBackgroundColor(c: Color.BLUE)
-//            .setBoundsDynamically(x: 0.5, y: 0.5, width: 0.5, height: 0.5, percentPos: true, percentSize: true)
+            .setBackgroundColor(c: UIColor.blue.cgColor)
+            .setBoundsDynamically(x: 0.25, y: 0.25, width: 0.5, height: 0.5, percentPos: true, percentSize: true)
 //            .setStrokeWidth(w: Float(10 / UIScreen.main.scale))
 //            .setStrokeColor(color: Color.GREEN)
 //            .setStrokeStart(s: 0.5)

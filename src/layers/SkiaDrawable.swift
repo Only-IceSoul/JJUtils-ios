@@ -348,7 +348,6 @@ public class SkiaDrawable: CALayer {
         var top = mBoundsY
         var width = mBoundsWidth
         var height = mBoundsHeight
-
         if(mIsBoundsPercentPos){
             left =  mBoundsX * Float(frame.width)
             top = mBoundsY * Float(frame.height)
@@ -362,7 +361,7 @@ public class SkiaDrawable: CALayer {
         }else{
             mBaseRect.set(left: Float(frame.origin.x), top: Float(frame.origin.y), right: Float(frame.origin.x+frame.size.width), bottom: Float(frame.origin.y+frame.size.height))
         }
-        
+       
         super.frame = CGRect(x: CGFloat(mBaseRect.left), y: CGFloat(mBaseRect.top), width: CGFloat(mBaseRect.width), height: CGFloat(mBaseRect.height))
         
         mInfo = ImageInfo(width: Int32 (mBaseRect.width), height: Int32 (mBaseRect.height), colorType: .bgra8888, alphaType: .premul)
@@ -560,26 +559,21 @@ public class SkiaDrawable: CALayer {
         
         var result  = CATransform3DTranslate(CATransform3DIdentity, transX, transY, 0)
         
-        
+        var per = CATransform3DIdentity
+        per.m34 = 1 / -400;
         for e in mRotationOrder {
             if e == .z{
-                result =  CATransform3DRotate(result, mRotationZ.toRadians(), 0, 0, 1)
+                per =  CATransform3DRotate(per, mRotationZ.toRadians(), 0, 0, 1)
             }
             if e == .y{
-                var per = CATransform3DIdentity
-                per.m34 = 1 / -400;
                 per = CATransform3DRotate(per, -mRotationY.toRadians(), 0, 1, 0)
-                result = CATransform3DConcat(per, result)
             }
             if e == .x{
-                var per = CATransform3DIdentity
-                per.m34 = 1 / -400;
                 per = CATransform3DRotate(per, -mRotationX.toRadians(), 1, 0, 0)
-                result = CATransform3DConcat(per, result)
             }
         }
 
-        
+        result = CATransform3DConcat(per, result)
         result = CATransform3DScale(result, mScaleX, mScaleX, 1)
         
         self.transform = result

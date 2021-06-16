@@ -39,10 +39,10 @@ class ViewController: UIViewController {
         view.addSubview(mView)
       
         mView.translatesAutoresizingMaskIntoConstraints = false
-        mView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        mView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        mView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
-        mView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
+        mView.widthAnchor.constraint(equalToConstant: 240).isActive = true
+        mView.heightAnchor.constraint(equalToConstant: 240).isActive = true
+        mView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        mView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
 //        let mDisplay = CADisplayLink(target: self, selector: #selector(self.displayAnimation(_:)))
 //        mDisplay.add(to: .main, forMode: .defaultRunLoopMode)

@@ -438,26 +438,21 @@ public class Drawable: CAShapeLayer {
 
         var result  = CATransform3DTranslate(CATransform3DIdentity, transX, transY, 0)
         
-        
+        var per = CATransform3DIdentity
+        per.m34 = 1 / -400;
         for e in mRotationOrder {
             if e == .z{
-                result =  CATransform3DRotate(result, mRotationZ.toRadians(), 0, 0, 1)
+                per =  CATransform3DRotate(per, mRotationZ.toRadians(), 0, 0, 1)
             }
             if e == .y{
-                var per = CATransform3DIdentity
-                per.m34 = 1 / -400;
                 per = CATransform3DRotate(per, -mRotationY.toRadians(), 0, 1, 0)
-                result = CATransform3DConcat(per, result)
             }
             if e == .x{
-                var per = CATransform3DIdentity
-                per.m34 = 1 / -400;
                 per = CATransform3DRotate(per, -mRotationX.toRadians(), 1, 0, 0)
-                result = CATransform3DConcat(per, result)
             }
         }
 
-        
+        result = CATransform3DConcat(per, result)
         result = CATransform3DScale(result, mScaleX, mScaleX, 1)
         
         self.transform = result
