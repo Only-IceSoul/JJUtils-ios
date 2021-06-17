@@ -348,13 +348,12 @@ public class Drawable: CAShapeLayer {
         }
         
         super.frame = mBaseRect
-        setupRect()
-        
         if invalidate { invalidateSelf() }
     }
     
     private func draw(){
         if(frame.width > 0 && frame.height > 0){
+            setupRect()
             setupPath()
             makeTransform()
         }

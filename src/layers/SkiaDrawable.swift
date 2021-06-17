@@ -40,6 +40,8 @@ public class SkiaDrawable: CALayer {
     private var mIsTranslationPercent : Bool = false
     private var mScaleX  : CGFloat = 1
     private var mScaleY  : CGFloat = 1
+    private var mInsetX : Float = 0
+    private var mInsetY : Float = 0
     private var mBaseRect = RectF()
     private var mRect = RectF()
     private var mRadius :[Float] = [0,0,0,0,0,0,0,0]
@@ -210,6 +212,23 @@ public class SkiaDrawable: CALayer {
         return self
    }
 
+    @discardableResult
+    public func setStrokeCap(cap:Paint.StrokeCap) -> SkiaDrawable{
+        mPaintStroke.strokeCap = cap
+       return self
+   }
+    
+    @discardableResult
+    public func setStrokeJoin(join:Paint.StrokeJoin) -> SkiaDrawable{
+        mPaintStroke.strokeJoin = join
+       return self
+   }
+    @discardableResult
+   public func setStrokeMiter(miter:Float) -> SkiaDrawable{
+        mPaintStroke.strokeMiter = miter
+       return self
+   }
+    
     //MARK: LAYER SET
 
     @discardableResult
@@ -251,6 +270,13 @@ public class SkiaDrawable: CALayer {
    public func setBackgroundColor(c:UInt32) -> SkiaDrawable{
         mPaintBg.color = c
        return self
+   }
+    
+    @discardableResult
+    public func setInset(dx:Float,dy:Float) -> SkiaDrawable{
+      mInsetX = dx
+      mInsetY = dy
+      return self
    }
 
 
@@ -448,8 +474,7 @@ public class SkiaDrawable: CALayer {
     
     private func setupRect(){
         mRect.set(left: 0, top: 0, right: mBaseRect.width, bottom: mBaseRect.height)
-        let strokeInset = mPaint.strokeWidth / 2
-        mRect.inset(dx: strokeInset, dy: strokeInset)
+        mRect.inset(dx: mInsetX, dy: mInsetY)
     }
 
     private func setupPath(){
