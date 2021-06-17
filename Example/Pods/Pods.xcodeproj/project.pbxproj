@@ -69,6 +69,7 @@
 		C2165D956365E808CD04E007D39BA389 /* sk_pixmap.h in Headers */ = {isa = PBXBuildFile; fileRef = D99048664728BCC6444972B085B87837 /* sk_pixmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3DC33045D9F3C7CE1D85483CB38CE75 /* Pods-jjutils_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FAE346A20FA6CFD0BE0AC18BA33071 /* Pods-jjutils_Example-dummy.m */; };
 		C9CAE42FF8A69ECCCFB2836B98A8B2A5 /* SVGPathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBB2B247BC49CD4415B0B5D2D9AED00 /* SVGPathParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D045A8A8267BCC1300DD130F /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045A8A7267BCC1300DD130F /* enums.swift */; };
 		D2C8A604516102F47A033C4266E3E18A /* extension_CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818977010FD06DEF737A1A6114EC298 /* extension_CGRect.swift */; };
 		D3009609AAD4BACCC35EEB2AC2870E0C /* extension_CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C23625360BC9B06D5F009F5D362AC /* extension_CAShapeLayer.swift */; };
 		D4C39340AB2C3201255501EEF8E16173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -133,18 +134,18 @@
 		42B7066163255BCC6860E86B89C35E74 /* sk_string.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
 		438AD5EF99D36B2F3C5B406FDDE864E6 /* extension_UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIImage.swift; sourceTree = "<group>"; };
 		4B390626183D1828FBE920EC44D78167 /* sk_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_types.h; sourceTree = "<group>"; };
-		4B4D11036326C3E54D9B4D593FB599CC /* jjutils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = jjutils.framework; path = jjutils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B4D11036326C3E54D9B4D593FB599CC /* jjutils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = jjutils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F49393D6561EC5F1BDE30CB7F8F31AF /* Pods-jjutils_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-jjutils_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		52FEA2531DDA1B3532BBF0D17531463C /* Pods_jjutils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_jjutils_Example.framework; path = "Pods-jjutils_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FEA2531DDA1B3532BBF0D17531463C /* Pods_jjutils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jjutils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5B9965115277062C0DEBB8D7ED35E5 /* Pods-jjutils_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-jjutils_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		5D423F0FDA7711349C01125BDB6CEA6A /* sk_drawable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_drawable.h; sourceTree = "<group>"; };
 		650241A73DE0355834716123A6D89419 /* LayerCircleProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayerCircleProgress.swift; sourceTree = "<group>"; };
-		6A9A61C7F0B416BE8AFD17BAC315CD52 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6A9A61C7F0B416BE8AFD17BAC315CD52 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		709347CA312B2A90F0F9F328CDE1D972 /* SkiaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SkiaKit.framework; sourceTree = "<group>"; };
 		70AEBF3D4752EA2F5888D7F5407CC16D /* SkiaKit-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkiaKit-Swift.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7375B177A814623204D7AC2F5D1D9AA1 /* LayerClip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayerClip.swift; sourceTree = "<group>"; };
-		7724336EE5692EFDE85213EFD5C3FA06 /* jjutils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = jjutils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7724336EE5692EFDE85213EFD5C3FA06 /* jjutils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = jjutils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		77FCD6F9B4F7519E72F5286942D9A1EE /* JJRegistrationCompletedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJRegistrationCompletedView.swift; sourceTree = "<group>"; };
 		79DEB755199B5827A8DAEFB99F3475A5 /* Pods-jjutils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jjutils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7DE1E1CF20C30F15342BE1AECB6B455F /* extension_UIBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPath.swift; sourceTree = "<group>"; };
@@ -157,9 +158,9 @@
 		9AEDBF59CF9E304BD35421F855485269 /* Pods-jjutils_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-jjutils_Example-Info.plist"; sourceTree = "<group>"; };
 		9B788E8FED608159035D51987A5F36B1 /* Pods-jjutils_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-jjutils_Example.modulemap"; sourceTree = "<group>"; };
 		9BD6C1D117AAE9483F6E36A55CCEB778 /* Pods-jjutils_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-jjutils_Tests.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1D79117B98A993CFFCA60A27E43FE61 /* sk_textblob.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_textblob.h; sourceTree = "<group>"; };
-		A201AFEAC894E9A93B444C7AF48C67EC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A201AFEAC894E9A93B444C7AF48C67EC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A38BDBDB16E869BF6774DF0FA00CC0D5 /* extension_UIBezierPathUpper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPathUpper.swift; sourceTree = "<group>"; };
 		A4142C13ED0113DFC117F06C6F77FE43 /* extension_CALayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CALayer.swift; sourceTree = "<group>"; };
 		A5B33482615D9373E3BD789CAC465079 /* UIViewEffectViewiOS14.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewEffectViewiOS14.swift; sourceTree = "<group>"; };
@@ -180,6 +181,7 @@
 		BFD3889D5CCD8D56D857ADBFEFCB3C51 /* extension_CGImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CGImage.swift; sourceTree = "<group>"; };
 		BFE6A31BADB2D25203348FDDD1AB9773 /* Pods-jjutils_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-jjutils_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C80AEA93923A0106BC349A32333E1961 /* sk_colorspace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_colorspace.h; sourceTree = "<group>"; };
+		D045A8A7267BCC1300DD130F /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
 		D07BF9FD3C0967F9CA990F02124F691C /* sk_xml.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_xml.h; sourceTree = "<group>"; };
 		D3F977B370796521A313C5527988A52E /* jjutils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "jjutils-prefix.pch"; sourceTree = "<group>"; };
 		D4E31108DD0B7500566AD6404E76A44C /* jjutils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "jjutils-umbrella.h"; sourceTree = "<group>"; };
@@ -194,7 +196,7 @@
 		E6310EC0D2FDBCB211933B732A7E0BF9 /* sk_data.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_data.h; sourceTree = "<group>"; };
 		E6E080E0640E7ED9C66D2BFB97F35D09 /* SkiaKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SkiaKit.h; sourceTree = "<group>"; };
 		E7BC1B67FEED870F047EFDD3E432B057 /* sk_imagefilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_imagefilter.h; sourceTree = "<group>"; };
-		E8F322EAAE187BFB860D95D8DD498EBC /* Pods_jjutils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_jjutils_Tests.framework; path = "Pods-jjutils_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F322EAAE187BFB860D95D8DD498EBC /* Pods_jjutils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jjutils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5A93B07B415F9AD1274FFA3F69D58F /* sk_vertices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_vertices.h; sourceTree = "<group>"; };
 		ECFBA497FA9A8DD9C356C97A37FD8AA7 /* jjutils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = jjutils.release.xcconfig; sourceTree = "<group>"; };
 		EDA1C6CB0489F8F0A754582584F30BF9 /* jjutils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = jjutils.debug.xcconfig; sourceTree = "<group>"; };
@@ -273,7 +275,6 @@
 				7F6FE93EA8A6AB7BA8F8F2A10838A2CA /* SkiaKit_iOS.h */,
 				FBBB2B247BC49CD4415B0B5D2D9AED00 /* SVGPathParser.h */,
 			);
-			name = Headers;
 			path = Headers;
 			sourceTree = "<group>";
 		};
@@ -411,6 +412,7 @@
 				650241A73DE0355834716123A6D89419 /* LayerCircleProgress.swift */,
 				7375B177A814623204D7AC2F5D1D9AA1 /* LayerClip.swift */,
 				1A21723F5C8A62EF9DFD7B44CDECED11 /* SkiaDrawable.swift */,
+				D045A8A7267BCC1300DD130F /* enums.swift */,
 			);
 			name = layers;
 			path = src/layers;
@@ -470,7 +472,6 @@
 			children = (
 				204CC62A372E0F76608571EC15B10055 /* Headers */,
 			);
-			name = SkiaKit.framework;
 			path = SkiaKit.framework;
 			sourceTree = "<group>";
 		};
@@ -680,6 +681,7 @@
 				7C2973D911B555B79CC72AF6D8D6BCA9 /* extension_UIColor.swift in Sources */,
 				1BC97389E944993D69C3F767AB203DB6 /* extension_UIImage.swift in Sources */,
 				7CAEB77EAC39542F8E06739ADABB1ABB /* extension_UIVIsualEffect.swift in Sources */,
+				D045A8A8267BCC1300DD130F /* enums.swift in Sources */,
 				370215974BCCB29AFBF280E0182F5A9D /* JJBlurEffect.swift in Sources */,
 				DC37701243E9F322184CC5406309A901 /* JJDrawable.swift in Sources */,
 				90DBC7E5526F6798A41ED151DCDDA0FC /* JJFilteredDrawable.swift in Sources */,
@@ -1036,8 +1038,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

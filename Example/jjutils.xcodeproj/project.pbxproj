@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5EEBE5556B589D88C35F3A75 /* Pods_jjutils_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F31EE359B93067A5D45EF23 /* Pods_jjutils_Example.framework */; };
+		4D4BB7E3C1169854C5905645 /* Pods_jjutils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE869DB5114029942129D6B /* Pods_jjutils_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		65656E1BB9C93F3FDF1DA0B4 /* Pods_jjutils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53020222B6CB37379CFC649 /* Pods_jjutils_Tests.framework */; };
-		D001C318263B0E5700443894 /* DrawableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001C317263B0E5700443894 /* DrawableView.swift */; };
+		D045A8A2267BCA7700DD130F /* DrawableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D001C317263B0E5700443894 /* DrawableView.swift */; };
+		D0EC1E7D267BC6D70082821F /* Pods_jjutils_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EC1E7C267BC6D70082821F /* Pods_jjutils_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,10 +30,10 @@
 
 /* Begin PBXFileReference section */
 		04B547C58638FDBCA304C512 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		072D0539594B06F61061785F /* Pods-jjutils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jjutils_Tests.debug.xcconfig"; path = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1F31EE359B93067A5D45EF23 /* Pods_jjutils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jjutils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CCA721EED491AD91E007C0F /* Pods-jjutils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jjutils_Example.debug.xcconfig"; path = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3D0B15CB1261067B77D00D56 /* Pods-jjutils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jjutils_Tests.release.xcconfig"; path = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		45C5E4BCB9ADE58976E9D683 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		4C484C127C1837239B115FFD /* Pods-jjutils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jjutils_Example.release.xcconfig"; path = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4A1E4E315871B4190226D411 /* Pods-jjutils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jjutils_Example.release.xcconfig"; path = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* jjutils_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jjutils_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,11 +44,13 @@
 		607FACE51AFB9204008FA782 /* jjutils_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jjutils_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		675787EDA620FC518A03E9F6 /* Pods-jjutils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jjutils_Example.debug.xcconfig"; path = "Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6A88F8886A3CFC7CB2B36516 /* Pods-jjutils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jjutils_Tests.release.xcconfig"; path = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9EC3EB3CF813326A3F942B9C /* jjutils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = jjutils.podspec; path = ../jjutils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ACE869DB5114029942129D6B /* Pods_jjutils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jjutils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D001C317263B0E5700443894 /* DrawableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawableView.swift; sourceTree = "<group>"; };
-		D53020222B6CB37379CFC649 /* Pods_jjutils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jjutils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EC1E6F267BC5A40082821F /* jjutils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = jjutils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EC1E7C267BC6D70082821F /* Pods_jjutils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_jjutils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0C15FF9DF402D7FAEAF99D9 /* Pods-jjutils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jjutils_Tests.debug.xcconfig"; path = "Target Support Files/Pods-jjutils_Tests/Pods-jjutils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDB5A2BDEA0611C99547ADD2 /* Pods_jjutils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jjutils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EEBE5556B589D88C35F3A75 /* Pods_jjutils_Example.framework in Frameworks */,
+				D0EC1E7D267BC6D70082821F /* Pods_jjutils_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65656E1BB9C93F3FDF1DA0B4 /* Pods_jjutils_Tests.framework in Frameworks */,
+				4D4BB7E3C1169854C5905645 /* Pods_jjutils_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +76,23 @@
 		1C47CE6D381B795982B2E37A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				675787EDA620FC518A03E9F6 /* Pods-jjutils_Example.debug.xcconfig */,
-				4C484C127C1837239B115FFD /* Pods-jjutils_Example.release.xcconfig */,
-				072D0539594B06F61061785F /* Pods-jjutils_Tests.debug.xcconfig */,
-				6A88F8886A3CFC7CB2B36516 /* Pods-jjutils_Tests.release.xcconfig */,
+				3CCA721EED491AD91E007C0F /* Pods-jjutils_Example.debug.xcconfig */,
+				4A1E4E315871B4190226D411 /* Pods-jjutils_Example.release.xcconfig */,
+				E0C15FF9DF402D7FAEAF99D9 /* Pods-jjutils_Tests.debug.xcconfig */,
+				3D0B15CB1261067B77D00D56 /* Pods-jjutils_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		55F4AD6D3DD8C5E492A9AAD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0EC1E7C267BC6D70082821F /* Pods_jjutils_Example.framework */,
+				D0EC1E6F267BC5A40082821F /* jjutils.framework */,
+				FDB5A2BDEA0611C99547ADD2 /* Pods_jjutils_Example.framework */,
+				ACE869DB5114029942129D6B /* Pods_jjutils_Tests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -90,7 +103,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				1C47CE6D381B795982B2E37A /* Pods */,
-				681BC1C37C021039A902A964 /* Frameworks */,
+				55F4AD6D3DD8C5E492A9AAD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,15 +166,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		681BC1C37C021039A902A964 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1F31EE359B93067A5D45EF23 /* Pods_jjutils_Example.framework */,
-				D53020222B6CB37379CFC649 /* Pods_jjutils_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,11 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "jjutils_Example" */;
 			buildPhases = (
-				164DE8FB9828363978D8B94E /* [CP] Check Pods Manifest.lock */,
+				9123B6D6074690D8ABD2332F /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				D068B63C483442055D3DA222 /* [CP] Embed Pods Frameworks */,
+				BF30B4AD058E8FB1B3EC3B87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,7 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "jjutils_Tests" */;
 			buildPhases = (
-				E8BE06097310E59C4D54B61B /* [CP] Check Pods Manifest.lock */,
+				F532883FC13431771A611EA0 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -210,7 +214,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -226,10 +230,9 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "jjutils" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -265,7 +268,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		164DE8FB9828363978D8B94E /* [CP] Check Pods Manifest.lock */ = {
+		9123B6D6074690D8ABD2332F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,7 +290,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D068B63C483442055D3DA222 /* [CP] Embed Pods Frameworks */ = {
+		BF30B4AD058E8FB1B3EC3B87 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,7 +310,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8BE06097310E59C4D54B61B /* [CP] Check Pods Manifest.lock */ = {
+		F532883FC13431771A611EA0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,7 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D001C318263B0E5700443894 /* DrawableView.swift in Sources */,
+				D045A8A2267BCA7700DD130F /* DrawableView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -384,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -392,14 +396,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -437,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -445,14 +453,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -481,7 +492,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 675787EDA620FC518A03E9F6 /* Pods-jjutils_Example.debug.xcconfig */;
+			baseConfigurationReference = 3CCA721EED491AD91E007C0F /* Pods-jjutils_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -499,7 +510,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C484C127C1837239B115FFD /* Pods-jjutils_Example.release.xcconfig */;
+			baseConfigurationReference = 4A1E4E315871B4190226D411 /* Pods-jjutils_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -516,7 +527,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 072D0539594B06F61061785F /* Pods-jjutils_Tests.debug.xcconfig */;
+			baseConfigurationReference = E0C15FF9DF402D7FAEAF99D9 /* Pods-jjutils_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -538,7 +549,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A88F8886A3CFC7CB2B36516 /* Pods-jjutils_Tests.release.xcconfig */;
+			baseConfigurationReference = 3D0B15CB1261067B77D00D56 /* Pods-jjutils_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",

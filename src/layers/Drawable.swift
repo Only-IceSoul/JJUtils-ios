@@ -36,6 +36,8 @@ public class Drawable: CAShapeLayer {
     private var mIsTranslationPercent : Bool = false
     private var mScaleX  : CGFloat = 1
     private var mScaleY  : CGFloat = 1
+    private var mInsetX  : CGFloat = 0
+    private var mInsetY  : CGFloat = 0
     private var mBaseRect = CGRect()
     private var mRect = CGRect()
     private var mRadius :[CGFloat] = [0,0,0,0]
@@ -162,6 +164,29 @@ public class Drawable: CAShapeLayer {
     commit()
        return self
    }
+    
+    @discardableResult
+   public func setStrokeCap(cap:CAShapeLayerLineCap) -> Drawable{
+     disableAnimation()
+    super.lineCap = cap
+    commit()
+       return self
+   }
+    
+    @discardableResult
+   public func setStrokeJoin(join:CAShapeLayerLineJoin) -> Drawable{
+     disableAnimation()
+    super.lineJoin = join
+    commit()
+       return self
+   }
+    @discardableResult
+   public func setStrokeMiter(miter:CGFloat) -> Drawable{
+     disableAnimation()
+    super.miterLimit = miter
+    commit()
+       return self
+   }
     //MARK: LAYER SET
     
     @discardableResult
@@ -202,7 +227,12 @@ public class Drawable: CAShapeLayer {
        return self
    }
    
-    
+    @discardableResult
+    public func setInset(dx:CGFloat,dy:CGFloat) -> Drawable{
+      mInsetX = dx
+      mInsetY = dy
+      return self
+   }
 
     
     //MARK: layer set transform
@@ -318,17 +348,16 @@ public class Drawable: CAShapeLayer {
         }
         
         super.frame = mBaseRect
+        setupRect()
+        
         if invalidate { invalidateSelf() }
     }
     
     private func draw(){
         if(frame.width > 0 && frame.height > 0){
-            setupRect()
             setupPath()
             makeTransform()
         }
-     
-        
     }
     
  
@@ -338,9 +367,7 @@ public class Drawable: CAShapeLayer {
         mRect.origin.y = 0
         mRect.size.width = mBaseRect.width
         mRect.size.height = mBaseRect.height
-        let strokeInset = super.lineWidth / 2
-        mRect.setInset(dx: strokeInset, dy: strokeInset)
-     
+        mRect.setInset(dx: mInsetX, dy: mInsetY)
     }
     
     private func setupPath(){

@@ -8,7 +8,7 @@
 
 //With background
 import UIKit
-public class JJDrawable: CAShapeLayer {
+public class JJDrawable: CALayer {
     
     
     
@@ -20,7 +20,7 @@ public class JJDrawable: CAShapeLayer {
         addSublayer(mDrawable)
   
     }
-        
+
 
     //MARK: Path set and get
     @discardableResult
@@ -89,9 +89,25 @@ public class JJDrawable: CAShapeLayer {
     @discardableResult
    public func setStrokeEnd(e:CGFloat) -> JJDrawable{
     mDrawable.setStrokeEnd(e: e)
- 
        return self
    }
+    @discardableResult
+    public func setStrokeCap(_ cap:DrawableLineCap) -> JJDrawable{
+        mDrawable.setStrokeCap(cap: cap.toTarget())
+        return self
+    }
+    @discardableResult
+   public func setStrokeMiter(_ miter:CGFloat) -> JJDrawable{
+     mDrawable.setStrokeMiter(miter: miter)
+       return self
+   }
+    @discardableResult
+   public func setStrokeJoin(_ join:DrawableLineJoin) -> JJDrawable{
+    mDrawable.setStrokeJoin(join: join.toTarget())
+       return self
+   }
+    
+    
     //MARK: LAYER SET
     
     @discardableResult
@@ -128,7 +144,11 @@ public class JJDrawable: CAShapeLayer {
        return self
    }
     
-   
+    @discardableResult
+    public func setInset(dx:CGFloat,dy:CGFloat) -> JJDrawable{
+        mDrawable.setInset(dx:dx,dy:dy)
+      return self
+   }
     
     //MARK: layer set transform
     

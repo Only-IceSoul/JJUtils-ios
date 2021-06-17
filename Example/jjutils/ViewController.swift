@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         mView.heightAnchor.constraint(equalToConstant: 240).isActive = true
         mView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         mView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
+//        
 //        let mDisplay = CADisplayLink(target: self, selector: #selector(self.displayAnimation(_:)))
 //        mDisplay.add(to: .main, forMode: .defaultRunLoopMode)
 
