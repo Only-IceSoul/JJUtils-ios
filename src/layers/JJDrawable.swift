@@ -178,7 +178,7 @@ public class JJDrawable: CALayer {
        return self
    }
     @discardableResult
-    public func setRotationOrder(f: Drawable.Axis,s:Drawable.Axis,t:Drawable.Axis) -> JJDrawable{
+    public func setRotationOrder(f: DrawableAxis,s:DrawableAxis,t:DrawableAxis) -> JJDrawable{
         mDrawable.setRotationOrder(f: f, s: s, t: t)
         mBg.setRotationOrder(f: f, s: s, t: t)
        return self

@@ -7,6 +7,9 @@
 
 import Foundation
 
+public enum DrawableAxis {
+    case x, y , z
+}
 
 public enum DrawableLineCap : String{
     case butt,
@@ -19,6 +22,15 @@ public enum DrawableLineCap : String{
     }
 }
 
+public enum GradientDrawableType : String{
+    case axial,
+         radial,
+         conic
+    internal func toTarget() -> CAGradientLayerType
+    {
+        return CAGradientLayerType(rawValue: rawValue)
+    }
+}
 
 public enum DrawableLineJoin : String{
     case bevel,

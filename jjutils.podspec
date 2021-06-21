@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'jjutils'
-  s.version          = '1.4.5'
+  s.version          = '1.4.6'
   s.summary          = 'utils for swift'
 
 # This description is used to generate tags and improve search results.
@@ -40,9 +40,9 @@ Class for create app faster
   s.public_header_files = 'src/Frameworks/**/Headers/*.{h}'
 
 # xcode 12 issue arm mac
-  s.pod_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)' ,
- 'ONLY_ACTIVE_ARCH' => 'YES'}
-  s.user_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)', 'ONLY_ACTIVE_ARCH' => 'YES'}
+#   s.pod_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)' ,
+#  'ONLY_ACTIVE_ARCH' => 'YES'}
+#   s.user_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)', 'ONLY_ACTIVE_ARCH' => 'YES'}
   
 #  s.ios.preserve_paths = 'src/Frameworks' , 'src/obj'
 #  s.public_header_files = 'src/Frameworks/**/Headers/*.{h}' , 'src/obj/Headers/*.{h}'

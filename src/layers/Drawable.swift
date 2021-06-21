@@ -18,16 +18,14 @@ public class Drawable: CAShapeLayer {
              none
     }
     
-    public enum Axis {
-        case x, y , z
-    }
+   
     
   
     //MARK: layer propertys
     private var mRotationX :CGFloat = 0
     private var mRotationY :CGFloat = 0
     private var mRotationZ :CGFloat = 0
-    private var mRotationOrder :[Axis] = [.z,.x,.y]
+    private var mRotationOrder :[DrawableAxis] = [.z,.x,.y]
     private var mTranslationX : CGFloat = 0
     private var mTranslationY : CGFloat = 0
  
@@ -260,7 +258,7 @@ public class Drawable: CAShapeLayer {
        return self
    }
     @discardableResult
-    public func setRotationOrder(f: Axis,s:Axis,t:Axis) -> Drawable{
+    public func setRotationOrder(f: DrawableAxis,s:DrawableAxis,t:DrawableAxis) -> Drawable{
         if (f == s || f == t) || ( s == t ) { return self}
        mRotationOrder = [f,s,t]
        return self
