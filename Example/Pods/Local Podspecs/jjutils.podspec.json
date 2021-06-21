@@ -1,6 +1,6 @@
 {
   "name": "jjutils",
-  "version": "1.4.7",
+  "version": "1.5.1",
   "summary": "utils for swift",
   "description": "Class for create app faster",
   "homepage": "https://github.com/Only-IceSoul/JJUtils-ios",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Only-IceSoul/JJUtils-ios.git",
-    "tag": "1.4.7"
+    "tag": "1.5.1"
   },
   "platforms": {
     "ios": "10.0"
@@ -28,7 +28,7 @@
   },
   "public_header_files": "src/Frameworks/**/Headers/*.{h}",
   "pod_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64 i386"
   },
   "swift_version": "4.2"
 }

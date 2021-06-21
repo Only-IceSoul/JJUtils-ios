@@ -1,5 +1,5 @@
 PODS:
-  - jjutils (1.4.7)
+  - jjutils (1.5.1)
 
 DEPENDENCIES:
   - jjutils (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  jjutils: d61f687f392dfa89d6512720050549162c5f9797
+  jjutils: 37db685981d76956aa6a71766d08746a8630d35c
 
 PODFILE CHECKSUM: 990a3bb20b95dde4a5b5def594c6215bc2cdccf3
 
