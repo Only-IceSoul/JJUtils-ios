@@ -43,8 +43,8 @@ Class for create app faster
 #   s.pod_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)' ,
 #  'ONLY_ACTIVE_ARCH' => 'YES'}
 #   s.user_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)', 'ONLY_ACTIVE_ARCH' => 'YES'} # not recommended
-s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }  
-s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }  
+s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' }  
+
 # s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' } # not recommended
 #  s.ios.preserve_paths = 'src/Frameworks' , 'src/obj'
 #  s.public_header_files = 'src/Frameworks/**/Headers/*.{h}' , 'src/obj/Headers/*.{h}'
