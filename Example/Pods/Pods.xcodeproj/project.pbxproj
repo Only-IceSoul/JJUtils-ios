@@ -7,94 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0044A04DAE09C86EF79B5E6BF45AF58E /* extension_string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F67AD384A33663FE4B39BD7E30FE923 /* extension_string.swift */; };
-		008E308D6BA9C7B40275D351F6C3D945 /* sk_picture.h in Headers */ = {isa = PBXBuildFile; fileRef = BFC2B4FF8AF45928C7C9B51562CEF9E2 /* sk_picture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058349D8A12B46E09718F3BAFC2DD11B /* sk_pixmap.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E216C87E2053102E832FF5ADAA1EF4 /* sk_pixmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		08D96A81ACBBEF08E78C39144C522E83 /* JJDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57492304B8DBEACF8E812B61C91E2A0F /* JJDrawable.swift */; };
-		0981B8293DFC57243E57A961DC90CAE1 /* sk_types.h in Headers */ = {isa = PBXBuildFile; fileRef = BBE7FCEFEE4E261C9BA3917996B40810 /* sk_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B5E117E0131A115FC3E2A14C5E92241 /* extension_UIBezierPathUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D01C878C94784274C6F869B78AAE1 /* extension_UIBezierPathUpper.swift */; };
-		0FE2D517EFD2CFAD742347896645866D /* jjutils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDB18F18ADD87862E04B84B7D085F09 /* jjutils-dummy.m */; };
-		18D1BDEC7107BE5747B01AE8C337C0E7 /* sk_general.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2E31365A584C32280952ECEE6820C3 /* sk_general.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01D63E4ED19F82C150E621DFD047C618 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D5205E56AC33A787B93F6248CC30A /* Drawable.swift */; };
+		188D78B2D17D76503457398DD69055A8 /* jjutils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B48364969249A4CE961992A6BEE6CF5 /* jjutils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18E654479D9B7AF90CCBBD6A31634790 /* jjutils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C50010DD252B700CCEE3BDD20A58E700 /* jjutils-dummy.m */; };
 		19E8291B4A8067D8864BD25F62781C49 /* Pods-jjutils_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3598AA7274255C5EE0D87741B752E3E6 /* Pods-jjutils_Tests-dummy.m */; };
-		1BF2D5543EA3E87283C790B64A85F773 /* sk_matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E01CF8CE1250BB9DBFD57B1A785F0A9 /* sk_matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D5C8641A32DAC8BAEF91C6693B1C341 /* sk_svg.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2C7BC979D9D972B36352A31C56A847 /* sk_svg.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DF2031E5B2B2720B683B52EB64BA440 /* extension_UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01489F0ABC6FDCD4B712EB7250105E53 /* extension_UIBezierPath.swift */; };
-		1FC4B00809DC0DEEAE9CFD55693B3362 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E74A31D08724D3B5493EB673925746 /* Color.swift */; };
-		22ACDB59A34158F35DCAF087D74941E0 /* SkiaKit-Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = FC49890FE73DABEDC81A46C294B360BC /* SkiaKit-Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2666461B2DF92B63EC34549DFC25A636 /* sk_font.h in Headers */ = {isa = PBXBuildFile; fileRef = F9CD321F0F15B3171FAD7C338776025B /* sk_font.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2827380AAE22A86C80CB6EB3729559BB /* sk_maskfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BA0F7DB8ABBF005473035578D237AB0 /* sk_maskfilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2BDE89A647757E56853591AA4BE54DA8 /* ViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B054CA80D7AEAC49BBA30F3230658 /* ViewBox.swift */; };
-		2C122CB38E947C7F393962C241748604 /* JJFilteredDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2CC3B3CEBAB27E235193B2C19EA2D /* JJFilteredDrawable.swift */; };
-		2C2498ED0D9E1DA1683F178D73A85E3F /* sk_paint.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A02813CB27AC83ACCB480C94FDB147 /* sk_paint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C864814DC7A218A89665061422665FB /* LayerClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C579DD51A5F77D1EC7551CC08179691F /* LayerClip.swift */; };
-		34B0C0754489F0B031EB709D639D96F9 /* extension_CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82D4BFB4F1831A2898E63BC53514D19 /* extension_CGImage.swift */; };
-		3E6ABD8FEAF1076E7EB4E59CB470A2D9 /* extension_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884E9620B7E3936BF76F6F14CE42EDD /* extension_UIColor.swift */; };
-		3F0596B551744C44CC37808000A07C66 /* extension_CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E708980C6739CACB474746D4CF7BCD3 /* extension_CALayer.swift */; };
-		40091DE84C3AF3FCBC9739DC592FD9E8 /* CustomBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC01B7312143B2F973A5E8369EFAEF /* CustomBlurEffect.swift */; };
-		4B2B08C98658222B5E3C983722A15DA5 /* sk_xml.h in Headers */ = {isa = PBXBuildFile; fileRef = 48374F40CB6E137A86436225B0069CA3 /* sk_xml.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4FCCA90A93C4F2A77F80918C27B2CAFC /* sk_string.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E742947F61B15F696C0C6668705019F /* sk_string.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A4E7BF5B2130006192A04D33FC6B9C8 /* CustomBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C711B8DE30D61157CC20863ECF86A0F /* CustomBlurEffect.swift */; };
+		234390477650D7331373B4A4CBCF4941 /* extension_UIVIsualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF16FA2788F466F9D13E2F4744C77B /* extension_UIVIsualEffect.swift */; };
 		5246CA225C0704FAA440F29C3ABADA7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		539B4F58FA08526F9D5E882EDB365B19 /* sk_path.h in Headers */ = {isa = PBXBuildFile; fileRef = D558E60238A8EB9C377D56AD3C1C8BC1 /* sk_path.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5807791DBC742F5810C50386F387161C /* sk_data.h in Headers */ = {isa = PBXBuildFile; fileRef = B8CD39E23970EA0A819E2B241E0AE46F /* sk_data.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A2596879A4EECAF58A1C8B84ED15864 /* sk_document.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B99DA5A459D78BBFD929750E733CF2D /* sk_document.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6793B84A1DDAC085D19AA2C3987E4201 /* sk_colortable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D64CAF9A945962527C4A7AE75C7B464 /* sk_colortable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69B8F89300554F9F0D2AF3595F129F82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		6A7043C82A2A91D06B5036F949B0E1EC /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2283D5BAB0684B8DCE235DBAB6BC3912 /* PathElement.swift */; };
-		6CE4A646A7E8F8F19AD1594CC2336BA3 /* SVGPathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 41228B65DA09FB84CF7AF3512482B3C0 /* SVGPathParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		711BDDFE78F4E9D18089DB1669DDEB31 /* extension_CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48166E08B11A109470881E6E759E36BC /* extension_CAShapeLayer.swift */; };
+		527223161087DEFD2FD7A4855C3B35FC /* JJDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420E052048C2EE360335966091113F /* JJDrawable.swift */; };
+		5466F9F70BABF77969374370228FE8BE /* extension_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA8320B12599EA4324EF0782BFFBC1 /* extension_UIImage.swift */; };
+		61A9A49EE004F8E464E1357747C21BC9 /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3F326AEAAC0323DED2FFFB815A228 /* PathElement.swift */; };
+		62D61ADF09A0B6348C7E10C456BE08D9 /* extension_bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA96AFF20B97BE8F8F99D870B3203A8 /* extension_bitwise.swift */; };
+		6F5C28731E5688996AE79A47E63A89E4 /* extension_CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A116FF09830AD84F87BF3B3500F2052 /* extension_CGFloat.swift */; };
+		734887AB7402C6DCB899395B99D38A5F /* extension_CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78934D14D2959DC7FAF00195600F84CA /* extension_CGRect.swift */; };
 		760DC6617DAB87EC2E78B7EF71A4A98E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		7621210BFFFEBA43FBB95AB7C8C0312F /* LayerCircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A51EE8FB7E255D0E66CB8E30661E8 /* LayerCircleProgress.swift */; };
-		7BC3146091055351B8DEB63EFA993120 /* extension_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B56BF5C1084A220E7453F66F5DA0532 /* extension_UIImage.swift */; };
-		7D142E0CAF06DB3C1EE4FAC67F38E22B /* sk_patheffect.h in Headers */ = {isa = PBXBuildFile; fileRef = 56C69A6F23324A84815EDB50E07FFB40 /* sk_patheffect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		805569C525D692E43407172EC62FBDAC /* extension_bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9BCACC2B7F0CA5731068514FECA977 /* extension_bitwise.swift */; };
-		86526B79E255AAD8CF5CBE427C85981B /* sk_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7A041CC105C1EC78371E21EBAE2B44 /* sk_image.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88EED411D65669853FA0CC2DE6F98512 /* sk_textblob.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BD36398C58B2EF442EF5CF38542D19 /* sk_textblob.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C2E0CCA81279472424074B7BBD23ECB /* UIViewEffectViewiOS14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922274169AFE28FDA239E98D23F84DA8 /* UIViewEffectViewiOS14.swift */; };
-		8CAFD3B1B4EE860F05F75E3FC4E397CE /* extension_CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F705413DCA14F0D4995C38A892C104 /* extension_CGFloat.swift */; };
-		8F0EA83584E7074781021C52F517E86F /* sk_drawable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E9483632FC7952DDE0D9386636F38B8 /* sk_drawable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92DC2DEC87AB0A3940AED0ED65A74AE8 /* sk_imagefilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1600E11D277AB4DB2D521DFC4E7071F5 /* sk_imagefilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		937D1E5060F541A6CF9D7CE371F9CF59 /* gr_context.h in Headers */ = {isa = PBXBuildFile; fileRef = 33146F84BA13B39EEA7B330C6E1D70CF /* gr_context.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95099F60194295B1B2DBC59E00083F5A /* extension_CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6594C98FE7AE85F8DC9EFAEE0CDD6CA /* extension_CGRect.swift */; };
-		9A2336C2197A236E37985E714D6E24DC /* PathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1626E804466B6BB2F791BF4EE652E6DB /* PathParser.swift */; };
-		9C8B0870A28847E5BD1F54A1A91B8E5D /* GradientDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6128EA4358F482D8B75CF10EB8E1F37 /* GradientDrawable.swift */; };
-		9C9C2958DA9AD349FFCDB4FB54890989 /* sk_vertices.h in Headers */ = {isa = PBXBuildFile; fileRef = B16C4898CA9F37FAD3C5033DEB94C423 /* sk_vertices.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DE64CECF9CFBB25F11EBC37641CFA79 /* sk_colorspace.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EEF0E5148657DB4AC37A1E87AFD566 /* sk_colorspace.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9EAD0692AC2EA55E58881339CF434B41 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562184E58E4F7027F982753EA7A97DBD /* enums.swift */; };
-		A040546D486BCC2C0A0E456CDDB7CC71 /* jjutils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53C091ACFC538682F1714782791F97BA /* jjutils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A15AC10C5BC54F08429CF5014F1277BD /* JJRegistrationCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10851B1BBCD41C068FFC97197481304A /* JJRegistrationCompletedView.swift */; };
-		A68D4E34316901ADD1DB75A3E9B885DD /* JJBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E865FF8EB866C679889FFB8F0C9346 /* JJBlurEffect.swift */; };
-		A8BC4A85E425530770D8ACD19650F602 /* extension_UIVIsualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333188C39BD2B2BADFB096028F33C02C /* extension_UIVIsualEffect.swift */; };
-		AC689222584C945A14AB86C547D2210C /* SkiaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7A4D119E3553202D6D4168DC4DBD02 /* SkiaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC8D406D1D9A698434F7F966118B973C /* sk_bitmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FCDDF89E1C3AB1A81374EF045D7D5AD /* sk_bitmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF4DEF10ACAFEEA39D838D8A505B046F /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96AC112DDF1928A80E42D5F00EDA8E /* Drawable.swift */; };
-		B1BCAF0AA526802025C439674129F907 /* sk_rrect.h in Headers */ = {isa = PBXBuildFile; fileRef = E0F7B5E00695D5406779655EAE1F21B5 /* sk_rrect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B351EB0D8CED6B3B73DBF4EAACBCDED2 /* sk_shader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE4F9BF58AF3A320F53294B94E2877F /* sk_shader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5D1BAEF4AAD18F9AD32CBEF36BD645D /* sk_canvas.h in Headers */ = {isa = PBXBuildFile; fileRef = 86B0226C117DBBF55A36F9B5018D7285 /* sk_canvas.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC3C167C4725739E7F67E71415B79718 /* sk_typeface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D99C3AFAB0E1DD6CB52AFEB61A07422 /* sk_typeface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77DBA876816EC2FA2CFFDB65ABB631D2 /* ElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11110C8F0A18266DE43AC96CA3913DA3 /* ElementType.swift */; };
+		7AA4035EB5CCA66A5F6356AA534214E8 /* SkiaDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37570E9F99705BA95DF81CFC58E485D8 /* SkiaDrawable.swift */; };
+		7DBC952FEDFBC139085EC3D75D8C4B3D /* UIViewEffectViewiOS14.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9D8A80D0A4971E52C3D07FAD44189 /* UIViewEffectViewiOS14.swift */; };
+		7FB005069C6242330F61FB80BC38BC81 /* JJFilteredDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352C26893606AF9265038DD3A3724C1 /* JJFilteredDrawable.swift */; };
+		8077FB26FD010D81B9C3F683BD825494 /* GradientDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693987DFA3F75DE1FFE5E55C035A0703 /* GradientDrawable.swift */; };
+		8678284E652738A665C23B22FF451F86 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FEC4E3D7FD26F725CB7425D450642C /* enums.swift */; };
+		890BA3924D2377D1E8E357E8F2D93B62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8C243C8BE77CE2FE6BB3BC75F2D0F2AC /* extension_CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE73A78497B234825496F59251C9600C /* extension_CAShapeLayer.swift */; };
+		929DC38035BF27EF8F73B2DFA251F539 /* LayerClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58361D1948E6DFB5BF425869EA712C91 /* LayerClip.swift */; };
+		9F2EFB1F2DE15F424E7E33AE42E71B9F /* extension_UIBezierPathUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4937FC7385E7C7CA427B3685F4BC3 /* extension_UIBezierPathUpper.swift */; };
+		A21C20583738BDCE9AE2E2265300BDAF /* PathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4822D9E003DE0C7F4BC332E4E56B0482 /* PathParser.swift */; };
+		A232196C81AB24962E060517F93E1713 /* JJRegistrationCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E518F2225746A1CCC6C8AD9932986 /* JJRegistrationCompletedView.swift */; };
+		A38CFA2143ADD07CFAF3994002916A67 /* extension_UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F206500FBA5D0E2A4FDB13E7A18BA44D /* extension_UIBezierPath.swift */; };
+		A718DCB19ACB1E88616E0BD4346E1A93 /* LayerCircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFA0881B7630B6FD8879965606964A /* LayerCircleProgress.swift */; };
+		B2693F06FF8CDAD56FCEA90037CBB59E /* extension_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92034DA3152173654D5146F839FF508E /* extension_UIColor.swift */; };
+		B39059D5C5333796EEBFE79A97022522 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A5A785F47E420084E3021BFDFD23C /* Color.swift */; };
+		B7BDB5BCBDBCDB3C851A03B6464BBE12 /* ViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23EEED56F388686DC9B9381B20D1B77 /* ViewBox.swift */; };
+		BD1E4FF7E51107A6F2C16F2A965818A7 /* extension_string.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51C61AD9AB541817BC196FB647DA3B /* extension_string.swift */; };
 		C3DC33045D9F3C7CE1D85483CB38CE75 /* Pods-jjutils_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FAE346A20FA6CFD0BE0AC18BA33071 /* Pods-jjutils_Example-dummy.m */; };
-		C3E7B77A8D394E57BB8DE924C9AF4B9C /* sk_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3C2CC1B8246ACDC46370FC59428C92 /* sk_stream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB72C2C836F5B8FDCE0645E3FA85B89E /* sk_mask.h in Headers */ = {isa = PBXBuildFile; fileRef = 45723CDF949DBB3F8F1AC76989F228C2 /* sk_mask.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFD1A83C3F012BBF745EF75CD6BDC2A6 /* sk_region.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C37124CCF2AC7E80F0C63B480DA6C2 /* sk_region.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1936CE458A4F943DC53D8CA5AFBFE7A /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34F6AAD0786D8AABC11ECAACFA2CAE /* VisualEffectView.swift */; };
-		D1BF258E099C2B9429F566C676611647 /* sk_surface.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F277067B6764CB64DFD2DACD65FB51 /* sk_surface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D99D48E14D5AD290AD3A4E3134968FDA /* SkiaDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261FF03D1DCE208E16F84DEE96074645 /* SkiaDrawable.swift */; };
-		E2ABF2C3D89D352748D2846950CE772E /* SkiaKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2B60AB3707237C30137B2DB51F62AA /* SkiaKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C651AE8E790F84F71F2F6AEB4413423A /* extension_CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B604C96B42445B2662923074A4C15 /* extension_CALayer.swift */; };
+		CF35B99A18303A6D3000DE38E567F5E9 /* extension_CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11F402F762B3B52CDE695A85C558CE /* extension_CGImage.swift */; };
+		D31E8BA5B28DE0AC24068D8C108D30DF /* JJBlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29F4809041EA8AB7C0A061C6F6BB04 /* JJBlurEffect.swift */; };
+		D41CA470925EA1D4E8C81CB3BE2F44BD /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307490332381EEA220BC0539FD6EADD /* VisualEffectView.swift */; };
 		E4741DD7203DDE775D196607A0134BFB /* Pods-jjutils_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 319A938125330FE84F18679B8926BC6D /* Pods-jjutils_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5FC80E00F3A6D265FCCD2891BAD9845 /* sk_colorfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E080512B6AB04BCB8C335B562AE727 /* sk_colorfilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6A5B0F50D83AA182F2381859431ADB8 /* ElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5900EF192B0814E5143AEF23D56F80 /* ElementType.swift */; };
-		E8A35B3C36F4BE4A0C7CD00F125CCD56 /* sk_codec.h in Headers */ = {isa = PBXBuildFile; fileRef = E2C74E73BD0520C4FA65F0F389BE0777 /* sk_codec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F511668125084B2EB8659EF735FF8A4C /* Pods-jjutils_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 245F1772B288FF883C817B3444838BA2 /* Pods-jjutils_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		757DBC6DB253F71EB1A0AE38FFF24C63 /* PBXContainerItemProxy */ = {
+		550CAD5CFB4BC05966F796B216D07940 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 454D442657ACE64A352DA1B1A9540794;
 			remoteInfo = jjutils;
 		};
-		D107E92F0E84804E6395ED8CB6BD78F9 /* PBXContainerItemProxy */ = {
+		E982DEEA3666DC8930B7F432DBE21368 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -104,107 +66,68 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01489F0ABC6FDCD4B712EB7250105E53 /* extension_UIBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPath.swift; sourceTree = "<group>"; };
+		0352C26893606AF9265038DD3A3724C1 /* JJFilteredDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJFilteredDrawable.swift; sourceTree = "<group>"; };
+		03FFA0881B7630B6FD8879965606964A /* LayerCircleProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayerCircleProgress.swift; sourceTree = "<group>"; };
 		048BBC965BD92BF22B0E25C8272B2275 /* Pods-jjutils_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-jjutils_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		07B2CC3B3CEBAB27E235193B2C19EA2D /* JJFilteredDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJFilteredDrawable.swift; sourceTree = "<group>"; };
-		0B99DA5A459D78BBFD929750E733CF2D /* sk_document.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_document.h; sourceTree = "<group>"; };
-		0D5900EF192B0814E5143AEF23D56F80 /* ElementType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementType.swift; path = src/ElementType.swift; sourceTree = "<group>"; };
-		10851B1BBCD41C068FFC97197481304A /* JJRegistrationCompletedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJRegistrationCompletedView.swift; sourceTree = "<group>"; };
+		0C711B8DE30D61157CC20863ECF86A0F /* CustomBlurEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomBlurEffect.swift; sourceTree = "<group>"; };
+		0D0F9AF10819C5056A64F8A1596C5843 /* jjutils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "jjutils-prefix.pch"; sourceTree = "<group>"; };
+		11110C8F0A18266DE43AC96CA3913DA3 /* ElementType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementType.swift; path = src/ElementType.swift; sourceTree = "<group>"; };
 		1160DF73A908B97AF2CE3EA12F893073 /* Pods-jjutils_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-jjutils_Tests-Info.plist"; sourceTree = "<group>"; };
-		1600E11D277AB4DB2D521DFC4E7071F5 /* sk_imagefilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_imagefilter.h; sourceTree = "<group>"; };
-		1626E804466B6BB2F791BF4EE652E6DB /* PathParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathParser.swift; path = src/PathParser.swift; sourceTree = "<group>"; };
-		1D64CAF9A945962527C4A7AE75C7B464 /* sk_colortable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_colortable.h; sourceTree = "<group>"; };
-		1DE4F9BF58AF3A320F53294B94E2877F /* sk_shader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_shader.h; sourceTree = "<group>"; };
-		1E742947F61B15F696C0C6668705019F /* sk_string.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_string.h; sourceTree = "<group>"; };
-		1F67AD384A33663FE4B39BD7E30FE923 /* extension_string.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_string.swift; sourceTree = "<group>"; };
+		13AF16FA2788F466F9D13E2F4744C77B /* extension_UIVIsualEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIVIsualEffect.swift; sourceTree = "<group>"; };
+		2070AA5A09B3CD71ABC9C33FA34FB0EB /* jjutils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = jjutils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		20FAE346A20FA6CFD0BE0AC18BA33071 /* Pods-jjutils_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-jjutils_Example-dummy.m"; sourceTree = "<group>"; };
-		2283D5BAB0684B8DCE235DBAB6BC3912 /* PathElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathElement.swift; path = src/PathElement.swift; sourceTree = "<group>"; };
-		22E080512B6AB04BCB8C335B562AE727 /* sk_colorfilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_colorfilter.h; sourceTree = "<group>"; };
-		22E74A31D08724D3B5493EB673925746 /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = src/Color.swift; sourceTree = "<group>"; };
 		245F1772B288FF883C817B3444838BA2 /* Pods-jjutils_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-jjutils_Tests-umbrella.h"; sourceTree = "<group>"; };
-		261FF03D1DCE208E16F84DEE96074645 /* SkiaDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SkiaDrawable.swift; sourceTree = "<group>"; };
-		271D01C878C94784274C6F869B78AAE1 /* extension_UIBezierPathUpper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPathUpper.swift; sourceTree = "<group>"; };
-		29BD36398C58B2EF442EF5CF38542D19 /* sk_textblob.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_textblob.h; sourceTree = "<group>"; };
-		2D7A4D119E3553202D6D4168DC4DBD02 /* SkiaKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SkiaKit.h; sourceTree = "<group>"; };
 		319A938125330FE84F18679B8926BC6D /* Pods-jjutils_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-jjutils_Example-umbrella.h"; sourceTree = "<group>"; };
-		33146F84BA13B39EEA7B330C6E1D70CF /* gr_context.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = gr_context.h; sourceTree = "<group>"; };
-		333188C39BD2B2BADFB096028F33C02C /* extension_UIVIsualEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIVIsualEffect.swift; sourceTree = "<group>"; };
 		3598AA7274255C5EE0D87741B752E3E6 /* Pods-jjutils_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-jjutils_Tests-dummy.m"; sourceTree = "<group>"; };
-		3B7A041CC105C1EC78371E21EBAE2B44 /* sk_image.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_image.h; sourceTree = "<group>"; };
-		3C96AC112DDF1928A80E42D5F00EDA8E /* Drawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
-		3D2C7BC979D9D972B36352A31C56A847 /* sk_svg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_svg.h; sourceTree = "<group>"; };
-		3E708980C6739CACB474746D4CF7BCD3 /* extension_CALayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CALayer.swift; sourceTree = "<group>"; };
-		41228B65DA09FB84CF7AF3512482B3C0 /* SVGPathParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVGPathParser.h; sourceTree = "<group>"; };
-		45723CDF949DBB3F8F1AC76989F228C2 /* sk_mask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_mask.h; sourceTree = "<group>"; };
-		48166E08B11A109470881E6E759E36BC /* extension_CAShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CAShapeLayer.swift; sourceTree = "<group>"; };
-		48374F40CB6E137A86436225B0069CA3 /* sk_xml.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_xml.h; sourceTree = "<group>"; };
+		37570E9F99705BA95DF81CFC58E485D8 /* SkiaDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SkiaDrawable.swift; sourceTree = "<group>"; };
+		3B8B604C96B42445B2662923074A4C15 /* extension_CALayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CALayer.swift; sourceTree = "<group>"; };
+		4822D9E003DE0C7F4BC332E4E56B0482 /* PathParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathParser.swift; path = src/PathParser.swift; sourceTree = "<group>"; };
 		4B4D11036326C3E54D9B4D593FB599CC /* jjutils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = jjutils.framework; path = jjutils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D8507CEFFA3B893EC01F3CE63098D0C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		4F49393D6561EC5F1BDE30CB7F8F31AF /* Pods-jjutils_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-jjutils_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		52FEA2531DDA1B3532BBF0D17531463C /* Pods_jjutils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_jjutils_Example.framework; path = "Pods-jjutils_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53C091ACFC538682F1714782791F97BA /* jjutils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "jjutils-umbrella.h"; sourceTree = "<group>"; };
-		561FDEDCFC058FD7E473C1CF8776D5B5 /* jjutils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "jjutils-prefix.pch"; sourceTree = "<group>"; };
-		562184E58E4F7027F982753EA7A97DBD /* enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
-		56C69A6F23324A84815EDB50E07FFB40 /* sk_patheffect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_patheffect.h; sourceTree = "<group>"; };
-		57492304B8DBEACF8E812B61C91E2A0F /* JJDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJDrawable.swift; sourceTree = "<group>"; };
+		5307490332381EEA220BC0539FD6EADD /* VisualEffectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		58361D1948E6DFB5BF425869EA712C91 /* LayerClip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayerClip.swift; sourceTree = "<group>"; };
 		5A5B9965115277062C0DEBB8D7ED35E5 /* Pods-jjutils_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-jjutils_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		5DDB18F18ADD87862E04B84B7D085F09 /* jjutils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "jjutils-dummy.m"; sourceTree = "<group>"; };
-		5E01CF8CE1250BB9DBFD57B1A785F0A9 /* sk_matrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_matrix.h; sourceTree = "<group>"; };
-		5F2B60AB3707237C30137B2DB51F62AA /* SkiaKit_iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SkiaKit_iOS.h; sourceTree = "<group>"; };
-		662C5E3E6E88CC1A5C449035A053F4E8 /* jjutils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "jjutils-Info.plist"; sourceTree = "<group>"; };
-		6D99C3AFAB0E1DD6CB52AFEB61A07422 /* sk_typeface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_typeface.h; sourceTree = "<group>"; };
+		693987DFA3F75DE1FFE5E55C035A0703 /* GradientDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientDrawable.swift; sourceTree = "<group>"; };
+		69C951823B7F21DEF8316D75EB97E450 /* jjutils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = jjutils.release.xcconfig; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		777DBB7A9E2449F1624459FAED756438 /* jjutils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = jjutils.debug.xcconfig; sourceTree = "<group>"; };
-		7884E9620B7E3936BF76F6F14CE42EDD /* extension_UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIColor.swift; sourceTree = "<group>"; };
+		78934D14D2959DC7FAF00195600F84CA /* extension_CGRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CGRect.swift; sourceTree = "<group>"; };
 		79DEB755199B5827A8DAEFB99F3475A5 /* Pods-jjutils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jjutils_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7A34F6AAD0786D8AABC11ECAACFA2CAE /* VisualEffectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
-		7E9483632FC7952DDE0D9386636F38B8 /* sk_drawable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_drawable.h; sourceTree = "<group>"; };
-		84E865FF8EB866C679889FFB8F0C9346 /* JJBlurEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJBlurEffect.swift; sourceTree = "<group>"; };
+		7B48364969249A4CE961992A6BEE6CF5 /* jjutils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "jjutils-umbrella.h"; sourceTree = "<group>"; };
 		85C37490F831DAD43682535B635B7CE9 /* Pods-jjutils_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-jjutils_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		86B0226C117DBBF55A36F9B5018D7285 /* sk_canvas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_canvas.h; sourceTree = "<group>"; };
-		8E4A51EE8FB7E255D0E66CB8E30661E8 /* LayerCircleProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayerCircleProgress.swift; sourceTree = "<group>"; };
-		922274169AFE28FDA239E98D23F84DA8 /* UIViewEffectViewiOS14.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewEffectViewiOS14.swift; sourceTree = "<group>"; };
+		886E518F2225746A1CCC6C8AD9932986 /* JJRegistrationCompletedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJRegistrationCompletedView.swift; sourceTree = "<group>"; };
+		88FEC4E3D7FD26F725CB7425D450642C /* enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
+		8F6D5205E56AC33A787B93F6248CC30A /* Drawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		92034DA3152173654D5146F839FF508E /* extension_UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIColor.swift; sourceTree = "<group>"; };
+		9A116FF09830AD84F87BF3B3500F2052 /* extension_CGFloat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CGFloat.swift; sourceTree = "<group>"; };
 		9AEDBF59CF9E304BD35421F855485269 /* Pods-jjutils_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-jjutils_Example-Info.plist"; sourceTree = "<group>"; };
-		9B56BF5C1084A220E7453F66F5DA0532 /* extension_UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIImage.swift; sourceTree = "<group>"; };
 		9B788E8FED608159035D51987A5F36B1 /* Pods-jjutils_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-jjutils_Example.modulemap"; sourceTree = "<group>"; };
-		9BA0F7DB8ABBF005473035578D237AB0 /* sk_maskfilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_maskfilter.h; sourceTree = "<group>"; };
+		9BC4937FC7385E7C7CA427B3685F4BC3 /* extension_UIBezierPathUpper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPathUpper.swift; sourceTree = "<group>"; };
 		9BD6C1D117AAE9483F6E36A55CCEB778 /* Pods-jjutils_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-jjutils_Tests.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FCDDF89E1C3AB1A81374EF045D7D5AD /* sk_bitmap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_bitmap.h; sourceTree = "<group>"; };
-		A6128EA4358F482D8B75CF10EB8E1F37 /* GradientDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientDrawable.swift; sourceTree = "<group>"; };
+		A707BE719D31CE4A6168153800F177FA /* jjutils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = jjutils.modulemap; sourceTree = "<group>"; };
 		A7CEFBFAA370950C53D7510A90738D25 /* Pods-jjutils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jjutils_Example.release.xcconfig"; sourceTree = "<group>"; };
-		AF3AF94A0AC82234BCD2394139C4F4DE /* SkiaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SkiaKit.framework; sourceTree = "<group>"; };
+		A7E082EB7EE7F93C4BA5289E8CB99C70 /* jjutils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = jjutils.debug.xcconfig; sourceTree = "<group>"; };
+		A8B3F326AEAAC0323DED2FFFB815A228 /* PathElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathElement.swift; path = src/PathElement.swift; sourceTree = "<group>"; };
+		A96A5A785F47E420084E3021BFDFD23C /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = src/Color.swift; sourceTree = "<group>"; };
+		AAA96AFF20B97BE8F8F99D870B3203A8 /* extension_bitwise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_bitwise.swift; sourceTree = "<group>"; };
+		AC11F402F762B3B52CDE695A85C558CE /* extension_CGImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CGImage.swift; sourceTree = "<group>"; };
 		B10DBEB54790508DAE4A4C0E6206DC30 /* Pods-jjutils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jjutils_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B16C4898CA9F37FAD3C5033DEB94C423 /* sk_vertices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_vertices.h; sourceTree = "<group>"; };
-		B404BE08E5A7354A0895B3DC85CBFAA2 /* jjutils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = jjutils.release.xcconfig; sourceTree = "<group>"; };
+		B18BB28025404006BED6EF20F4DAADC2 /* jjutils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "jjutils-Info.plist"; sourceTree = "<group>"; };
 		B4A0851E0E4FAEB5D5011D919F48095F /* Pods-jjutils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jjutils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B4EEF0E5148657DB4AC37A1E87AFD566 /* sk_colorspace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_colorspace.h; sourceTree = "<group>"; };
-		B8CD39E23970EA0A819E2B241E0AE46F /* sk_data.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_data.h; sourceTree = "<group>"; };
-		BBE7FCEFEE4E261C9BA3917996B40810 /* sk_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_types.h; sourceTree = "<group>"; };
-		BD2E31365A584C32280952ECEE6820C3 /* sk_general.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_general.h; sourceTree = "<group>"; };
-		BFC2B4FF8AF45928C7C9B51562CEF9E2 /* sk_picture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_picture.h; sourceTree = "<group>"; };
+		B5B887C09D5A7C7D0C38B2A5E138A18E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		BFE6A31BADB2D25203348FDDD1AB9773 /* Pods-jjutils_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-jjutils_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C579DD51A5F77D1EC7551CC08179691F /* LayerClip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayerClip.swift; sourceTree = "<group>"; };
-		C9C37124CCF2AC7E80F0C63B480DA6C2 /* sk_region.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_region.h; sourceTree = "<group>"; };
-		CA9BCACC2B7F0CA5731068514FECA977 /* extension_bitwise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_bitwise.swift; sourceTree = "<group>"; };
-		D0F705413DCA14F0D4995C38A892C104 /* extension_CGFloat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CGFloat.swift; sourceTree = "<group>"; };
-		D558E60238A8EB9C377D56AD3C1C8BC1 /* sk_path.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_path.h; sourceTree = "<group>"; };
-		DA0B054CA80D7AEAC49BBA30F3230658 /* ViewBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewBox.swift; path = src/ViewBox.swift; sourceTree = "<group>"; };
-		E06FFA213921F5D6EE9314357B019D9B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		E0F7B5E00695D5406779655EAE1F21B5 /* sk_rrect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_rrect.h; sourceTree = "<group>"; };
-		E2C74E73BD0520C4FA65F0F389BE0777 /* sk_codec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_codec.h; sourceTree = "<group>"; };
-		E3F277067B6764CB64DFD2DACD65FB51 /* sk_surface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_surface.h; sourceTree = "<group>"; };
-		E4E216C87E2053102E832FF5ADAA1EF4 /* sk_pixmap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_pixmap.h; sourceTree = "<group>"; };
-		E6594C98FE7AE85F8DC9EFAEE0CDD6CA /* extension_CGRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CGRect.swift; sourceTree = "<group>"; };
-		E6A02813CB27AC83ACCB480C94FDB147 /* sk_paint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_paint.h; sourceTree = "<group>"; };
+		C23EEED56F388686DC9B9381B20D1B77 /* ViewBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewBox.swift; path = src/ViewBox.swift; sourceTree = "<group>"; };
+		C50010DD252B700CCEE3BDD20A58E700 /* jjutils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "jjutils-dummy.m"; sourceTree = "<group>"; };
+		CB51C61AD9AB541817BC196FB647DA3B /* extension_string.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_string.swift; sourceTree = "<group>"; };
+		DBFA8320B12599EA4324EF0782BFFBC1 /* extension_UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIImage.swift; sourceTree = "<group>"; };
+		DE73A78497B234825496F59251C9600C /* extension_CAShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CAShapeLayer.swift; sourceTree = "<group>"; };
 		E8F322EAAE187BFB860D95D8DD498EBC /* Pods_jjutils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_jjutils_Tests.framework; path = "Pods-jjutils_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E94E2EF5A18AD79170BEDE3B179F57E2 /* jjutils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = jjutils.modulemap; sourceTree = "<group>"; };
-		F1E23690336F9C9636104718FA3B55CF /* jjutils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = jjutils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F82D4BFB4F1831A2898E63BC53514D19 /* extension_CGImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_CGImage.swift; sourceTree = "<group>"; };
-		F9CD321F0F15B3171FAD7C338776025B /* sk_font.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_font.h; sourceTree = "<group>"; };
-		FC3C2CC1B8246ACDC46370FC59428C92 /* sk_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sk_stream.h; sourceTree = "<group>"; };
-		FC49890FE73DABEDC81A46C294B360BC /* SkiaKit-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkiaKit-Swift.h"; sourceTree = "<group>"; };
-		FCEC01B7312143B2F973A5E8369EFAEF /* CustomBlurEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomBlurEffect.swift; sourceTree = "<group>"; };
+		EC420E052048C2EE360335966091113F /* JJDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJDrawable.swift; sourceTree = "<group>"; };
+		ED7A78AE9E0E6214A335DF6F631BAA7E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F206500FBA5D0E2A4FDB13E7A18BA44D /* extension_UIBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = extension_UIBezierPath.swift; sourceTree = "<group>"; };
+		FBE9D8A80D0A4971E52C3D07FAD44189 /* UIViewEffectViewiOS14.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewEffectViewiOS14.swift; sourceTree = "<group>"; };
+		FD29F4809041EA8AB7C0A061C6F6BB04 /* JJBlurEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JJBlurEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,14 +139,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66E38EB6B5C48F690C1AC26D9BE0512E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				69B8F89300554F9F0D2AF3595F129F82 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		777731AD6750F6F4E438BD3CCF6C2ADE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,71 +147,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF1502D32C0D117E0F6FD9586E51938C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				890BA3924D2377D1E8E357E8F2D93B62 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21D5151706F36F312B4660FB276D6CF1 /* Development Pods */ = {
+		118AD77D9734E62107539DB3131918B2 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				92EC0611C58EE6D1B13C9E2869889502 /* jjutils */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		2356158F96A679AB8A50874467ADDD24 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				F1E23690336F9C9636104718FA3B55CF /* jjutils.podspec */,
-				4D8507CEFFA3B893EC01F3CE63098D0C /* LICENSE */,
-				E06FFA213921F5D6EE9314357B019D9B /* README.md */,
+				2070AA5A09B3CD71ABC9C33FA34FB0EB /* jjutils.podspec */,
+				B5B887C09D5A7C7D0C38B2A5E138A18E /* LICENSE */,
+				ED7A78AE9E0E6214A335DF6F631BAA7E /* README.md */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		2B69D97DC549792A1E218DAB239F59CF /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				33146F84BA13B39EEA7B330C6E1D70CF /* gr_context.h */,
-				9FCDDF89E1C3AB1A81374EF045D7D5AD /* sk_bitmap.h */,
-				86B0226C117DBBF55A36F9B5018D7285 /* sk_canvas.h */,
-				E2C74E73BD0520C4FA65F0F389BE0777 /* sk_codec.h */,
-				22E080512B6AB04BCB8C335B562AE727 /* sk_colorfilter.h */,
-				B4EEF0E5148657DB4AC37A1E87AFD566 /* sk_colorspace.h */,
-				1D64CAF9A945962527C4A7AE75C7B464 /* sk_colortable.h */,
-				B8CD39E23970EA0A819E2B241E0AE46F /* sk_data.h */,
-				0B99DA5A459D78BBFD929750E733CF2D /* sk_document.h */,
-				7E9483632FC7952DDE0D9386636F38B8 /* sk_drawable.h */,
-				F9CD321F0F15B3171FAD7C338776025B /* sk_font.h */,
-				BD2E31365A584C32280952ECEE6820C3 /* sk_general.h */,
-				3B7A041CC105C1EC78371E21EBAE2B44 /* sk_image.h */,
-				1600E11D277AB4DB2D521DFC4E7071F5 /* sk_imagefilter.h */,
-				45723CDF949DBB3F8F1AC76989F228C2 /* sk_mask.h */,
-				9BA0F7DB8ABBF005473035578D237AB0 /* sk_maskfilter.h */,
-				5E01CF8CE1250BB9DBFD57B1A785F0A9 /* sk_matrix.h */,
-				E6A02813CB27AC83ACCB480C94FDB147 /* sk_paint.h */,
-				D558E60238A8EB9C377D56AD3C1C8BC1 /* sk_path.h */,
-				56C69A6F23324A84815EDB50E07FFB40 /* sk_patheffect.h */,
-				BFC2B4FF8AF45928C7C9B51562CEF9E2 /* sk_picture.h */,
-				E4E216C87E2053102E832FF5ADAA1EF4 /* sk_pixmap.h */,
-				C9C37124CCF2AC7E80F0C63B480DA6C2 /* sk_region.h */,
-				E0F7B5E00695D5406779655EAE1F21B5 /* sk_rrect.h */,
-				1DE4F9BF58AF3A320F53294B94E2877F /* sk_shader.h */,
-				FC3C2CC1B8246ACDC46370FC59428C92 /* sk_stream.h */,
-				1E742947F61B15F696C0C6668705019F /* sk_string.h */,
-				E3F277067B6764CB64DFD2DACD65FB51 /* sk_surface.h */,
-				3D2C7BC979D9D972B36352A31C56A847 /* sk_svg.h */,
-				29BD36398C58B2EF442EF5CF38542D19 /* sk_textblob.h */,
-				6D99C3AFAB0E1DD6CB52AFEB61A07422 /* sk_typeface.h */,
-				BBE7FCEFEE4E261C9BA3917996B40810 /* sk_types.h */,
-				B16C4898CA9F37FAD3C5033DEB94C423 /* sk_vertices.h */,
-				48374F40CB6E137A86436225B0069CA3 /* sk_xml.h */,
-				2D7A4D119E3553202D6D4168DC4DBD02 /* SkiaKit.h */,
-				FC49890FE73DABEDC81A46C294B360BC /* SkiaKit-Swift.h */,
-				5F2B60AB3707237C30137B2DB51F62AA /* SkiaKit_iOS.h */,
-				41228B65DA09FB84CF7AF3512482B3C0 /* SVGPathParser.h */,
-			);
-			name = Headers;
-			path = Headers;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -305,6 +174,23 @@
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		5E54DD0E53E24BDD91F8CA682F7662E9 /* layers */ = {
+			isa = PBXGroup;
+			children = (
+				8F6D5205E56AC33A787B93F6248CC30A /* Drawable.swift */,
+				88FEC4E3D7FD26F725CB7425D450642C /* enums.swift */,
+				693987DFA3F75DE1FFE5E55C035A0703 /* GradientDrawable.swift */,
+				EC420E052048C2EE360335966091113F /* JJDrawable.swift */,
+				0352C26893606AF9265038DD3A3724C1 /* JJFilteredDrawable.swift */,
+				886E518F2225746A1CCC6C8AD9932986 /* JJRegistrationCompletedView.swift */,
+				03FFA0881B7630B6FD8879965606964A /* LayerCircleProgress.swift */,
+				58361D1948E6DFB5BF425869EA712C91 /* LayerClip.swift */,
+				37570E9F99705BA95DF81CFC58E485D8 /* SkiaDrawable.swift */,
+			);
+			name = layers;
+			path = src/layers;
 			sourceTree = "<group>";
 		};
 		6CC2DBE1B1FD06533EF52181DCD0865A /* Pods-jjutils_Tests */ = {
@@ -323,16 +209,16 @@
 			path = "Target Support Files/Pods-jjutils_Tests";
 			sourceTree = "<group>";
 		};
-		785A31214E499C743A98ADA943371539 /* Support Files */ = {
+		765538ACFE2A45FF00D867F39E810334 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E94E2EF5A18AD79170BEDE3B179F57E2 /* jjutils.modulemap */,
-				5DDB18F18ADD87862E04B84B7D085F09 /* jjutils-dummy.m */,
-				662C5E3E6E88CC1A5C449035A053F4E8 /* jjutils-Info.plist */,
-				561FDEDCFC058FD7E473C1CF8776D5B5 /* jjutils-prefix.pch */,
-				53C091ACFC538682F1714782791F97BA /* jjutils-umbrella.h */,
-				777DBB7A9E2449F1624459FAED756438 /* jjutils.debug.xcconfig */,
-				B404BE08E5A7354A0895B3DC85CBFAA2 /* jjutils.release.xcconfig */,
+				A707BE719D31CE4A6168153800F177FA /* jjutils.modulemap */,
+				C50010DD252B700CCEE3BDD20A58E700 /* jjutils-dummy.m */,
+				B18BB28025404006BED6EF20F4DAADC2 /* jjutils-Info.plist */,
+				0D0F9AF10819C5056A64F8A1596C5843 /* jjutils-prefix.pch */,
+				7B48364969249A4CE961992A6BEE6CF5 /* jjutils-umbrella.h */,
+				A7E082EB7EE7F93C4BA5289E8CB99C70 /* jjutils.debug.xcconfig */,
+				69C951823B7F21DEF8316D75EB97E450 /* jjutils.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/jjutils";
@@ -364,25 +250,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		92EC0611C58EE6D1B13C9E2869889502 /* jjutils */ = {
-			isa = PBXGroup;
-			children = (
-				22E74A31D08724D3B5493EB673925746 /* Color.swift */,
-				0D5900EF192B0814E5143AEF23D56F80 /* ElementType.swift */,
-				2283D5BAB0684B8DCE235DBAB6BC3912 /* PathElement.swift */,
-				1626E804466B6BB2F791BF4EE652E6DB /* PathParser.swift */,
-				DA0B054CA80D7AEAC49BBA30F3230658 /* ViewBox.swift */,
-				E37472DBC0775D96E077BC6BAB30D306 /* blurEffect */,
-				A6A49966187B85A2EFC7A53B58840DEE /* extensions */,
-				A707E2BFCB323C8DB729C8A9FE4D1748 /* Frameworks */,
-				F43CFEDC2FC675CA9953544853D0B880 /* layers */,
-				2356158F96A679AB8A50874467ADDD24 /* Pod */,
-				785A31214E499C743A98ADA943371539 /* Support Files */,
-			);
-			name = jjutils;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		A295C75CB2CF3F83916AB4A0B48DE249 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,41 +260,49 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A6A49966187B85A2EFC7A53B58840DEE /* extensions */ = {
+		C493786086A396C830EAC2EAFC1E5C37 /* jjutils */ = {
 			isa = PBXGroup;
 			children = (
-				CA9BCACC2B7F0CA5731068514FECA977 /* extension_bitwise.swift */,
-				3E708980C6739CACB474746D4CF7BCD3 /* extension_CALayer.swift */,
-				48166E08B11A109470881E6E759E36BC /* extension_CAShapeLayer.swift */,
-				D0F705413DCA14F0D4995C38A892C104 /* extension_CGFloat.swift */,
-				F82D4BFB4F1831A2898E63BC53514D19 /* extension_CGImage.swift */,
-				E6594C98FE7AE85F8DC9EFAEE0CDD6CA /* extension_CGRect.swift */,
-				1F67AD384A33663FE4B39BD7E30FE923 /* extension_string.swift */,
-				01489F0ABC6FDCD4B712EB7250105E53 /* extension_UIBezierPath.swift */,
-				271D01C878C94784274C6F869B78AAE1 /* extension_UIBezierPathUpper.swift */,
-				7884E9620B7E3936BF76F6F14CE42EDD /* extension_UIColor.swift */,
-				9B56BF5C1084A220E7453F66F5DA0532 /* extension_UIImage.swift */,
-				333188C39BD2B2BADFB096028F33C02C /* extension_UIVIsualEffect.swift */,
+				A96A5A785F47E420084E3021BFDFD23C /* Color.swift */,
+				11110C8F0A18266DE43AC96CA3913DA3 /* ElementType.swift */,
+				A8B3F326AEAAC0323DED2FFFB815A228 /* PathElement.swift */,
+				4822D9E003DE0C7F4BC332E4E56B0482 /* PathParser.swift */,
+				C23EEED56F388686DC9B9381B20D1B77 /* ViewBox.swift */,
+				CDB5DD80CFEFF20716D9EC086E9DC8D6 /* blurEffect */,
+				DE421F3BA2FCE2C3F917EAC3BE80E0BC /* extensions */,
+				5E54DD0E53E24BDD91F8CA682F7662E9 /* layers */,
+				118AD77D9734E62107539DB3131918B2 /* Pod */,
+				765538ACFE2A45FF00D867F39E810334 /* Support Files */,
 			);
-			name = extensions;
-			path = src/extensions;
+			name = jjutils;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		A707E2BFCB323C8DB729C8A9FE4D1748 /* Frameworks */ = {
+		C4CB30C1A84F12C46962726ED48AED72 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AF3AF94A0AC82234BCD2394139C4F4DE /* SkiaKit.framework */,
-				DB0FE04C60D0B47E0CE45B6A12D56962 /* SkiaKit.framework */,
+				C493786086A396C830EAC2EAFC1E5C37 /* jjutils */,
 			);
-			name = Frameworks;
-			path = src/Frameworks;
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CDB5DD80CFEFF20716D9EC086E9DC8D6 /* blurEffect */ = {
+			isa = PBXGroup;
+			children = (
+				0C711B8DE30D61157CC20863ECF86A0F /* CustomBlurEffect.swift */,
+				FD29F4809041EA8AB7C0A061C6F6BB04 /* JJBlurEffect.swift */,
+				FBE9D8A80D0A4971E52C3D07FAD44189 /* UIViewEffectViewiOS14.swift */,
+				5307490332381EEA220BC0539FD6EADD /* VisualEffectView.swift */,
+			);
+			name = blurEffect;
+			path = src/blurEffect;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				21D5151706F36F312B4660FB276D6CF1 /* Development Pods */,
+				C4CB30C1A84F12C46962726ED48AED72 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				A295C75CB2CF3F83916AB4A0B48DE249 /* Products */,
 				7BD3EE74F5BECB353F95C020C61FBBEF /* Targets Support Files */,
@@ -442,42 +317,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DB0FE04C60D0B47E0CE45B6A12D56962 /* SkiaKit.framework */ = {
+		DE421F3BA2FCE2C3F917EAC3BE80E0BC /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2B69D97DC549792A1E218DAB239F59CF /* Headers */,
+				AAA96AFF20B97BE8F8F99D870B3203A8 /* extension_bitwise.swift */,
+				3B8B604C96B42445B2662923074A4C15 /* extension_CALayer.swift */,
+				DE73A78497B234825496F59251C9600C /* extension_CAShapeLayer.swift */,
+				9A116FF09830AD84F87BF3B3500F2052 /* extension_CGFloat.swift */,
+				AC11F402F762B3B52CDE695A85C558CE /* extension_CGImage.swift */,
+				78934D14D2959DC7FAF00195600F84CA /* extension_CGRect.swift */,
+				CB51C61AD9AB541817BC196FB647DA3B /* extension_string.swift */,
+				F206500FBA5D0E2A4FDB13E7A18BA44D /* extension_UIBezierPath.swift */,
+				9BC4937FC7385E7C7CA427B3685F4BC3 /* extension_UIBezierPathUpper.swift */,
+				92034DA3152173654D5146F839FF508E /* extension_UIColor.swift */,
+				DBFA8320B12599EA4324EF0782BFFBC1 /* extension_UIImage.swift */,
+				13AF16FA2788F466F9D13E2F4744C77B /* extension_UIVIsualEffect.swift */,
 			);
-			name = SkiaKit.framework;
-			path = SkiaKit.framework;
-			sourceTree = "<group>";
-		};
-		E37472DBC0775D96E077BC6BAB30D306 /* blurEffect */ = {
-			isa = PBXGroup;
-			children = (
-				FCEC01B7312143B2F973A5E8369EFAEF /* CustomBlurEffect.swift */,
-				84E865FF8EB866C679889FFB8F0C9346 /* JJBlurEffect.swift */,
-				922274169AFE28FDA239E98D23F84DA8 /* UIViewEffectViewiOS14.swift */,
-				7A34F6AAD0786D8AABC11ECAACFA2CAE /* VisualEffectView.swift */,
-			);
-			name = blurEffect;
-			path = src/blurEffect;
-			sourceTree = "<group>";
-		};
-		F43CFEDC2FC675CA9953544853D0B880 /* layers */ = {
-			isa = PBXGroup;
-			children = (
-				3C96AC112DDF1928A80E42D5F00EDA8E /* Drawable.swift */,
-				562184E58E4F7027F982753EA7A97DBD /* enums.swift */,
-				A6128EA4358F482D8B75CF10EB8E1F37 /* GradientDrawable.swift */,
-				57492304B8DBEACF8E812B61C91E2A0F /* JJDrawable.swift */,
-				07B2CC3B3CEBAB27E235193B2C19EA2D /* JJFilteredDrawable.swift */,
-				10851B1BBCD41C068FFC97197481304A /* JJRegistrationCompletedView.swift */,
-				8E4A51EE8FB7E255D0E66CB8E30661E8 /* LayerCircleProgress.swift */,
-				C579DD51A5F77D1EC7551CC08179691F /* LayerClip.swift */,
-				261FF03D1DCE208E16F84DEE96074645 /* SkiaDrawable.swift */,
-			);
-			name = layers;
-			path = src/layers;
+			name = extensions;
+			path = src/extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,49 +348,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D8006064AE2BCBD9941750573427DCA /* Headers */ = {
+		8858973164B69CAE8EF93E5FCCFBDEB4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				937D1E5060F541A6CF9D7CE371F9CF59 /* gr_context.h in Headers */,
-				A040546D486BCC2C0A0E456CDDB7CC71 /* jjutils-umbrella.h in Headers */,
-				AC8D406D1D9A698434F7F966118B973C /* sk_bitmap.h in Headers */,
-				B5D1BAEF4AAD18F9AD32CBEF36BD645D /* sk_canvas.h in Headers */,
-				E8A35B3C36F4BE4A0C7CD00F125CCD56 /* sk_codec.h in Headers */,
-				E5FC80E00F3A6D265FCCD2891BAD9845 /* sk_colorfilter.h in Headers */,
-				9DE64CECF9CFBB25F11EBC37641CFA79 /* sk_colorspace.h in Headers */,
-				6793B84A1DDAC085D19AA2C3987E4201 /* sk_colortable.h in Headers */,
-				5807791DBC742F5810C50386F387161C /* sk_data.h in Headers */,
-				5A2596879A4EECAF58A1C8B84ED15864 /* sk_document.h in Headers */,
-				8F0EA83584E7074781021C52F517E86F /* sk_drawable.h in Headers */,
-				2666461B2DF92B63EC34549DFC25A636 /* sk_font.h in Headers */,
-				18D1BDEC7107BE5747B01AE8C337C0E7 /* sk_general.h in Headers */,
-				86526B79E255AAD8CF5CBE427C85981B /* sk_image.h in Headers */,
-				92DC2DEC87AB0A3940AED0ED65A74AE8 /* sk_imagefilter.h in Headers */,
-				CB72C2C836F5B8FDCE0645E3FA85B89E /* sk_mask.h in Headers */,
-				2827380AAE22A86C80CB6EB3729559BB /* sk_maskfilter.h in Headers */,
-				1BF2D5543EA3E87283C790B64A85F773 /* sk_matrix.h in Headers */,
-				2C2498ED0D9E1DA1683F178D73A85E3F /* sk_paint.h in Headers */,
-				539B4F58FA08526F9D5E882EDB365B19 /* sk_path.h in Headers */,
-				7D142E0CAF06DB3C1EE4FAC67F38E22B /* sk_patheffect.h in Headers */,
-				008E308D6BA9C7B40275D351F6C3D945 /* sk_picture.h in Headers */,
-				058349D8A12B46E09718F3BAFC2DD11B /* sk_pixmap.h in Headers */,
-				CFD1A83C3F012BBF745EF75CD6BDC2A6 /* sk_region.h in Headers */,
-				B1BCAF0AA526802025C439674129F907 /* sk_rrect.h in Headers */,
-				B351EB0D8CED6B3B73DBF4EAACBCDED2 /* sk_shader.h in Headers */,
-				C3E7B77A8D394E57BB8DE924C9AF4B9C /* sk_stream.h in Headers */,
-				4FCCA90A93C4F2A77F80918C27B2CAFC /* sk_string.h in Headers */,
-				D1BF258E099C2B9429F566C676611647 /* sk_surface.h in Headers */,
-				1D5C8641A32DAC8BAEF91C6693B1C341 /* sk_svg.h in Headers */,
-				88EED411D65669853FA0CC2DE6F98512 /* sk_textblob.h in Headers */,
-				BC3C167C4725739E7F67E71415B79718 /* sk_typeface.h in Headers */,
-				0981B8293DFC57243E57A961DC90CAE1 /* sk_types.h in Headers */,
-				9C9C2958DA9AD349FFCDB4FB54890989 /* sk_vertices.h in Headers */,
-				4B2B08C98658222B5E3C983722A15DA5 /* sk_xml.h in Headers */,
-				22ACDB59A34158F35DCAF087D74941E0 /* SkiaKit-Swift.h in Headers */,
-				AC689222584C945A14AB86C547D2210C /* SkiaKit.h in Headers */,
-				E2ABF2C3D89D352748D2846950CE772E /* SkiaKit_iOS.h in Headers */,
-				6CE4A646A7E8F8F19AD1594CC2336BA3 /* SVGPathParser.h in Headers */,
+				188D78B2D17D76503457398DD69055A8 /* jjutils-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +379,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				0DB7C588FAD215173D5BF3262CC35ECF /* PBXTargetDependency */,
+				7E0477AA5FCCB858B6887BC356DCC596 /* PBXTargetDependency */,
 			);
 			name = "Pods-jjutils_Tests";
 			productName = "Pods-jjutils_Tests";
@@ -569,12 +388,12 @@
 		};
 		454D442657ACE64A352DA1B1A9540794 /* jjutils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA8017E2C7418DBF053305F0A327C15C /* Build configuration list for PBXNativeTarget "jjutils" */;
+			buildConfigurationList = 9385AEAFE8F5F015D89004ECE4B93873 /* Build configuration list for PBXNativeTarget "jjutils" */;
 			buildPhases = (
-				5D8006064AE2BCBD9941750573427DCA /* Headers */,
-				2EB3F2CC6D187B4E075B183C58E04776 /* Sources */,
-				66E38EB6B5C48F690C1AC26D9BE0512E /* Frameworks */,
-				6E1BB00C70426CE906202311424EBB01 /* Resources */,
+				8858973164B69CAE8EF93E5FCCFBDEB4 /* Headers */,
+				06D0100C03FCFDC089ADB8BC921F3C84 /* Sources */,
+				EF1502D32C0D117E0F6FD9586E51938C /* Frameworks */,
+				2576A1F914558B651E64F6B1462F8416 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -597,7 +416,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				ACBF91EEF0E875E4C42CDE2D14D72ED9 /* PBXTargetDependency */,
+				BF547EB535F59953170F77F8714ED30A /* PBXTargetDependency */,
 			);
 			name = "Pods-jjutils_Example";
 			productName = "Pods-jjutils_Example";
@@ -634,6 +453,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2576A1F914558B651E64F6B1462F8416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46D52D2B5C05BF78F1B2390780001318 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -648,51 +474,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E1BB00C70426CE906202311424EBB01 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2EB3F2CC6D187B4E075B183C58E04776 /* Sources */ = {
+		06D0100C03FCFDC089ADB8BC921F3C84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FC4B00809DC0DEEAE9CFD55693B3362 /* Color.swift in Sources */,
-				40091DE84C3AF3FCBC9739DC592FD9E8 /* CustomBlurEffect.swift in Sources */,
-				AF4DEF10ACAFEEA39D838D8A505B046F /* Drawable.swift in Sources */,
-				E6A5B0F50D83AA182F2381859431ADB8 /* ElementType.swift in Sources */,
-				9EAD0692AC2EA55E58881339CF434B41 /* enums.swift in Sources */,
-				805569C525D692E43407172EC62FBDAC /* extension_bitwise.swift in Sources */,
-				3F0596B551744C44CC37808000A07C66 /* extension_CALayer.swift in Sources */,
-				711BDDFE78F4E9D18089DB1669DDEB31 /* extension_CAShapeLayer.swift in Sources */,
-				8CAFD3B1B4EE860F05F75E3FC4E397CE /* extension_CGFloat.swift in Sources */,
-				34B0C0754489F0B031EB709D639D96F9 /* extension_CGImage.swift in Sources */,
-				95099F60194295B1B2DBC59E00083F5A /* extension_CGRect.swift in Sources */,
-				0044A04DAE09C86EF79B5E6BF45AF58E /* extension_string.swift in Sources */,
-				1DF2031E5B2B2720B683B52EB64BA440 /* extension_UIBezierPath.swift in Sources */,
-				0B5E117E0131A115FC3E2A14C5E92241 /* extension_UIBezierPathUpper.swift in Sources */,
-				3E6ABD8FEAF1076E7EB4E59CB470A2D9 /* extension_UIColor.swift in Sources */,
-				7BC3146091055351B8DEB63EFA993120 /* extension_UIImage.swift in Sources */,
-				A8BC4A85E425530770D8ACD19650F602 /* extension_UIVIsualEffect.swift in Sources */,
-				9C8B0870A28847E5BD1F54A1A91B8E5D /* GradientDrawable.swift in Sources */,
-				A68D4E34316901ADD1DB75A3E9B885DD /* JJBlurEffect.swift in Sources */,
-				08D96A81ACBBEF08E78C39144C522E83 /* JJDrawable.swift in Sources */,
-				2C122CB38E947C7F393962C241748604 /* JJFilteredDrawable.swift in Sources */,
-				A15AC10C5BC54F08429CF5014F1277BD /* JJRegistrationCompletedView.swift in Sources */,
-				0FE2D517EFD2CFAD742347896645866D /* jjutils-dummy.m in Sources */,
-				7621210BFFFEBA43FBB95AB7C8C0312F /* LayerCircleProgress.swift in Sources */,
-				2C864814DC7A218A89665061422665FB /* LayerClip.swift in Sources */,
-				6A7043C82A2A91D06B5036F949B0E1EC /* PathElement.swift in Sources */,
-				9A2336C2197A236E37985E714D6E24DC /* PathParser.swift in Sources */,
-				D99D48E14D5AD290AD3A4E3134968FDA /* SkiaDrawable.swift in Sources */,
-				8C2E0CCA81279472424074B7BBD23ECB /* UIViewEffectViewiOS14.swift in Sources */,
-				2BDE89A647757E56853591AA4BE54DA8 /* ViewBox.swift in Sources */,
-				D1936CE458A4F943DC53D8CA5AFBFE7A /* VisualEffectView.swift in Sources */,
+				B39059D5C5333796EEBFE79A97022522 /* Color.swift in Sources */,
+				1A4E7BF5B2130006192A04D33FC6B9C8 /* CustomBlurEffect.swift in Sources */,
+				01D63E4ED19F82C150E621DFD047C618 /* Drawable.swift in Sources */,
+				77DBA876816EC2FA2CFFDB65ABB631D2 /* ElementType.swift in Sources */,
+				8678284E652738A665C23B22FF451F86 /* enums.swift in Sources */,
+				62D61ADF09A0B6348C7E10C456BE08D9 /* extension_bitwise.swift in Sources */,
+				C651AE8E790F84F71F2F6AEB4413423A /* extension_CALayer.swift in Sources */,
+				8C243C8BE77CE2FE6BB3BC75F2D0F2AC /* extension_CAShapeLayer.swift in Sources */,
+				6F5C28731E5688996AE79A47E63A89E4 /* extension_CGFloat.swift in Sources */,
+				CF35B99A18303A6D3000DE38E567F5E9 /* extension_CGImage.swift in Sources */,
+				734887AB7402C6DCB899395B99D38A5F /* extension_CGRect.swift in Sources */,
+				BD1E4FF7E51107A6F2C16F2A965818A7 /* extension_string.swift in Sources */,
+				A38CFA2143ADD07CFAF3994002916A67 /* extension_UIBezierPath.swift in Sources */,
+				9F2EFB1F2DE15F424E7E33AE42E71B9F /* extension_UIBezierPathUpper.swift in Sources */,
+				B2693F06FF8CDAD56FCEA90037CBB59E /* extension_UIColor.swift in Sources */,
+				5466F9F70BABF77969374370228FE8BE /* extension_UIImage.swift in Sources */,
+				234390477650D7331373B4A4CBCF4941 /* extension_UIVIsualEffect.swift in Sources */,
+				8077FB26FD010D81B9C3F683BD825494 /* GradientDrawable.swift in Sources */,
+				D31E8BA5B28DE0AC24068D8C108D30DF /* JJBlurEffect.swift in Sources */,
+				527223161087DEFD2FD7A4855C3B35FC /* JJDrawable.swift in Sources */,
+				7FB005069C6242330F61FB80BC38BC81 /* JJFilteredDrawable.swift in Sources */,
+				A232196C81AB24962E060517F93E1713 /* JJRegistrationCompletedView.swift in Sources */,
+				18E654479D9B7AF90CCBBD6A31634790 /* jjutils-dummy.m in Sources */,
+				A718DCB19ACB1E88616E0BD4346E1A93 /* LayerCircleProgress.swift in Sources */,
+				929DC38035BF27EF8F73B2DFA251F539 /* LayerClip.swift in Sources */,
+				61A9A49EE004F8E464E1357747C21BC9 /* PathElement.swift in Sources */,
+				A21C20583738BDCE9AE2E2265300BDAF /* PathParser.swift in Sources */,
+				7AA4035EB5CCA66A5F6356AA534214E8 /* SkiaDrawable.swift in Sources */,
+				7DBC952FEDFBC139085EC3D75D8C4B3D /* UIViewEffectViewiOS14.swift in Sources */,
+				B7BDB5BCBDBCDB3C851A03B6464BBE12 /* ViewBox.swift in Sources */,
+				D41CA470925EA1D4E8C81CB3BE2F44BD /* VisualEffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,17 +534,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0DB7C588FAD215173D5BF3262CC35ECF /* PBXTargetDependency */ = {
+		7E0477AA5FCCB858B6887BC356DCC596 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-jjutils_Example";
 			target = 9ED1BF184D1F922CCE018B46CF6DBBD8 /* Pods-jjutils_Example */;
-			targetProxy = D107E92F0E84804E6395ED8CB6BD78F9 /* PBXContainerItemProxy */;
+			targetProxy = E982DEEA3666DC8930B7F432DBE21368 /* PBXContainerItemProxy */;
 		};
-		ACBF91EEF0E875E4C42CDE2D14D72ED9 /* PBXTargetDependency */ = {
+		BF547EB535F59953170F77F8714ED30A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = jjutils;
 			target = 454D442657ACE64A352DA1B1A9540794 /* jjutils */;
-			targetProxy = 757DBC6DB253F71EB1A0AE38FFF24C63 /* PBXContainerItemProxy */;
+			targetProxy = 550CAD5CFB4BC05966F796B216D07940 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -764,9 +583,9 @@
 			};
 			name = Release;
 		};
-		32639397C0B3322D839B932E46A1DB8E /* Debug */ = {
+		5CA542327BD8CB121C2CAF88CA0BEB07 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 777DBB7A9E2449F1624459FAED756438 /* jjutils.debug.xcconfig */;
+			baseConfigurationReference = 69C951823B7F21DEF8316D75EB97E450 /* jjutils.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -790,10 +609,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		5EDCC6A8ECA292C5B3D00D50DFE72E58 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -822,6 +642,37 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		685331FE8820BFDF23E4CAA516A68E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7E082EB7EE7F93C4BA5289E8CB99C70 /* jjutils.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/jjutils/jjutils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/jjutils/jjutils-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/jjutils/jjutils.modulemap";
+				PRODUCT_MODULE_NAME = jjutils;
+				PRODUCT_NAME = jjutils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -887,38 +738,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		7EF5C944876E1FCF2DFE41D019BBBEF2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B404BE08E5A7354A0895B3DC85CBFAA2 /* jjutils.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/jjutils/jjutils-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/jjutils/jjutils-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/jjutils/jjutils.modulemap";
-				PRODUCT_MODULE_NAME = jjutils;
-				PRODUCT_NAME = jjutils;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1067,20 +886,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9385AEAFE8F5F015D89004ECE4B93873 /* Build configuration list for PBXNativeTarget "jjutils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				685331FE8820BFDF23E4CAA516A68E38 /* Debug */,
+				5CA542327BD8CB121C2CAF88CA0BEB07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B38DD47F44BA48FBD373B50130F7EA6D /* Build configuration list for PBXNativeTarget "Pods-jjutils_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5EDCC6A8ECA292C5B3D00D50DFE72E58 /* Debug */,
 				7F5C3FE97EB758226AB0C30428CDEAD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA8017E2C7418DBF053305F0A327C15C /* Build configuration list for PBXNativeTarget "jjutils" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				32639397C0B3322D839B932E46A1DB8E /* Debug */,
-				7EF5C944876E1FCF2DFE41D019BBBEF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

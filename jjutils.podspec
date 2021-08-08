@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'jjutils'
-  s.version          = '1.5.1'
+  s.version          = '1.5.2'
   s.summary          = 'utils for swift'
 
 # This description is used to generate tags and improve search results.
@@ -34,18 +34,20 @@ Class for create app faster
   s.swift_version = '4.2'
   
   
-  s.vendored_frameworks = 'src/Frameworks/*.framework'
+  # s.vendored_frameworks = 'src/Frameworks/*.framework'
   
-  s.ios.preserve_paths = 'src/Frameworks'
-  s.public_header_files = 'src/Frameworks/**/Headers/*.{h}'
+  # s.ios.preserve_paths = 'src/Frameworks'
+  # s.public_header_files = 'src/Frameworks/**/Headers/*.{h}'
 
-# xcode 12 issue arm mac
+
 #   s.pod_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)' ,
 #  'ONLY_ACTIVE_ARCH' => 'YES'}
 #   s.user_target_xcconfig = { 'ARCHS'  => '$(ARCHS_STANDARD)', 'ONLY_ACTIVE_ARCH' => 'YES'} # not recommended
-s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' }  
 
-s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' } # not recommended
+# s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' }  
+
+# s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' } # not recommended
+
 #  s.ios.preserve_paths = 'src/Frameworks' , 'src/obj'
 #  s.public_header_files = 'src/Frameworks/**/Headers/*.{h}' , 'src/obj/Headers/*.{h}'
 

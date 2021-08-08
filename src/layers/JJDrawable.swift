@@ -111,7 +111,7 @@ public class JJDrawable: CALayer {
     //MARK: LAYER SET
     
     @discardableResult
-    public func setSvgPath(d:String,viewBox:[CGFloat] = [0,0,0,0],align:String = "xMidYMid",aspect:ViewBox.AspectRatio = .meet) -> JJDrawable{
+    public func setSvgPath(d:String,viewBox:[CGFloat] = [0,0,0,0],align:String = "none",aspect:ViewBox.AspectRatio = .none) -> JJDrawable{
         mDrawable.setSvgPath(d: d,viewBox: viewBox,align: align,aspect: aspect)
     
        

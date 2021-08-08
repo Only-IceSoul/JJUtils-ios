@@ -57,7 +57,7 @@ public class PathParser {
     private static let plus = "+".utf16.first!
     private static let x = "x".utf16.first!
     
-    public static func parse( d:String?) -> UIBezierPath {
+    public static func parse( d:String?) throws -> UIBezierPath {
         mPath = UIBezierPath()
         if(d == nil ){
             return mPath;
@@ -90,22 +90,25 @@ public class PathParser {
 
             if (!has_prev_cmd && first_char != M && first_char != m) {
                        // The first segment must be a MoveTo.
-                      fatalError("Unexpected character \(first_char) (i=\(i), s=\(str)");
-                   }
+                throw PathParserError.ParseException("Unexpected character \(first_char) (i=\(i), s=\(str)");
+            }
 
                    // TODO: simplify
                    var is_implicit_move_to = false
                    var cmd = space
-                   if (is_cmd(c: first_char)) {
+
+            
+            if (is_cmd(cmd: first_char)) {
                        is_implicit_move_to = false;
                        cmd = first_char;
                        i += 1;
                    } else if (is_number_start(c: first_char) && has_prev_cmd) {
                        if (prev_cmd == Z || prev_cmd == z) {
                            // ClosePath cannot be followed by a number.
-                           fatalError("Unexpected number after z (s=\(str))");
+                        throw PathParserError.ParseException("Unexpected number after z (s=\(str))");
                        }
 
+                  
                        if (prev_cmd == M || prev_cmd == m) {
                            // "If a moveto is followed by multiple pairs of coordinates,
                            // the subsequent pairs are treated as implicit lineto commands."
@@ -121,82 +124,83 @@ public class PathParser {
                            cmd = prev_cmd;
                        }
                    } else {
-                       fatalError("Unexpected character \(first_char) (i=\(i), s=\(str)");
+                        throw PathParserError.ParseException("Unexpected character \(first_char) (i=\(i), s=\(str)");
                    }
 
                  let absolute = is_absolute(c: cmd);
        
+            
                    switch (cmd) {
                        case m:
-                           move(parse_list_number(), parse_list_number());
+                        move( try parse_list_number(),try parse_list_number());
                            break;
                        
                        case M:
-                           moveTo(parse_list_number(), parse_list_number());
+                        moveTo( try parse_list_number(),try parse_list_number());
                            break;
                        
                        case l:
-                           line(parse_list_number(), parse_list_number());
+                           line(try parse_list_number(),try parse_list_number());
                            break;
                        
                        case L:
-                           lineTo(parse_list_number(), parse_list_number());
+                           lineTo( try parse_list_number(),try parse_list_number());
                            break;
                        
                        case h:
-                           line(parse_list_number(), 0);
+                           line(try parse_list_number(), 0);
                            break;
                        
                        case H:
-                           lineTo(parse_list_number(), mPenY);
+                           lineTo(try parse_list_number(), mPenY);
                            break;
                        
                        case v:
-                           line(0, parse_list_number());
+                           line(0, try parse_list_number());
                            break;
                        
                         case V:
-                           lineTo(mPenX, parse_list_number());
+                           lineTo(mPenX, try parse_list_number());
                            break;
                        
                        case c:
-                           curve(parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number());
+                           curve(try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number());
                            break;
                        
                        case C:
-                           curveTo(parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number());
+                           curveTo(try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number());
                            break;
                        
                        case s:
-                           smoothCurve(parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number());
+                           smoothCurve(try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number());
                            break;
                        
                        case S:
-                           smoothCurveTo(parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number());
+                           smoothCurveTo(try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number());
                            break;
                        
                        case q:
-                           quadraticBezierCurve(parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number());
+                           quadraticBezierCurve(try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number());
                            break;
                        
                        case Q:
-                           quadraticBezierCurveTo(parse_list_number(), parse_list_number(), parse_list_number(), parse_list_number());
+                           quadraticBezierCurveTo(try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_list_number());
                            break;
                        
                        case t:
-                        smoothQuadraticBezierCurve(c1x: parse_list_number(), c1y: parse_list_number());
+                        smoothQuadraticBezierCurve(c1x:try parse_list_number(), c1y: try parse_list_number());
                            break;
                        
                        case T:
-                           smoothQuadraticBezierCurveTo(parse_list_number(), parse_list_number());
+                           smoothQuadraticBezierCurveTo(try parse_list_number(),try parse_list_number());
                            break;
                        
                        case a:
-                        arc(rx: parse_list_number(), ry: parse_list_number(), rotation: parse_list_number(), outer: parse_flag(), clockwise: parse_flag(), x: parse_list_number(), y: parse_list_number());
+                        arc(rx:try parse_list_number(), ry:try parse_list_number(), rotation:try parse_list_number(),outer: try parse_flag(),clockwise:  try parse_flag(), x: try parse_list_number(), y:try parse_list_number());
                            break;
                        
                        case A:
-                           arcTo(parse_list_number(), parse_list_number(), parse_list_number(), parse_flag(), parse_flag(), parse_list_number(), parse_list_number());
+                           arcTo(try parse_list_number(),try parse_list_number(),try parse_list_number(),try parse_flag(), try parse_flag(),try parse_list_number(),try parse_list_number());
                            break;
                        
                        case z,
@@ -205,11 +209,12 @@ public class PathParser {
                            break;
                     
                        default:
-                           fatalError("Unexpected comand \(cmd) (s=\(str)");
+                       throw PathParserError.ParseException("Unexpected comand \(cmd) (s=\(str)");
                        
                    }
 
-
+            
+            
                    if (is_implicit_move_to) {
                        if (absolute) {
                            prev_cmd = M;
@@ -514,8 +519,8 @@ public class PathParser {
         }
     }
 
-    private static func is_cmd(c:UInt16) -> Bool {
-        switch (c) {
+    private static func is_cmd(cmd:UInt16) -> Bool {
+        switch (cmd) {
             case M,
              m,
              Z,
@@ -541,6 +546,7 @@ public class PathParser {
             return false
         }
 
+
     }
     
     private static func is_number_start(c:UInt16) -> Bool {
@@ -555,7 +561,7 @@ public class PathParser {
     
     // By the SVG spec "large-arc" and "sweep" must contain only one char
     // and can be written without any separators, e.g.: 10 20 30 01 10 20.
-    private static func parse_flag() -> Bool {
+    private static func parse_flag() throws -> Bool {
        skip_spaces();
 
         let c = str.character(at:i);
@@ -569,29 +575,29 @@ public class PathParser {
                break;
            
            default:
-            fatalError("Unexpected flag \(c) (i=\(i), s=\(str))");
+           throw PathParserError.ParseException("Unexpected flag \(c) (i=\(i), s=\(str))");
        }
 
         return c == one;
     }
 
-    private static func parse_list_number() -> CGFloat{
+    private static func parse_list_number() throws -> CGFloat{
          if (i == lenght) {
-             fatalError("Unexpected end (s=\(str))")
+            throw PathParserError.ParseException("Unexpected end (s=\(str))")
          }
 
-        let n = parse_number();
+        let n = try parse_number();
          skip_spaces();
          parse_list_separator();
 
          return n;
      }
-      private static func parse_number() -> CGFloat {
+      private static func parse_number() throws -> CGFloat {
           // Strip off leading whitespaces.
           skip_spaces();
 
           if (i == lenght) {
-              fatalError("Unexpected end (s=\(str))")
+            throw PathParserError.ParseException("Unexpected end (s=\(str))")
           }
 
         let start = i;
@@ -611,7 +617,7 @@ public class PathParser {
                 c = str.character(at:i);
               }
         } else if (c != dot) {
-              fatalError("Invalid number formating character \(c) (i=\(i), s=\(str)")
+           throw PathParserError.ParseException("Invalid number formating character \(c) (i=\(i), s=\(str)")
           }
 
           // Consume fraction.
@@ -636,14 +642,14 @@ public class PathParser {
                   } else if (c >= zero && c <= nine) {
                       skip_digits();
                   } else {
-                    fatalError("Invalid number formating character \(c) (i=\(i), s=\(str)")
+                    throw PathParserError.ParseException("Invalid number formating character \(c) (i=\(i), s=\(str)")
                   }
               }
           }
 
         let num = str.substring(with: NSMakeRange(start, i - start))
         guard let n = Double(num) else {
-            fatalError("Invalid number \(num) (start=\(start), i=\(i), s=\(str))")
+           throw PathParserError.ParseException("Invalid number \(num) (start=\(start), i=\(i), s=\(str))")
         }
 
       

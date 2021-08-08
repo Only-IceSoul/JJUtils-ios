@@ -188,7 +188,7 @@ public class Drawable: CAShapeLayer {
     //MARK: LAYER SET
     
     @discardableResult
-    public func setSvgPath(d:String,viewBox:[CGFloat] = [0,0,0,0],align:String = "xMidYMid",aspect:ViewBox.AspectRatio = .meet) -> Drawable{
+    public func setSvgPath(d:String,viewBox:[CGFloat] = [0,0,0,0],align:String = "none",aspect:ViewBox.AspectRatio = .none) -> Drawable{
         mSvgPath = d
         mSvgAlign = align
         mSvgAspect = aspect
@@ -392,13 +392,17 @@ public class Drawable: CAShapeLayer {
             break
    
         case .svgPath:
-                mPath = PathParser.parse(d: mSvgPath)
+            do{
+                mPath = try PathParser.parse(d: mSvgPath)
            
                 if mVbRect.width > 0 && mVbRect.height > 0 {
                     let trans = ViewBox.transform(vbRect: mVbRect, eRect: mRect, align: mSvgAlign, meetOrSlice: mSvgAspect)
                   
                     mPath.apply(trans)
                 }
+            }catch{
+                    print("Exception: ",error)
+            }
             
            
         default:

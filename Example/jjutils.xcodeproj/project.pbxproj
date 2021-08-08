@@ -297,12 +297,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-jjutils_Example/Pods-jjutils_Example-frameworks.sh",
-				"${PODS_ROOT}/../../src/Frameworks/SkiaKit.framework",
 				"${BUILT_PRODUCTS_DIR}/jjutils/jjutils.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkiaKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jjutils.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

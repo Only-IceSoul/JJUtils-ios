@@ -7,6 +7,18 @@
 
 import Foundation
 
+enum PathParserError: Error {
+    case runtimeError(String)
+    case IllegalStateException(String)
+    case Exception(String)
+    case IllegalArgumentException(String)
+    case IndexOutOfBoundsException(String)
+    case NullPointerException(String)
+    case OperationCanceledException(String)
+    case ParseException(String)
+  
+}
+
 public enum DrawableAxis {
     case x, y , z
 }
